@@ -1,0 +1,67 @@
+{
+  "version": "1.30.768",
+  "builtAt": "2026-11-11T11:37:03.209Z",
+  "sourceCommit": "33a682693f7f9fa34bf949437b5186999c583f46",
+  "artifacts": [
+    {
+      "kind": "linux-x64.AppImage",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-linux-x64.AppImage",
+      "bytes": 117676536,
+      "sha256": "26896cebcf2e1ba9bbd38ca1211fcf509e9a267c7285f098eab71e780d0cc024"
+    },
+    {
+      "kind": "linux-x64.deb",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-linux-x64.deb",
+      "bytes": 44302578,
+      "sha256": "5ca6250e29e7bf3b6223766367b8f627597c4530ebf662830c60a6244f7158ea"
+    },
+    {
+      "kind": "linux-x64.rpm",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-linux-x64.rpm",
+      "bytes": 44298476,
+      "sha256": "abbdb4021cda59ab48a8b9a3a99d52414177da5e9fd99e72749b7fa1aa4aa65d"
+    },
+    {
+      "kind": "windows-executable",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-windows-x64.exe",
+      "bytes": 27450368,
+      "sha256": "15b27fe4fb487c011fef10ec414d17eff2b5bb94a39e8c24def181cad84360c8"
+    },
+    {
+      "kind": "windows-x64-installer.exe",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-windows-x64-installer.exe",
+      "bytes": 20292097,
+      "sha256": "9c861640d31a539741c9cc1f1042fb0606d419151c2695dc6c0d53bede28995a"
+    },
+    {
+      "kind": "windows-msi",
+      "path": "dist/natally-v1.30.768/natally-v1.30.768-windows-x64.msi",
+      "bytes": 21527552,
+      "sha256": "114f812ae93f90bed0de5e63ae6808fca3785a860d282e905445051e4d016b75"
+    }
+  ],
+  "targets": {
+    "linux": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T11:37:28.511Z",
+      "finishedAt": "2026-11-11T11:50:18.604Z"
+    },
+    "windows": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T11:50:18.604Z",
+      "finishedAt": "2026-11-11T11:53:02.431Z"
+    },
+    "windows-msi": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T11:53:02.431Z",
+      "finishedAt": "2026-11-11T11:53:03.691Z"
+    },
+    "android": {
+      "state": "failed",
+      "startedAt": "2026-11-11T11:53:03.691Z",
+      "error": "android command failed (1); see /home/robin/github/natally-8nov2026-09h02-yetanothercleanroomrestart/dist/natally-v1.30.768/logs/android.log"
+    }
+  },
+  "finishedAt": "2026-11-11T11:56:34.389Z",
+  "complete": false
+}

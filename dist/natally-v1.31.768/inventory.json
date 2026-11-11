@@ -1,0 +1,85 @@
+{
+  "version": "1.31.768",
+  "builtAt": "2026-11-11T12:05:21.865Z",
+  "sourceCommit": "d7a60737d6f0702185c9ec5466b6ed8f34ba6cca",
+  "artifacts": [
+    {
+      "kind": "linux-x64.AppImage",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-linux-x64.AppImage",
+      "bytes": 117660152,
+      "sha256": "a9d203de53a49cae78b34f0e7d22e8f5405cec94e9f374fc78c881abde18ed7d"
+    },
+    {
+      "kind": "linux-x64.deb",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-linux-x64.deb",
+      "bytes": 44303978,
+      "sha256": "5a915141b44f696ecd412e85f1adb77a20e3a9b34a4d178adf484576f576e009"
+    },
+    {
+      "kind": "linux-x64.rpm",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-linux-x64.rpm",
+      "bytes": 44300091,
+      "sha256": "4f54fdd2b53ed72adeed1d5fa7f1ab8969a1d11a518aa34281f38555e8d98532"
+    },
+    {
+      "kind": "windows-executable",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-windows-x64.exe",
+      "bytes": 27450880,
+      "sha256": "cba34c9379bfea45f0fd691b1267e45430407f6402e67523ac4544a8da0e3b3c"
+    },
+    {
+      "kind": "windows-x64-installer.exe",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-windows-x64-installer.exe",
+      "bytes": 20479855,
+      "sha256": "33d6117b56b35d44f3f2734cbf935f24d887fe3ebf750baba2fb05bf8e3d4d5c"
+    },
+    {
+      "kind": "windows-msi",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-windows-x64.msi",
+      "bytes": 21527552,
+      "sha256": "737bb7eded0c951a7cfbb02cd3a5e7fb335f49c2579bdaf61c98c4feab3c7e15"
+    },
+    {
+      "kind": "android-apk",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-android-arm64.apk",
+      "bytes": 103270143,
+      "sha256": "24d826f923bf7ae8dd921bd65f0ea2f0f506881d505319d7e9f66ee76ccd467f"
+    },
+    {
+      "kind": "android-aab",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-android-arm64.aab",
+      "bytes": 41153381,
+      "sha256": "660faf9280d6109eb671da99a91072579a754211fd2323bad7957e188051d51e"
+    },
+    {
+      "kind": "android-symbols",
+      "path": "dist/natally-v1.31.768/natally-v1.31.768-android-arm64-native-debug-symbols.zip",
+      "bytes": 13587782,
+      "sha256": "f603861cdf53412fa8b12ae91ffd4c97e3f38540986828a9ea8d72797d6d4262"
+    }
+  ],
+  "targets": {
+    "linux": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T12:05:45.936Z",
+      "finishedAt": "2026-11-11T12:16:19.867Z"
+    },
+    "windows": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T12:16:19.867Z",
+      "finishedAt": "2026-11-11T12:17:46.003Z"
+    },
+    "windows-msi": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T12:17:46.003Z",
+      "finishedAt": "2026-11-11T12:17:47.056Z"
+    },
+    "android": {
+      "state": "packaged",
+      "startedAt": "2026-11-11T12:17:47.056Z",
+      "finishedAt": "2026-11-11T12:21:33.176Z"
+    }
+  },
+  "finishedAt": "2026-11-11T12:21:33.176Z",
+  "complete": true
+}

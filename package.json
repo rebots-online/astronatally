@@ -1,0 +1,32 @@
+{
+  "name": "natally-cleanroom",
+  "private": true,
+  "version": "1.31.768",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "bash build_all.sh",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
+    "@revenuecat/purchases-js": "^1.74.0",
+    "@tauri-apps/api": "^2.12.4",
+    "firebase": "^12.19.0",
+    "jspdf": "^4.2.1",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "swisseph-wasm": "^0.1.0",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.174.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

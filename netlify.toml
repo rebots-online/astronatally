@@ -1,0 +1,15 @@
+[build]
+  publish = "dist-web"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[functions."ephemeris"]
+  included_files = ["node_modules/swisseph-wasm/wasm/**"]
+
+[[redirects]]
+  from = "/billing/*"
+  to = "/.netlify/functions/chargebee/billing/:splat"
+  status = 200
+  force = true

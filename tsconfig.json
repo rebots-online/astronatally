@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    // Relaxed for the verbatim -original ports (src/atelier-original,
+    // src/landing-original, src/onboarding-original): those files are
+    // byte-identical copies authored under the original's tsconfig, which
+    // enabled none of strict/noUnused*. TS cannot scope these flags per
+    // folder; new clean-room code keeps strict discipline by convention.
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src", "vite.config.ts"]
+}
