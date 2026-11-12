@@ -564,36 +564,17 @@ export function Inset({
       setGeometry(clampGeometry({ x: DOCK_MARGIN / stage.width, y: top / stage.height, w: width / stage.width }, stage, floorPx));
       return;
     }
-    if (!compact && (sideFits(stage, floorPx) || stackFits(stage, floorPx))) {
-      // Large enough to dock beside the scene: neither obscures the other,
-      // the scene re-zooms into the remaining space.
-      reportInvert(false);
-      setMode(sideFits(stage, floorPx) ? 'side' : 'stack');
-      setGeometry(current =>
-        clampGeometry(
-          current ?? { x: 0.5, y: 0.5, w: dockedWidthPx(stage, floorPx) / stage.width },
-          stage,
-          floorPx,
-        ),
-      );
-      return;
-    }
+    // The initial composition is deliberately layered, not docked beside
+    // the scene. Keep customer-saved side/stack layouts available above.
+    // A complete wheel and Natally's inset share the same stage.
+    reportInvert(false);
     setMode('floating');
-    // Her face is measured in stage coordinates; the placement works in the
-    // visible box's coordinates, so shift it before comparing.
-    const face = faceRectInStage(stageElement());
-    const faceInBox =
-      face === null
-        ? null
-        : {
-            x1: face.x1 - stage.left,
-            y1: face.y1 - stage.top,
-            x2: face.x2 - stage.left,
-            y2: face.y2 - stage.top,
-          };
-    const placement = computeAutoPlacement(stage, faceInBox, floorPx);
-    reportInvert(placement.kind === 'invert');
-    if (placement.kind === 'dock') setGeometry(placement.geometry);
+    const width = Math.min(allowedWidthPx(stage), Math.max(floorPx, stage.width * 0.36));
+    setGeometry(clampGeometry({
+      x: DOCK_MARGIN / stage.width,
+      y: DOCK_MARGIN / stage.height,
+      w: width / stage.width,
+    }, stage, floorPx));
   }, [stage, mode, floorPx, compact, stageElement, reportInvert]);
 
   // Lay out the host stage and layer for the current mode. While the chart
