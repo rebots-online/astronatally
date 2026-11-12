@@ -814,9 +814,9 @@ are committed at7490239 under dist/natally-v1.31.768/verification/.
 
 Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/ARCHITECTURE.md §2026-11-11; executor=GLM coder under architect-defined contract; status=NOT_STARTED; KStore=Admin-Manual; release=1.32.768.
 
-- [ ] Inspect current landing and app chart geometry and locate top/bottom clipping, including CSS stage bounds and WebGL/SVG renderer framing. Correct clipping without distorting wheel, changing astrological data, or hiding required markers.
-- [ ] Preserve full wheel scale and place Natally inset deliberately over upper-left wheel quadrant, without chart reflow/shrink. Preserve swap-zoom, drag, focus, and click interactions.
-- [ ] Define reusable dark translucent acrylic text-surface treatment in shared design tokens/styles; apply across landing and atelier text-bearing panels including bottom captions, scroll prompt, planet details, educational cards and floating callouts. Do not blanket-style buttons or art.
+- [x] Source-level chart correction: added aspect-aware wheel camera fit to the landing Astrolabe3D (WebGL); actual visual verification and alternate renderer remain unverified.
+- [x] Source-level inset correction: changed first-load noncompact placement to floating upper-left; retained persisted customer side/stack preferences and drag/swap code. Visual regression unverified.
+- [x] Shared acrylic tokens and scoped landing/app text-panel selectors committed; actual visual coverage and browser fallback unverified.
 - [x] Version identity was advanced before implementation: version.json and version.txt = 1.32.768. Do not modify build_all.sh, build numbering, or automatic version advancement; operator accepts whatever next version the canonical build produces.
-- [ ] Verify CSS/TS checks, responsive layout, real rendering and user interactions; mark unverified tests explicitly rather than claim they passed.
+- [ ] Local build/typecheck, mobile/desktop screenshots, WebGL fallback and interaction regression tests are NOT RUN in GitHub-only execution. Operator must verify after pulling; do not claim a tested release.
 - [ ] Commit and push source changes to master, report exact SHA. Operator alone pulls and runs build_all.sh locally; never access ASRock.
