@@ -176,3 +176,16 @@
 .marketing-story .hero,
 .marketing-story .usp { padding-block: 28px; }
 .marketing-story__visual { padding: 20px 0 16px; }
+
+
+/* v1.32 — all informational text surfaces share dark acrylic. */
+.marketing-frame :is(.marketing-frame__text,.marketing-frame__caption,.marketing-frame__instruction,.marketing-frame__lesson,.marketing-frame__status,.marketing-frame__notice),
+.marketing-account__menu,
+.account-billing,
+.marketing-frame .atelier-scene__caption,
+.marketing-frame .reading-stage__view-note {
+  background: var(--natally-acrylic-bg, rgb(16 10 25 / 60%));
+  border-color: var(--natally-acrylic-border, rgb(201 164 92 / 42%));
+  -webkit-backdrop-filter: var(--natally-acrylic-filter, blur(16px) saturate(125%));
+  backdrop-filter: var(--natally-acrylic-filter, blur(16px) saturate(125%));
+}
