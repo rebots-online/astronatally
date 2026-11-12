@@ -195,6 +195,20 @@ export const Astrolabe3D: React.FC<Astrolabe3DProps> = ({
     const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
     camera.position.set(0, 6.8, 6.2);
     camera.lookAt(0, -0.15, 0);
+    // Fit the full zodiac perimeter, including glyphs, in the narrower
+    // viewport dimension. Perspective aspect alone clips a circular wheel
+    // in short/wide panels; preserve orientation while moving the camera back.
+    const fitWheel = (w: number, h: number) => {
+      const halfFov = THREE.MathUtils.degToRad(camera.fov / 2);
+      const requiredDistance = 3.85 / (Math.tan(halfFov) * Math.min(1, w / h));
+      const target = new THREE.Vector3(0, -0.15, 0);
+      const offset = camera.position.clone().sub(target);
+      if (offset.length() < requiredDistance) {
+        camera.position.copy(target.add(offset.normalize().multiplyScalar(requiredDistance)));
+        camera.lookAt(0, -0.15, 0);
+      }
+    };
+    fitWheel(width, height);
     cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({
@@ -801,6 +815,7 @@ export const Astrolabe3D: React.FC<Astrolabe3DProps> = ({
       // Do not replace a valid canvas with viewport-sized pixels while layout is pending.
       if (!w || !h) return;
       camera.aspect = w / h;
+      fitWheel(w, h);
       camera.updateProjectionMatrix();
       if (renderSize.x !== w || renderSize.y !== h) {
         renderer.setSize(w, h, false);
