@@ -24,6 +24,7 @@ Automated source tests certify wiring and lifecycle only, never real login.
 | A11 | Choose native Email and Google | Email uses the Firebase SDK in the app; Google preserves the existing system-browser bridge, nonce, expiry and cancellation. Real native runtime completion is recorded separately from source tests. |
 | A12 | Choose native SMS | The system browser receives the existing `provider=phone` flow, collects the number through real reCAPTCHA, and returns only verification ID/code through the validated loopback form. Firebase verification occurs in the native app; invalid credentials/cancellation remain visible there. No Google redirect starts for a phone flow. |
 | A13 | Inspect Git integration and provider configuration | Published auth changes retain the other session's latest commits; no force push or manual version stamp. Record actual Email/Phone provider settings when authenticated admin access permits. Unobserved provider settings remain unverified. |
+| A14 | Read the landing hero's account caption and activate its CTA | Caption says "Free — sign in with Google, email or SMS." and the existing CTA opens the three-method chooser. The old Google-only caption is absent from that hero. |
 
 Observation status at authorship: all rows pending. Build/deployment and real
 email/SMS/native acceptance require observed results; local UI recordings and
@@ -39,3 +40,7 @@ SDK contract tests must be labelled with their actual scope.
   operator OAuth route succeeded after `npx --yes firebase-tools projects:list
   --json` (exit0, active project visible). No provider/domain settings changed.
   Real account/SMS journeys and the rest of the rubric remain pending.
+- A14 added before its follow-up design/code: parent visual review of the
+  desktop chooser recording found the hero still saying "Free — sign in
+  with Google." behind the completed three-method sheet. That caption
+  requires the bounded AUTH-METHOD-COPY correction before handback.
