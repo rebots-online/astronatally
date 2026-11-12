@@ -1185,3 +1185,16 @@ v1.30.768 as the honestly incomplete earlier attempt. Root dist bytes remain
 local while the operator's no-Forgejo-contact restriction is active and no
 permitted large-file backing store is configured; commit/push their exact
 inventory/log/evidence records, not oversized raw binary blobs.
+
+
+## 2026-11-11 — v1.32 visual composition and build-identity amendment
+
+Metadata: project=Natally; repository=rebots-online/astronatally; branch=master; authority=operator 2026-11-11; version-target=1.32.768 (version.json and version.txt already committed); author-role=architect; implementation-role=delegated GLM coder via Claude Code ACP; orchestration=KStore Admin-Manual; status=architecture-defined, implementation-pending; scope=wheel geometry, inset overlay, universal text-panel acrylic, preserve version during local build.
+
+### Observed problem and intended state
+The natal chart wheel is vertically clipped at both top and bottom even without overlapping elements. The full wheel must fit inside the stage without distortion, with all perimeter markings visible. The Natally inset MUST deliberately overlap the wheel's upper-left quadrant even when the wheel is correctly sized; it is not an adjacent column or a reason to shrink, displace, or crop the wheel. Diagnose CSS clipping and renderer/camera/canvas bounds in both main and landing experiences and their fallbacks; preserve existing interaction, chart mathematics, and swap-zoom.
+
+Every text-bearing panel throughout the atelier and landing (planet detail callouts, hero captions, bottom captions, scroll cues, explanatory and instructional cards, floating text) must use a shared dark, translucent acrylic treatment. Baseline visual tokens: dark plum/near-black rgba(16,10,25,.58), backdrop blur 16px, saturate 125%, subtle muted-gold/lavender border, accessible cream/gold text, appropriate fallback when blur/transparency is unavailable or reduced. Preserve visible scene behind panels; do not apply to buttons, artwork, chart geometry, or unrelated UI merely because it is nearby. Implement via a reusable existing style primitive where possible; any new module-scope entity must be registered in the architecture entity registry before implementation.
+
+### Release contract and invariant
+Operator requested: version first, visual corrections, push, then local pull and canonical build_all.sh on ASRock. The current repository version.json and version.txt are already 1.32.768. Preserve the 1.32 release line: build_all.sh currently increments MINOR on each invocation; before handoff, adjust that specific stamping behavior only as needed to avoid silently advancing to 1.33, without changing Android namespace, billing, credentials, or unrelated build conventions. Keep version files synchronized and avoid claiming builtAt reflects a new build until one actually occurs. No cloud deployment or native build is claimed as part of GitHub-only editing. Verify source-level regression checks and rendered visual geometry before handoff wherever execution is available. Follow existing KStore Admin-Manual and no-placeholder constraints.
