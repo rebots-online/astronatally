@@ -1319,6 +1319,25 @@ its active no-Forgejo-contact notice prevents refreshing that remote. KStore
 exact policy was retrieved; its manifest response omitted
 `authority_revision/authority_rules`, and no relevant fork handoff was found.
 
+### §22 copy coherence — AUTH-METHOD-COPY, FROZEN 2026-11-11
+
+After AUTH-EMAIL-SMS source completion (`bf902b1`,18 actual-source tests pass,
+type check exit0), parent visual review found a surviving Google-only hero
+caption. This bounded follow-up changes no login behavior or layout. Its
+preauthored observation is rubricA14 (`a75db8b`).
+
+| Exact entity | Target file:line | Contract; engaged by AUTH-METHOD-COPY |
+| --- | --- | --- |
+| `LandingCards` hero `.landing-card-aside` | `src/app/landing/LandingCards.tsx:254` | Exact text `Free — sign in with Google, email or SMS.` replaces `Free — sign in with Google.`; existing button/onSignIn wiring is retained |
+
+CodeGraph identified the component but trimmed its JSX; a named targeted
+read of that component's existing hero established the exact caption anchor.
+Coder owns only this file for source changes, re-reads the edited region,
+runs `npm run lint`, observes the caption and CTA in the dev browser and saves
+a final desktop/mobile screenshot. No new tests for a literal copy correction;
+the previously passing auth suite remains applicable. Earlier auth walkthroughs
+showing the old background caption are before-copy proof, not final A14 proof.
+
 ## 2026-11-11 — v1.32 visual composition and build-identity amendment
 
 Metadata: project=Natally; repository=rebots-online/astronatally; branch=master; authority=operator 2026-11-11; version-target=1.32.768 (version.json and version.txt already committed); author-role=architect; implementation-role=delegated GLM coder via Claude Code ACP; orchestration=KStore Admin-Manual; status=architecture-defined, implementation-pending; scope=wheel geometry, inset overlay, universal text-panel acrylic, preserve version during local build.
