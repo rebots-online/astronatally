@@ -1,0 +1,28 @@
+{
+  "id": "405777d1-fb33-4804-951b-74d07436f1d4",
+  "stream_id": "11185eb27849bbc6c1447c14662f49891361a8c681f9ce79dad19cd98e11c3ab",
+  "status": "ERROR",
+  "findings": [],
+  "coverage": {
+    "first_sequence": 0,
+    "last_sequence": 1097,
+    "event_count": 1098,
+    "policy_sha256": "7542d432287976b950ae5e65471b6dea217394bfe620a2ebf84165fad4fc2207",
+    "event_sha256": "6520f336cad954bdc3a6fe27022308932689862a7f9467c26ae1c3f6915c5ee5",
+    "windows_expected": 20,
+    "windows_reviewed": 4,
+    "windows_reused": 4,
+    "user_context_sha256": "cb5c030eef6ee755f5725eb0203c828001c8b8818244419549c9a3ebcfc21128"
+  },
+  "model": "glm-5.3-flash",
+  "provider_attempts": 1,
+  "reviewed_at": "2026-11-12T02:29:44.591027+00:00",
+  "context_sha256": "b1ad580a40cb8dd76f0c4fe6cabcfa934f644c0b6d40b800d21088574c170136",
+  "reasoning_effort": "low",
+  "error": {
+    "type": "ValueError",
+    "stage": "persist_window",
+    "message": "Review incomplete; correction or retry required",
+    "code": "review_error"
+  }
+}

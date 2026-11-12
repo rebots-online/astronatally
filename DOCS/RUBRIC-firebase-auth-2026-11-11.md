@@ -60,3 +60,11 @@ SDK contract tests must be labelled with their actual scope.
   correction; the short final-copy clips and final screenshots certifyA14.
   Real Email/SMS exchanges, actual native runtime sign-in and production
   publication remain unverified. This is not full rubric acceptance.
+- KStore semantic review is not PASS: the first request timed out; exact
+  replay returned `ERROR`, code `review_error`, stage `persist_window`,
+  message `Review incomplete; correction or retry required` (4 of20 windows
+  reviewed). The actual response is
+  [semantic-review.json](DEMONSTRATIONS/firebase-auth-2026-11-11/semantic-review.json);
+  the verbatim request and response remain in
+  [the pending review outbox](KSTORE-OUTBOX-firebase-auth-review-2026-11-11.json).
+  No alternate reviewer or verdict override was substituted.
