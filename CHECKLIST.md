@@ -2,7 +2,9 @@
 
 ## AUTH-EMAIL-SMS — active operator correction, 2026-11-11
 
-Status: ⬜. Frozen authority: ARCHITECTURE §22 (dfce2d0), translated here in
+Status: [X] implemented in44613cb/bf902b1; ✅ named source tests18/18 and
+type check observed by coder. Real account/SMS/native acceptance remains
+unverified and deployment is not claimed. Frozen authority: ARCHITECTURE §22 (dfce2d0), translated here in
 full for the task-bound coder. Rubric:
 `DOCS/RUBRIC-firebase-auth-2026-11-11.md` (a9347ea). This stanza supersedes
 generic Sign in = Google in the historical NAV/LANDING tasks below.
@@ -149,6 +151,36 @@ and unverified gaps. The parent is sole Git integrator: notify after each
 completed logical change; parent commits/pushes promptly. No worker Git
 mutations or force push. Parent fetches/merges current master before normal
 integration, preserving the other session's commits.
+
+## AUTH-METHOD-COPY — bounded follow-up after auth source completion
+
+Status: ⬜. Frozen authority: ARCHITECTURE §22 copy coherence (f4ff165);
+preauthored observation: rubricA14 (a75db8b). Initial auth source is completed;
+this task changes its stale landing caption, not the auth flows.
+
+**Own/read/edit only** `src/app/landing/LandingCards.tsx` for source; read this
+stanza and `DOCS/RUBRIC-firebase-auth-2026-11-11.md`. CodeGraph identified
+`LandingCards` but trimmed the JSX; the parent's named targeted read found
+its hero `.landing-card-aside` at line254. Do not survey neighbors, introduce
+entities, or alter layout, callbacks, auth behavior, versions or build files.
+You are not alone; preserve the other session's composition/acrylic work.
+
+**Do:** In `LandingCards`, change the exact hero caption from
+`Free — sign in with Google.` to `Free — sign in with Google, email or SMS.`
+Keep the existing hero button and `onSignIn` binding unchanged. Re-read the
+edited region. Report source ready to the parent for immediate commit/push;
+parent is sole Git integrator.
+
+**Verify:** run `npm run lint`; observe the exact caption and that its existing
+CTA opens the Google/Email/SMS chooser at desktop/mobile sizes. Save final
+screenshots and a short clip under the existing
+`DOCS/DEMONSTRATIONS/firebase-auth-2026-11-11/` directory and add actual results
+to its verification artifact. Earlier recordings showing the stale background
+caption remain labelled as before-copy evidence. Do not re-run the unchanged
+18-test auth suite for a literal copy correction or create new tests.
+
+**Accept (idempotent):** `npm run lint` exits0 with no TypeScript errors.
+Runtime caption/CTA observations are rubricA14's separate protocol.
 
 1:1 translation of DOCS/ARCHITECTURE.md. One coder per task, disjoint files,
 frozen contracts. ⬜ · 🔧 · ✅ · 🛑. Acceptance: section complete, `tsc
