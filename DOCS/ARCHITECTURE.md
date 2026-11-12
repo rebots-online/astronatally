@@ -73,7 +73,7 @@ required to surface that visibly rather than default silently.
 | Module | Role |
 | --- | --- |
 | `env.ts` | `VITE_*` accessors: `billingApiUrl()` (default `https://natally-hosted-chat.netlify.app`), `chargebeeSite()` (empty = unconfigured), `firebaseConfig()`, `creditDisplayPerUsd()` (default 100) |
-| `firebase.ts` | Google sign-in (popup, redirect fallback), `idToken()`, `onAuthChange()`, typed error classes (`AuthUnavailableError`, `NotSignedInError`, `SignInCancelledError`) and `describeSignInFailure()` that names the failure |
+| `firebase.ts` | Google popup/redirect and native browser sign-in; Firebase email/password registration, sign-in and password reset; Firebase SMS challenge/confirmation and native phone return (§22); `idToken()`, `onAuthChange()`, typed auth errors and method-specific `describeSignInFailure()` |
 | `eventBus.ts` | Typed pub/sub with an empty `PlatformEventMap` that feature modules augment via `declare module` — the bus itself owns no event names |
 | `pwa.ts` | `registerServiceWorker()` registers `/sw.js` only if actually served (HEAD probe); this repo ships none, so it truthfully installs nothing |
 | `version.ts` | `version.json?raw` baked in at build; exports `version`, `builtAt` |
@@ -507,12 +507,11 @@ lifecycle), `CustomerValueExplanation`, `Astrolabe3D` (landing copy).
    (`AtelierScene`) with the sign-in card. That page, not `landing.html` /
    `src/landing-original/marketing.tsx`, is the landing: astronatally.com `/`
    serves `app.html`. The marketing port is retired from the landing role.
-2. **One click, one sign-in (hard rule).** Sign In launches Google's account
-   chooser on that same click. No screen, card or button ever asks someone to
-   click to sign in after they already clicked Sign In — offering sign-in and
-   then presenting another "click here to sign in" taunts them. A blocked
-   popup falls back to Google's redirect from that same click, never to a
-   second prompt.
+2. **Choose a real sign-in method (§22, operator correction).** Generic Sign
+   in opens the existing account-sheet pattern with Google, Email and SMS
+   choices. Continue with Google starts the popup on that same labelled
+   click, with redirect fallback when blocked. Email and SMS collect their
+   actual credentials on the app origin; no repeated generic sign-in prompt.
 3. **All scrolling text is paginated onto cards.** Every piece of landing copy
    is divided into pages, each page its own small card with the dark purple
    background of the card that today carries the second "click here to sign
@@ -699,12 +698,14 @@ lifecycle), `CustomerValueExplanation`, `Astrolabe3D` (landing copy).
 7. **Sign-in works on both domains.** Firebase authorized domains include
    astronatally.com, asknatally.online and their `www` hosts (added
    2026-11-11; snapshot in `DOCS/DOMAINS/`). Item 2 holds across the domain
-   change: Sign In on astronatally.com runs the Google popup on that click
+   change: Continue with Google on astronatally.com runs the popup on that click
    (redirect fallback when blocked); on success the visitor continues on
    asknatally.online already signed in — the Google ID token travels in the
    URL fragment (`#gid=…`, never sent to a server), asknatally.online signs in
    with it (`signInWithCredential`) and strips the fragment at once. No second
    sign-in click anywhere.
+   Email and SMS use §22's method-only app-origin navigation instead of a
+   Google credential handoff.
 
 ## 13. Preserved trees (`*-original/`) — frozen ports
 
@@ -1186,6 +1187,137 @@ local while the operator's no-Forgejo-contact restriction is active and no
 permitted large-file backing store is configured; commit/push their exact
 inventory/log/evidence records, not oversized raw binary blobs.
 
+
+## 22. Firebase Email and SMS alongside Google — FROZEN 2026-11-11
+
+Operator: "The firebase email and SMS login are important and necessary."
+Target is `rebots-online/astronatally`, based on `4008b68`; another session
+is writing visual/build changes. This amendment supersedes Google-only NAV-1,
+§12.1 item2 and the phone exclusion in §19. Existing Google behavior and
+§19's callback origin/nonce/deadline/field validation remain binding.
+Rubric: `DOCS/RUBRIC-firebase-auth-2026-11-11.md`, authored before this amendment.
+
+### Flow and UI contract
+
+All generic signed-out Sign in actions (header, menu and LandingCards) open
+`SignInPanel`, a variant of the existing AccountPanel sheet using `.sheet`,
+`.sheet-head`, `.sheet-backdrop` and `.btn`. This is the existing account
+surface with standard labelled forms, not a new atelier design. Present
+"Continue with Google", "Continue with email", "Continue with SMS".
+The Google callback calls the existing `App.signIn` synchronously from the
+labelled click, preserving its popup, redirect fallback and `#gid=` bridge.
+Show the shell's Google errors inside the sheet as well as its existing host.
+
+Email provides Sign in, Create account, Forgot password and Back actions.
+Use Firebase `signInWithEmailAndPassword`, `createUserWithEmailAndPassword`,
+`sendPasswordResetEmail`; trim email only, never password. Creation requires
+matching password confirmation and at least six characters; Firebase applies
+the project's remaining password policy. Reset success remains on the form
+with a generic account-existence-neutral confirmation; rejected requests show
+the actual mapped failure. No app-owned password or magic-link service.
+
+For a browser on `PRODUCT_LANDING_HOSTS`, selecting Email/SMS navigates first
+to `https://asknatally.online/?auth=email` / `?auth=phone`. Only the method
+travels. `App` consumes these two allowed values, opens the matching form
+automatically and removes just that query parameter, retaining other URL
+data. Credentials are entered and Firebase signs in on the app origin.
+Other browsers and Tauri use the current app directly. The normal auth
+observer owns success; phone-only identities use `user.phoneNumber` as the
+name fallback before `stargazer`. Do not grant allowance or link accounts by
+matching email/phone; Firebase remains the identity authority.
+
+Browser SMS accepts an international number (leading +, country code,
+8–15 digits total after removing spaces, parentheses, dots and hyphens) and
+shows an SMS consent/rates notice before sending. `RecaptchaVerifier` uses
+the actual Firebase Auth instance and a mounted container with compact
+visible widget. `signInWithPhoneNumber` creates the real challenge; only
+its resolution reveals the six-digit code form. `confirm` uses Firebase's
+ConfirmationResult. Failed/expired codes remain visible and retryable;
+resend/new number disposes the old challenge. Each form has one pending
+operation. Never disable real app verification, install test phone numbers,
+persist passwords/codes/tokens, or claim SMS delivery after rejection.
+
+`createPhoneSignInSession` registers abort cleanup before issuing the request,
+clears its verifier on success/failure/abort, removes its abort listener, and
+rejects late results after abort. Session `dispose` invalidates confirmation
+and makes repeated cleanup harmless. The sheet owns AbortController/session
+refs and clears them on method switch/close/unmount; ignore stale promises.
+Closing an active native-phone flow invokes `cancel_native_sign_in` so another
+attempt is not trapped behind ACTIVE. Errors distinguish invalid email,
+invalid credentials, email already used, weak/password-policy failures,
+invalid number/code, expired session, reCAPTCHA, SMS quota, disabled provider,
+network, excessive attempts, cancellation and missing configuration.
+
+Native email runs the same Firebase SDK calls in the app. Native SMS invokes
+`native_sign_in` with `provider:'phone'`; the existing Rust bridge already
+accepts verificationId/code. Its browser page now validates google or phone.
+Google retains its automatic redirect behavior. Phone shows labelled number,
+reCAPTCHA, code and resend controls and never starts a Google redirect. It
+uses the named `natally-native-auth` Firebase app and the same SMS helper,
+then submits `{state,provider:'phone',verificationId,code}` by the existing
+loopback form. Firebase verification occurs once in the native app through
+`PhoneAuthProvider.credential` and `signInWithCredential`; the browser says
+it is returning the code for verification, never that verification succeeded.
+Wrong/expired native codes surface in the app with a fresh-attempt action.
+Phone cancellation posts `{state,provider:'phone',cancelled:true}` only.
+The browser stores only the existing five flow metadata fields. Reloading a
+phone page asks for a new challenge; code and verification ID are memory-only.
+No Rust/Cargo/namespace/build changes are part of this amendment.
+
+### Entity registry additions and signature amendments (engaged by AUTH-EMAIL-SMS)
+
+These rows extend §16. All unlisted helpers inside the named functions are
+local closures. CSS selectors are scoped to the existing account sheet.
+
+| Exact entity | Target file:anchor | Fields/signature and role |
+| --- | --- | --- |
+| `AuthMethod` | `src/platform/firebase.ts:before auth helpers` | exported type `'google' \| 'email' \| 'phone'` |
+| `isNativeAuth` | same module:after requireAuth | exported `():boolean`; actual Tauri internal marker |
+| `emailSignIn`, `emailSignUp` | same module:after signOutNow | exported `(email:string,password:string):Promise<void>`; Firebase SDK and current auth |
+| `resetEmailPassword` | same module:after emailSignUp | exported `(email:string):Promise<void>`; real Firebase reset request |
+| `PhoneSignInSession` | same module:before phone helpers | exported interface `{verificationId:string;confirm(code:string):Promise<void>;dispose():void}` |
+| `createPhoneSignInSession` | same module:after email helpers | exported `(owner:Auth,phoneNumber:string,container:HTMLElement,signal?:AbortSignal):Promise<PhoneSignInSession>`; real verifier, challenge, validation and lifecycle |
+| `startPhoneSignIn` | same module:after createPhoneSignInSession | exported `(phoneNumber:string,container:HTMLElement,signal?:AbortSignal):Promise<PhoneSignInSession>`; requires current auth and delegates |
+| `nativePhoneSignIn` | same module:after phone helpers | exported `():Promise<void>`; invoke phone, validate provider/verificationId (1–8191 chars)/six-digit code and absence of OAuth tokens, install PhoneAuthProvider credential; map cancellation |
+| `cancelNativeSignIn` | same module:after nativePhoneSignIn | exported `():Promise<void>`; native-only cancel command |
+| `describeSignInFailure` | same module:existing187 | signature becomes `(error:unknown,method:AuthMethod='google'):string`; compatible existing callers, accurate provider messages |
+| `AuthView` | `src/app/SignInPanel.tsx:1` (new) | private type `'choose' \| 'email' \| 'register' \| 'reset' \| 'phone' \| 'code'` |
+| `SignInPanelProps` | same new module | exported interface `{onClose():void;onGoogle():Promise<void>;initialMethod?:'email' \| 'phone';googleError?:string \| null;continueOnApp?:boolean}` |
+| `SignInPanel` | same new module | named exported component `(props:SignInPanelProps)`; owns forms, busy/error/success state and phone cleanup |
+| `.sign-in-panel`, `.sign-in-*` | `src/app/sign-in.css:1` (new) | scoped existing sheet variant; bounded viewport height/internal scrolling, mobile inputs, visible focus/error; no unrelated acrylic/layout changes |
+| `AUTH_METHOD_QUERY` | `src/app/AppShell.tsx:after GID_FRAGMENT299` | private const `'auth'`; new local `initialAuthMethod`/`signInOpen` state, existing callbacks/observer/CTA integration |
+| `bootstrapNativeAuth` | `src/platform/nativeAuthPage.ts:8` | local Flow provider union google/phone; existing Google logic retained; local phone session/forms/abort cleanup, method-aware errors and strict same protocol |
+| `native-auth-description`, `native-auth-phone-form`, `native-auth-phone`, `native-auth-recaptcha`, `native-auth-code-form`, `native-auth-code`, `native-auth-resend` | `auth/native.html:body` | stable DOM IDs; phone forms hidden for Google and invalid flows; submit/resend buttons disable while pending; no extra third-party analytics |
+| `execute`, `flow`, `settle`, existing native auth tests | `src/platform/nativeAuth.test.mjs:existing harness` | extend actual-source VM harness for SDK operations, challenge lifecycle and browser phone protocol; no product-side mocks |
+
+### Verification, parser gaps and concurrent publication
+
+CodeGraph initialized/verified (155 files, 2441 nodes, SQLite quick_check ok)
+at `4008b68` before mapping. Its explore output trims the large App closure
+and does not supply the HTML/CSS/config and full test harness; targeted reads
+were limited to App's auth state/observer/CTA regions, `auth/native.html`,
+`package.json`, `nativeAuth.test.mjs` and the contracts. No original/abandoned
+repository source was read. Reuse current form/account styling rather than
+surveying or rewriting the other session's composition work.
+
+Coder runs `node --experimental-vm-modules --test src/platform/nativeAuth.test.mjs`
+and `npm run lint`, then records actual desktop/mobile UI walkthroughs against
+the rubric. Use the fork's existing public `src/firebase-applet-config.json`
+as local VITE_FIREBASE_CONFIG when necessary; do not commit local config or
+print credentials. Real email/SMS/native/provider checks are reported by their
+actual scope. Do not contact a phone number or create a real customer account
+without an operator-provided identity. Admin read access may inspect existing
+provider flags; no blind provider/region-policy or credential changes.
+
+Work in the dedicated clone/branch `fix/firebase-email-sms-login`, commit and
+push every completed change. Fetch remote master before integration; preserve
+incoming commits, merge without force and resolve only this auth amendment.
+Never run a separate product build or hand-stamp versions. `build_all.sh`
+remains the sole release entry and must not race the other session's build.
+Admin-Manual revision used: `a6dae2f92076823119c8081ceeffb1447f781f8e`;
+its active no-Forgejo-contact notice prevents refreshing that remote. KStore
+exact policy was retrieved; its manifest response omitted
+`authority_revision/authority_rules`, and no relevant fork handoff was found.
 
 ## 2026-11-11 — v1.32 visual composition and build-identity amendment
 
