@@ -154,7 +154,9 @@ integration, preserving the other session's commits.
 
 ## AUTH-METHOD-COPY — bounded follow-up after auth source completion
 
-Status: ⬜. Frozen authority: ARCHITECTURE §22 copy coherence (f4ff165);
+Status: [X] implemented459d2b3; ✅ coder type check exit0 and desktop/mobile
+caption/CTA observations recorded; parent visually reviewed final captures.
+Frozen authority: ARCHITECTURE §22 copy coherence (f4ff165);
 preauthored observation: rubricA14 (a75db8b). Initial auth source is completed;
 this task changes its stale landing caption, not the auth flows.
 

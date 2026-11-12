@@ -44,3 +44,19 @@ SDK contract tests must be labelled with their actual scope.
   desktop chooser recording found the hero still saying "Free — sign in
   with Google." behind the completed three-method sheet. That caption
   requires the bounded AUTH-METHOD-COPY correction before handback.
+- AUTH-EMAIL-SMS source is published on its task branch in44613cb/bf902b1;
+  AUTH-METHOD-COPY source is459d2b3. Coder observed18/18 actual-source tests
+  passing and `npm run lint` exit0; the caption follow-up has its own lint0.
+  Exact output and scoped row observations are in
+  [verification.json](DEMONSTRATIONS/firebase-auth-2026-11-11/verification.json).
+- Parent independently viewed desktop chooser, mobile Email, registration
+  mismatch, SMS guidance and short-viewport scrolling captures, then the final
+  desktop/mobile caption and mobile chooser. CaptionA14 is visibly corrected;
+  existing CTA opens the three-method chooser. A3's domain handoff is observed
+  with local source routed under the purchased hostnames, not on a deployment.
+- [recordings.json](DEMONSTRATIONS/firebase-auth-2026-11-11/recordings.json)
+  identifies compact complete walkthroughs, final-copy clips, screenshots and
+  byte-preserved local-only originals. Long walkthroughs precede the caption
+  correction; the short final-copy clips and final screenshots certifyA14.
+  Real Email/SMS exchanges, actual native runtime sign-in and production
+  publication remain unverified. This is not full rubric acceptance.

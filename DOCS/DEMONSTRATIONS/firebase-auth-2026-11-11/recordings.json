@@ -1,0 +1,107 @@
+{
+  "recordedAt": "2026-11-12T02:24:29.154501+00:00",
+  "scope": "Real local-dev UI recordings. Full before-copy reviews include the earlier Google-only caption; short final-copy clips show the corrected caption and existing CTA. No live account, SMS, or native app sign-in was recorded.",
+  "rawPolicy": "Original WebM bytes and incomplete VP9 diagnostics remain under source-recordings/, ignored by its tracked .gitignore. Do not stage or publish those files.",
+  "conversion": "Complete review MP4s retain original dimensions and continuous timeline at8fps, H.264. Small duration differences come from frame rounding. Incomplete VP9 file metadata duration is not proof of full encoding; those diagnostic files are not accepted evidence.",
+  "recordings": [
+    {
+      "path": "source-recordings/desktop-forms.webm",
+      "status": "raw-original-local-only",
+      "bytes": 206042297,
+      "durationSeconds": 593.84,
+      "sha256": "37385077c9a313ad940334b58661f4f654f8ceca29f102ed25ebcbce52d436f0",
+      "publish": false
+    },
+    {
+      "path": "source-recordings/mobile-forms.webm",
+      "status": "raw-original-local-only",
+      "bytes": 43404796,
+      "durationSeconds": 484.64,
+      "sha256": "a39839e4792d2ab690d48f1ef96232340981e2c23b2dbeeb0ea4cd7faa81de56",
+      "publish": false
+    },
+    {
+      "path": "source-recordings/desktop-forms-compact.webm",
+      "status": "incomplete-vp9-diagnostic-local-only",
+      "bytes": 904613,
+      "durationSeconds": 42.375,
+      "sha256": "bedad4fbb8c8c5f8b7ac0c46908cbecc01b9ceabe72f2ef750ca8802eecb071d",
+      "publish": false
+    },
+    {
+      "path": "source-recordings/mobile-forms-compact.webm",
+      "status": "incomplete-vp9-diagnostic-local-only",
+      "bytes": 1381988,
+      "durationSeconds": 171.75,
+      "sha256": "d451bf8f0c8fdcc31ef9fc54ffc005987b38cb32cb07b609668ea8baf6798bc8",
+      "publish": false
+    },
+    {
+      "path": "desktop-forms-review.mp4",
+      "status": "complete-before-copy-review",
+      "bytes": 31725606,
+      "durationSeconds": 593.875,
+      "sha256": "4b464d550a76d2498a9d9f21c22a53676f97b49d75a06e9bdddf07c6b75cff1d",
+      "publish": true
+    },
+    {
+      "path": "mobile-forms-review.mp4",
+      "status": "complete-before-copy-review",
+      "bytes": 6874983,
+      "durationSeconds": 484.625,
+      "sha256": "e567eb649864e7d3c757d06c2aeca046ebd3feb54630a94cdaf57457888cfdd8",
+      "publish": true
+    },
+    {
+      "path": "desktop-final-copy.webm",
+      "status": "final-copy-cta-proof",
+      "bytes": 5834802,
+      "durationSeconds": 12.92,
+      "sha256": "abbaeafdbaaffb1868ea4a049e0cd23e1f2083abaccb0ae21b781c6121b0ab8c",
+      "publish": true
+    },
+    {
+      "path": "mobile-final-copy.webm",
+      "status": "final-copy-cta-proof",
+      "bytes": 2226006,
+      "durationSeconds": 14.84,
+      "sha256": "2df8918a0f51db1eb7d5d2d1a9ba97cb8fb6e8a3490e46d59837ff219806c35d",
+      "publish": true
+    }
+  ],
+  "rawLocalOnlyDirectory": "/home/robin/github/astronatally-email-sms-login/DOCS/DEMONSTRATIONS/firebase-auth-2026-11-11/source-recordings",
+  "publishArtifacts": [
+    "desktop-chooser.png",
+    "desktop-email.png",
+    "desktop-final-caption.png",
+    "desktop-final-copy.webm",
+    "desktop-final-cta-chooser.png",
+    "desktop-forms-review.mp4",
+    "desktop-landing-email-handoff-local-host-routing.png",
+    "desktop-landing-sms-handoff-local-host-routing.png",
+    "desktop-native-sms-page-local-host-routing.png",
+    "desktop-registration-validation.png",
+    "desktop-reset-validation.png",
+    "desktop-review-video-frame.png",
+    "desktop-sms-guidance.png",
+    "mobile-chooser.png",
+    "mobile-email.png",
+    "mobile-final-caption.png",
+    "mobile-final-copy.webm",
+    "mobile-final-cta-chooser.png",
+    "mobile-forms-review.mp4",
+    "mobile-missing-email-config.png",
+    "mobile-missing-sms-config.png",
+    "mobile-native-sms-page-local-host-routing.png",
+    "mobile-registration-top.png",
+    "mobile-registration-validation.png",
+    "mobile-reset.png",
+    "mobile-review-video-frame.png",
+    "mobile-short-viewport-scroll.png",
+    "mobile-sms-guidance.png",
+    "provider-config.json",
+    "recordings.json",
+    "source-recordings/.gitignore",
+    "verification.json"
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "task": "AUTH-EMAIL-SMS",
+  "recordedAt": "2026-11-12T02:17:24.167074+00:00",
+  "scope": "Actual source SDK-contract tests, TypeScript lint, and local dev browser UI. No release build, deploy, real customer account, delivered SMS, or native runtime login was performed.",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "src/platform/nativeAuth.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "(node:3277667) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:3277667) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time\n✔ native Google installs the system-browser credential through the exact command (124.284857ms)\n✔ native cancellation maps to the existing error and malformed credentials never install (57.868695ms)\n✔ web popup still starts synchronously on the caller gesture without native invocation (23.245772ms)\n✔ invalid origin, fragment, duplicate, state, provider, port and stored expiry reject before Firebase (207.506968ms)\n✔ fresh launch retains only flow metadata, removes fragment, and starts Google once (9.903548ms)\n✔ real-shaped redirect result posts credentials only to the validated loopback form (8.496935ms)\n✔ cancel submits no token fields and null redirect result cannot restart itself (20.350805ms)\n✔ invalid returned Google credential retains genuine retry and cancel without a callback (10.916115ms)\n✔ email operations use the current Auth, trim email only, and preserve rejection (25.837503ms)\n✔ auth failures distinguish provider, credential, phone and deployment outcomes (17.807755ms)\n✔ phone challenge normalizes numbers and supplies the mounted container and actual Auth (8.75077ms)\n✔ invalid phone and code inputs never reach the Firebase send or confirm operation (9.023524ms)\n✔ send failures and aborts clear verifiers once and ignore late challenge results (14.825217ms)\n✔ a completed send removes its abort listener and a disposed pending confirmation rejects late success (11.636166ms)\n✔ native phone validates and installs only phone credentials, with truthful cancellation (51.675426ms)\n✔ phone browser flow sends with the named Auth and posts its code without confirming or starting Google (8.710589ms)\n✔ phone cancellation sends metadata only and a late send cannot reopen the code form (10.277845ms)\n✔ phone send failures do not reveal a code form and resend replaces the prior challenge (22.869005ms)\nℹ tests 18\nℹ suites 0\nℹ pass 18\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 784.760265\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> natally-cleanroom@1.31.768 lint\n> tsc --noEmit\n\n",
+      "stderr": ""
+    }
+  ],
+  "ui": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "visualReview": [
+      "desktop-chooser.png",
+      "desktop-email.png",
+      "desktop-registration-validation.png",
+      "mobile-chooser.png",
+      "mobile-registration-validation.png",
+      "mobile-sms-guidance.png",
+      "mobile-short-viewport-scroll.png",
+      "mobile-missing-sms-config.png",
+      "desktop-native-sms-page-local-host-routing.png",
+      "mobile-native-sms-page-local-host-routing.png",
+      "desktop-final-caption.png",
+      "desktop-final-cta-chooser.png",
+      "mobile-final-caption.png",
+      "mobile-final-cta-chooser.png"
+    ],
+    "chooser": "Three labelled Google/email/SMS choices; initial focus on Google. Header Sign in, Escape and restoration to Sign in observed.",
+    "nativeValidation": {
+      "emptyEmail": "Please fill out this field.",
+      "invalidEmail": "Please include an '@' in the email address. 'not-an-email' is missing an '@'.",
+      "emptyPhone": "Please fill out this field."
+    },
+    "registration": "Mismatching local validation strings produce The passwords do not match. Enter the same password in both fields. No account was created or submitted to Firebase.",
+    "keyboard": {
+      "shiftTabFromClose": "Back",
+      "tabFromBack": "Close",
+      "escape": "Dialog removed; focus restored to Sign in"
+    },
+    "mobileRegister": {
+      "dialogBounds": {
+        "x": 12,
+        "y": 100.890625,
+        "width": 366,
+        "height": 642.203125
+      },
+      "clientWidth": 364,
+      "scrollWidth": 364
+    },
+    "reducedHeightScroll": {
+      "viewport": {
+        "width": 390,
+        "height": 500
+      },
+      "dialogBounds": {
+        "x": 12,
+        "y": 12,
+        "width": 366,
+        "height": 476
+      },
+      "scrollTop": 113,
+      "clientHeight": 474,
+      "scrollHeight": 587,
+      "clientWidth": 364,
+      "scrollWidth": 364,
+      "bodyOverflow": "hidden",
+      "backButtonBottom": 466.609375
+    },
+    "queryHandoff": {
+      "input": "/app.html?auth=phone&campaign=proof#your-chart",
+      "observed": "/app.html?campaign=proof#your-chart",
+      "initialForm": "SMS",
+      "codeFormVisible": false,
+      "afterCloseReopen": "Chooser"
+    },
+    "landing": {
+      "scope": "Purchased hostnames routed to the local dev source in an isolated browser context; this is not deployed production proof.",
+      "beforeMethodChoiceCredentialInputs": 0,
+      "emailDestination": "https://asknatally.online/",
+      "emailFormOpened": true,
+      "smsDestination": "https://asknatally.online/",
+      "smsPhoneFormOpened": true,
+      "smsCodeFormVisible": false
+    },
+    "phonePattern": {
+      "unicodeSetsCompile": true,
+      "formattedInternationalNumberAccepted": true,
+      "plainTextRejected": true
+    },
+    "missingConfig": {
+      "scope": "Separate local dev server with VITE_FIREBASE_CONFIG empty; no provider operation or SMS was sent.",
+      "email": "Email/password sign-in isn’t configured on this deployment — VITE_FIREBASE_CONFIG is empty or invalid.",
+      "phone": "SMS sign-in isn’t configured on this deployment — VITE_FIREBASE_CONFIG is empty or invalid.",
+      "codeFormVisible": false
+    },
+    "nativeBrowserPage": {
+      "scope": "Local source routed under https://asknatally.online; no native runtime or loopback server.",
+      "googleContinueHidden": true,
+      "phoneFormVisible": true,
+      "codeFormVisible": false,
+      "fragmentRemoved": true,
+      "storedFields": [
+        "port",
+        "provider",
+        "redirecting",
+        "startedAt",
+        "state"
+      ],
+      "reload": "Request a new SMS code to continue. Codes from before this page reload are not retained.",
+      "emptyNumberValidation": "Please fill out this field.",
+      "mobile": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "pageWidth": 390,
+        "bodyHeight": 844,
+        "phoneFormVisible": true,
+        "codeFormVisible": false
+      }
+    },
+    "consoleObservation": "The initial app browser page emitted one unsupported MIME type (text/html) script error and one warning while voice preparation was visible. No provider login was attempted. The corrected phone pattern was compiled successfully by the browser with the UnicodeSets v flag.",
+    "videos": [
+      "desktop-forms-review.mp4",
+      "mobile-forms-review.mp4",
+      "desktop-final-copy.webm",
+      "mobile-final-copy.webm"
+    ],
+    "beforeCopyEvidence": "All desktop/mobile form screenshots and full-duration review videos precede AUTH-METHOD-COPY; the final-caption/final-cta-chooser screenshots and final-copy clips show the corrected caption."
+  },
+  "rubric": {
+    "A1": "Observed local desktop/mobile chooser and navigation",
+    "A2": "Existing Google behavior covered by actual-source VM tests; real provider login unverified",
+    "A3": "Observed local-source landing Email choice navigates to asknatally.online before any credential input; chosen email form opens and auth query disappears. Screenshots/video are labelled local hostname routing, not deployment.",
+    "A4": "Observed email/password, Create account, confirmation, Forgot password, native required/invalid-email validation and local password-mismatch error on desktop/mobile. SDK wiring is covered by actual-source VM tests. Real successful form submission is unverified.",
+    "A5": "Real email registration/sign-in/session retention/sign-out and reset email delivery remain unverified pending an authorized account. No live email journey was simulated or claimed.",
+    "A6": "SMS guidance/consent and mounted-container SDK contract covered; real reCAPTCHA interaction pending authorized number",
+    "A7": "Actual-source confirmation/error contracts covered with controlled SDK imports; real SMS delivery/code login unverified",
+    "A8": "Abort/dispose/late-result behavior covered by actual-source tests; close/back/reopen observed locally; real reCAPTCHA lifecycle unverified",
+    "A9": "Method-specific local missing-config errors observed; disabled-provider errors covered by actual-source tests. Existing live providers are enabled per parent provider-config.json.",
+    "A10": "Observed and visually reviewed desktop/mobile forms, focus loop/restoration and internal scrolling",
+    "A11": "Email/native-Google SDK contract tests pass; native runtime completion unverified",
+    "A12": "Native-phone source flow/payload/cancel tests and local secure-origin page observed; actual native browser bridge completion unverified",
+    "A13": "Git integration is parent-owned; live provider settings recorded separately by parent in provider-config.json; this worker changed no provider setting",
+    "A14": "Observed exact corrected caption and original hero CTA opening Google/email/SMS chooser on1440x900 and390x844. Final-caption/final-cta-chooser screenshots and short final-copy clips recorded; source task lint exit0."
+  },
+  "pending": [
+    "Real email sign-in with an authorized existing account",
+    "Real account creation and reset delivery with an authorized identity",
+    "Real reCAPTCHA, SMS delivery, correct/incorrect/expired code using an authorized Canada/US number",
+    "Native Email/Google/SMS runtime completion and cancellation",
+    "Production publication and release acceptance (parent/operator owned)"
+  ],
+  "recordingProcessing": {
+    "originalDurationSeconds": {
+      "desktop": 593.84,
+      "mobile": 484.64
+    },
+    "firstDesktopVp9Attempt": {
+      "exitCode": 255,
+      "stderr": "",
+      "verifiedDurationSeconds": 42.375,
+      "accepted": false
+    },
+    "reviewFormat": "H.264 MP4, original dimensions, 8 fps, full continuous duration; screenshots retain full-resolution form states.",
+    "rawLocalOnly": [
+      {
+        "path": "source-recordings/desktop-forms.webm",
+        "status": "raw-original-local-only",
+        "bytes": 206042297,
+        "durationSeconds": 593.84,
+        "sha256": "37385077c9a313ad940334b58661f4f654f8ceca29f102ed25ebcbce52d436f0",
+        "publish": false
+      },
+      {
+        "path": "source-recordings/mobile-forms.webm",
+        "status": "raw-original-local-only",
+        "bytes": 43404796,
+        "durationSeconds": 484.64,
+        "sha256": "a39839e4792d2ab690d48f1ef96232340981e2c23b2dbeeb0ea4cd7faa81de56",
+        "publish": false
+      },
+      {
+        "path": "source-recordings/desktop-forms-compact.webm",
+        "status": "incomplete-vp9-diagnostic-local-only",
+        "bytes": 904613,
+        "durationSeconds": 42.375,
+        "sha256": "bedad4fbb8c8c5f8b7ac0c46908cbecc01b9ceabe72f2ef750ca8802eecb071d",
+        "publish": false
+      },
+      {
+        "path": "source-recordings/mobile-forms-compact.webm",
+        "status": "incomplete-vp9-diagnostic-local-only",
+        "bytes": 1381988,
+        "durationSeconds": 171.75,
+        "sha256": "d451bf8f0c8fdcc31ef9fc54ffc005987b38cb32cb07b609668ea8baf6798bc8",
+        "publish": false
+      }
+    ],
+    "reviewCopies": [
+      {
+        "path": "desktop-forms-review.mp4",
+        "bytes": 31725606,
+        "durationSeconds": 593.875
+      },
+      {
+        "path": "mobile-forms-review.mp4",
+        "bytes": 6874983,
+        "durationSeconds": 484.625
+      }
+    ],
+    "recordingManifest": "recordings.json",
+    "finalVideoQualityReview": "Complete H.264 reviews retain full timelines; extracted90-second video frames were viewed. Final desktop and corrected mobile caption/chooser screenshots were viewed. Full originals remain byte-preserved in ignored source-recordings/."
+  },
+  "copyFollowUp": {
+    "task": "AUTH-METHOD-COPY",
+    "recordedAt": "2026-11-12T02:22:35.366563+00:00",
+    "caption": "Free — sign in with Google, email or SMS.",
+    "command": {
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> natally-cleanroom@1.31.768 lint\n> tsc --noEmit\n\n",
+      "stderr": ""
+    },
+    "observation": {
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "caption": "Free — sign in with Google, email or SMS.",
+      "ctaChoices": [
+        "Continue with Google",
+        "Continue with email",
+        "Continue with SMS"
+      ],
+      "screenshots": [
+        "desktop-final-caption.png",
+        "desktop-final-cta-chooser.png",
+        "mobile-final-caption.png",
+        "mobile-final-cta-chooser.png"
+      ],
+      "clips": [
+        "desktop-final-copy.webm",
+        "mobile-final-copy.webm"
+      ],
+      "mobileCaptionVisibility": {
+        "bounds": {
+          "x": 48.5,
+          "y": 693.5,
+          "width": 293,
+          "height": 20.796875
+        },
+        "visibleAtCenter": true,
+        "scrollY": 352,
+        "visuallyReviewed": true
+      }
+    }
+  }
+}
