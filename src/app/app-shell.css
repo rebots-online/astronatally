@@ -713,3 +713,13 @@ div[id^='threejs-container'] {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+
+/* v1.32 — text panels remain translucent over the scene. */
+.app-main :is(.lesson-card,.sheet,.account-panel,.reading-stage__view-note,.atelier-scene__caption,.astrolabe-tooltip),
+.app-splash :is(.card,.atelier-scene__caption) {
+  background: var(--natally-acrylic-bg, rgb(16 10 25 / 60%));
+  border-color: var(--natally-acrylic-border, rgb(201 164 92 / 42%));
+  -webkit-backdrop-filter: var(--natally-acrylic-filter, blur(16px) saturate(125%));
+  backdrop-filter: var(--natally-acrylic-filter, blur(16px) saturate(125%));
+}
