@@ -1,5 +1,155 @@
 # Checklist — 2026-11-08 (clean-room one-shot)
 
+## AUTH-EMAIL-SMS — active operator correction, 2026-11-11
+
+Status: ⬜. Frozen authority: ARCHITECTURE §22 (dfce2d0), translated here in
+full for the task-bound coder. Rubric:
+`DOCS/RUBRIC-firebase-auth-2026-11-11.md` (a9347ea). This stanza supersedes
+generic Sign in = Google in the historical NAV/LANDING tasks below.
+Target: `rebots-online/astronatally`, base4008b68, dedicated checkout
+`/home/robin/github/astronatally-email-sms-login`, branch
+`fix/firebase-email-sms-login`. Another session owns visual/build work.
+
+**Ownership and permitted reads/edits.** Implement only
+`src/platform/firebase.ts`, `src/platform/nativeAuthPage.ts`,
+`src/platform/nativeAuth.test.mjs`, `src/app/AppShell.tsx`,
+`auth/native.html`, new `src/app/SignInPanel.tsx`, new
+`src/app/sign-in.css`. Read this stanza, `AGENTS.md`, `CLAUDE.md` if present,
+`package.json`, `package-lock.json`, `tsconfig.json`, `vite.config.ts`,
+`src/platform/env.ts`, `src/firebase-applet-config.json`, and the named rubric
+for operations/verification. Do not read ARCHITECTURE or survey neighbors.
+Existing source was mapped by CodeGraph; its trimmed App closure and
+HTML/CSS/config/test coverage gaps authorize targeted reads of these files.
+Only locate what you edit within owned files. No greps. You are not alone:
+preserve current code and incoming work, especially chart, acrylic and build
+changes. No Rust/Cargo/build/version/dependency-file changes.
+
+**Do — Firebase API.** Add these exact module entities to `firebase.ts`:
+
+| Entity | Exact contract |
+| --- | --- |
+| `AuthMethod` | exported type `'google' \| 'email' \| 'phone'` |
+| `isNativeAuth` | exported `():boolean`, actual `window.__TAURI_INTERNALS__` presence |
+| `emailSignIn`, `emailSignUp` | exported `(email:string,password:string):Promise<void>`; use `signInWithEmailAndPassword` / `createUserWithEmailAndPassword` against `requireAuth()`, trim email only |
+| `resetEmailPassword` | exported `(email:string):Promise<void>`; `sendPasswordResetEmail(requireAuth(),trimmedEmail)` |
+| `PhoneSignInSession` | exported interface `{verificationId:string;confirm(code:string):Promise<void>;dispose():void}` |
+| `createPhoneSignInSession` | exported `(owner:Auth,phoneNumber:string,container:HTMLElement,signal?:AbortSignal):Promise<PhoneSignInSession>`; actual RecaptchaVerifier and signInWithPhoneNumber |
+| `startPhoneSignIn` | exported `(phoneNumber:string,container:HTMLElement,signal?:AbortSignal):Promise<PhoneSignInSession>`; delegates with `requireAuth()` |
+| `nativePhoneSignIn` | exported `():Promise<void>`; invoke `native_sign_in` with `{provider:'phone'}`, validate returned object/provider, verificationId 1–8191 chars, exactly six ASCII digits, no OAuth tokens; install `PhoneAuthProvider.credential(verificationId,code)` through signInWithCredential; map native cancellation to SignInCancelledError |
+| `cancelNativeSignIn` | exported `():Promise<void>`; native-only invoke `cancel_native_sign_in` |
+| `describeSignInFailure` | amend to `(error:unknown,method:AuthMethod='google'):string`; existing callers compatible, method-specific disabled/config messages |
+
+Keep existing Google popup/redirect/gesture/#gid functionality unchanged.
+Phone normalization strips spaces, parentheses, dots and hyphens, then
+requires + and 8–15 digits, first digit nonzero. Codes must be six digits.
+RecaptchaVerifier gets the actual Auth plus mounted container and
+`{size:'compact'}`. Register AbortSignal cleanup before sending; clear the
+verifier on success/failure/abort, remove its listener, reject late results
+after abort. Session dispose invalidates later confirms and is idempotent.
+Errors distinguish invalid email/credentials, email in use, weak/password
+policy, invalid phone/code, expired session, reCAPTCHA, quota, disabled
+provider, network, excessive attempts, cancellation and missing config.
+Never log/store passwords/codes/tokens or disable actual app verification.
+Use current official modular Firebase API: firebase.google.com/docs/auth/web/
+password-auth and phone-auth; RecaptchaVerifier signature is
+`new RecaptchaVerifier(auth,container,parameters)`.
+
+**Do — account sheet and app integration.** New `SignInPanel.tsx` has only
+these module entities; all other helpers are component-local closures:
+
+- private `AuthView = 'choose' | 'email' | 'register' | 'reset' | 'phone' | 'code'`.
+- exported `SignInPanelProps {onClose():void;onGoogle():Promise<void>;initialMethod?:'email'|'phone';googleError?:string|null;continueOnApp?:boolean}`.
+- named exported `SignInPanel(props:SignInPanelProps)`.
+
+Reuse `.sheet-backdrop`, `.sheet`, `.sheet-head`, `.btn` and existing palette.
+New `sign-in.css` uses only scoped `.sign-in-panel` / `.sign-in-*` selectors;
+do not rewrite app-shell.css or the other session's acrylic/composition.
+The chooser presents Continue with Google / Continue with email / Continue
+with SMS. Calling onGoogle stays synchronous within its labelled click,
+before any await; shell googleError appears inside the sheet. Other views:
+Email/password Sign in; Create account with matching password confirmation
+and six-character minimum; Forgot password with account-existence-neutral
+success text; Back. Browser-native input validation, Enter submit, clear
+labels, aria-live error/status, visible focus, Escape/Close, focus trap and
+focus restoration; bounded height and internal scrolling at390x844/1440x900.
+Use one pending operation per form. Keep passwords/codes in memory only.
+
+SMS shows international-number guidance and actual SMS consent/rates notice.
+Web requests a real challenge into a mounted reCAPTCHA container; only SDK
+resolution reveals the code input; confirm calls the session's confirm.
+Offer resend and new number; rejected requests/codes keep truthful errors.
+Use AbortController/session refs and ignore stale promises; clean up on
+switch/close/unmount. Native SMS calls nativePhoneSignIn instead of embedded
+reCAPTCHA; closing its pending flow calls cancelNativeSignIn. Native email
+uses the same email SDK operations as web. No invented account or allowance.
+
+In `AppShell.tsx`, add private `AUTH_METHOD_QUERY = 'auth'` after GID_FRAGMENT;
+local initialAuthMethod/signInOpen state consumes only ?auth=email/phone and
+removes just that parameter, retaining the rest of the URL. Generic header,
+menu and LandingCards Sign in opens the sheet; its onGoogle calls the existing
+signIn function. Pass continueOnApp for PRODUCT_LANDING_HOSTS in a browser:
+the sheet's Email/SMS choices first navigate to
+`https://asknatally.online/?auth=email` / `?auth=phone`, then app initialization
+opens the selected form automatically before credentials are collected.
+On other origins/native collect credentials locally. Existing onAuthChange
+owns success/unmount; include user.phoneNumber before 'stargazer' in the
+name fallback. Preserve existing Google #gid effect and app/chart behavior.
+
+**Do — native phone page.** Extend the existing bootstrapNativeAuth local Flow
+provider union to google/phone. Keep origin https://asknatally.online, unique
+port/state/provider fragment fields, port30000–65535,64 lower-case-hex state,
+five metadata-only sessionStorage fields,300s expiry, same Google redirect
+logic, named natally-native-auth Firebase app, session persistence and existing
+loopback form POST. Never start Google for a phone flow. Add stable HTML IDs
+`native-auth-description`, `native-auth-phone-form`, `native-auth-phone`,
+`native-auth-recaptcha`, `native-auth-code-form`, `native-auth-code`,
+`native-auth-resend`; phone forms hidden for Google/invalid links. Local
+closures own phone forms, abort/session cleanup, send/resend and busy states.
+Use createPhoneSignInSession with the named current Auth; after send, collect
+the six-digit code and POST `{state,provider:'phone',verificationId,code}`.
+Do not confirm it in the browser: nativePhoneSignIn confirms it once in the
+app; say returning for verification, never verified. Wrong codes surface in
+the native app and allow a fresh attempt. Cancellation POST contains only
+state/provider/cancelled:true; no credentials. Reload asks for a new challenge.
+No fetch/CORS workaround, token URL/storage or protocol weakening.
+
+**Verify (coder runs; orchestrator does not run tests).** Extend the existing
+actual-source VM harness execute/flow/settle in `nativeAuth.test.mjs` for new
+SDK exports, phone challenge and browser-page imports. Exercise real source
+through controlled SDK imports, not a mirrored implementation. Cover email
+SDK arguments and rejection/reset, method-specific errors, phone validation,
+successful confirmation, verifier cleanup on send failure/abort/success,
+disposed/late challenges, malformed native phone results/cancellation, valid
+phone-flow POST/cancel, and existing Google behavior. Replace phone in the
+invalid-provider test with an actually unsupported provider. Run:
+`node --experimental-vm-modules --test src/platform/nativeAuth.test.mjs` and
+`npm run lint`. Use npm ci if dependencies are absent; do not change manifests
+or dependency versions. If the registry cannot satisfy the committed lock,
+report that error and use already-installed matching public dependencies
+from the prior checkout as a read-only dependency source if available; never
+read/copy its product code. Do not invoke a product build except build_all.sh,
+and do not invoke that release/deploy command in this concurrent task.
+
+Record desktop/mobile actual UI video/screenshots under
+`DOCS/DEMONSTRATIONS/firebase-auth-2026-11-11/` using the dev server on an unused
+non-patterned high port. Its existing public src/firebase-applet-config.json
+can supply VITE_FIREBASE_CONFIG locally without printing/committing local
+config. Review forms/validation/scroll/focus against rubric A1–A10. Do not
+send SMS or create accounts using invented/unauthorized identities. Inspect
+provider flags through existing authenticated admin access when available;
+record actual errors otherwise, no blind provider/region/credential changes.
+Real email/SMS/native login stays unverified until actually observed.
+
+**Accept (idempotent).** Both named commands exit0 with all actual-source tests
+passing and no TypeScript errors. Implementation marker [X] means written;
+✅ requires observed command success. Visual/runtime observations are the
+rubric's separate protocol, with explicit pending rows where unexercised.
+Re-read edited regions; report task, exact files, command/output, artifacts
+and unverified gaps. The parent is sole Git integrator: notify after each
+completed logical change; parent commits/pushes promptly. No worker Git
+mutations or force push. Parent fetches/merges current master before normal
+integration, preserving the other session's commits.
+
 1:1 translation of DOCS/ARCHITECTURE.md. One coder per task, disjoint files,
 frozen contracts. ⬜ · 🔧 · ✅ · 🛑. Acceptance: section complete, `tsc
 --noEmit` clean, owned files only, no placeholders, commit+push.
