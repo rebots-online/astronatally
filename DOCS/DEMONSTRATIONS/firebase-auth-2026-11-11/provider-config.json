@@ -1,0 +1,16 @@
+{
+  "recordedAtUtc": "2026-11-12T02:05:00Z",
+  "source": "GET https://identitytoolkit.googleapis.com/admin/v2/projects/gen-lang-client-0714568880/config",
+  "access": "Existing operator Firebase CLI OAuth login, refreshed by firebase-tools projects:list; no settings changed",
+  "projectId": "gen-lang-client-0714568880",
+  "email": { "enabled": true, "passwordRequired": true },
+  "phoneNumber": { "enabled": true },
+  "smsRegionConfig": { "allowlistOnly": { "allowedRegions": ["CA", "US"] } },
+  "authorizedPurchasedDomains": [
+    "astronatally.com",
+    "www.astronatally.com",
+    "asknatally.online",
+    "www.asknatally.online"
+  ],
+  "scope": "Observed provider/domain configuration only. No real email sign-in, password-reset delivery, SMS delivery, code confirmation, native runtime, or deployment acceptance is claimed."
+}

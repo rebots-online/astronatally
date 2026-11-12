@@ -28,3 +28,14 @@ Automated source tests certify wiring and lifecycle only, never real login.
 Observation status at authorship: all rows pending. Build/deployment and real
 email/SMS/native acceptance require observed results; local UI recordings and
 SDK contract tests must be labelled with their actual scope.
+
+## Observations
+
+- A13 provider-configuration portion observed 2026-11-11 (02:05 UTC Nov12):
+  Email/password and Phone are enabled; SMS regions are Canada/US; both
+  purchased apexes and their www hosts are authorized. Exact safe projection:
+  [provider-config.json](DEMONSTRATIONS/firebase-auth-2026-11-11/provider-config.json).
+  The initial service-account config read returned403; the documented existing
+  operator OAuth route succeeded after `npx --yes firebase-tools projects:list
+  --json` (exit0, active project visible). No provider/domain settings changed.
+  Real account/SMS journeys and the rest of the rubric remain pending.
