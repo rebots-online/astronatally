@@ -251,7 +251,7 @@ export function LandingCards({ onSection, onSignIn, signingIn }: LandingCardsPro
           >
            {signingIn ? 'Signing in…' : "Create your natal chart — it's free"}
           </button>
-          <p className="landing-card-aside">Free — sign in with Google.</p>
+          <p className="landing-card-aside">Free — sign in with Google, email or SMS.</p>
          </>
         )}
        </article>
