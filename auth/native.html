@@ -20,13 +20,34 @@
       button.secondary { background: transparent; color: #ffe084; }
       button:focus-visible { outline: 3px solid #fff3d2; outline-offset: 4px; }
       button:disabled { cursor: default; opacity: .55; }
+      form { display: grid; gap: 14px; margin-top: 22px; }
+      form[hidden] { display: none; }
+      label { font-weight: bold; }
+      input { min-width: 0; width: 100%; min-height: 48px; box-sizing: border-box; border: 1px solid #9e7a35; border-radius: 10px; padding: 12px; background: #120c1c; color: #fff3d2; font: inherit; font-size: 16px; }
+      input:focus-visible { outline: 3px solid #fff3d2; outline-offset: 4px; }
+      .hint { color: #d8c6ae; font-size: .9rem; }
+      #native-auth-recaptcha:empty { display: none; }
     </style>
   </head>
   <body>
     <main aria-labelledby="native-auth-title">
       <h1 id="native-auth-title">Sign in to Natally</h1>
-      <p>Your Google sign-in takes place in this browser, then returns to the Natally app.</p>
+      <p id="native-auth-description">Your Google sign-in takes place in this browser, then returns to the Natally app.</p>
       <p id="native-auth-status" role="status" aria-live="polite">Preparing your sign-in…</p>
+      <form id="native-auth-phone-form" hidden>
+        <label for="native-auth-phone">Mobile phone number</label>
+        <input id="native-auth-phone" name="phone" type="tel" autocomplete="tel" required pattern="\+[1-9][0-9 ().\-]{7,25}" title="Start with + and your country code, using 8–15 digits." />
+        <p class="hint">Include + and your country code, followed by 8–15 digits. SMS sign-in is currently available for Canada and the United States.</p>
+        <p class="hint">By choosing Send SMS code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.</p>
+        <button type="submit">Send SMS code</button>
+      </form>
+      <div id="native-auth-recaptcha" aria-label="SMS reCAPTCHA verification"></div>
+      <form id="native-auth-code-form" hidden>
+        <label for="native-auth-code">Six-digit SMS code</label>
+        <input id="native-auth-code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required />
+        <button type="submit">Return to Natally for verification</button>
+        <button id="native-auth-resend" class="secondary" type="button">Request a new code</button>
+      </form>
       <div class="actions">
         <button id="native-auth-continue" type="button" disabled>Continue with Google</button>
         <button id="native-auth-cancel" class="secondary" type="button" disabled>Cancel sign-in</button>
