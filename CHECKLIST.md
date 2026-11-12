@@ -808,3 +808,15 @@ BUILD-MATRIX-PACKAGED 1.31.768 (exit0). SDK badging observed application ID
 mba.robin.astronatally, versionName1.31.768; apksigner exited0 with one valid
 v2 signer matching the configured production certificate. Exact observations
 are committed at7490239 under dist/natally-v1.31.768/verification/.
+
+
+## v1.32.768 — Architecture-derived visual correction (2026-11-11)
+
+Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/ARCHITECTURE.md §2026-11-11; executor=GLM coder under architect-defined contract; status=NOT_STARTED; KStore=Admin-Manual; release=1.32.768.
+
+- [ ] Inspect current landing and app chart geometry and locate top/bottom clipping, including CSS stage bounds and WebGL/SVG renderer framing. Correct clipping without distorting wheel, changing astrological data, or hiding required markers.
+- [ ] Preserve full wheel scale and place Natally inset deliberately over upper-left wheel quadrant, without chart reflow/shrink. Preserve swap-zoom, drag, focus, and click interactions.
+- [ ] Define reusable dark translucent acrylic text-surface treatment in shared design tokens/styles; apply across landing and atelier text-bearing panels including bottom captions, scroll prompt, planet details, educational cards and floating callouts. Do not blanket-style buttons or art.
+- [ ] Prevent canonical build_all.sh from silently bumping already preselected v1.32 to v1.33 on operator's first local invocation; do not alter other release semantics.
+- [ ] Verify CSS/TS checks, responsive layout, real rendering and user interactions; mark unverified tests explicitly rather than claim they passed.
+- [ ] Commit and push source changes to master, report exact SHA. Operator alone pulls and runs build_all.sh locally; never access ASRock.
