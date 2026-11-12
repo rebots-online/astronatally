@@ -42,3 +42,48 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+
+/* Natally v1.32: common acrylic material for informational text surfaces.
+   Applied to actual panels, not buttons, artwork or the natal wheel. */
+:root {
+  --natally-acrylic-bg: rgb(16 10 25 / 60%);
+  --natally-acrylic-border: rgb(201 164 92 / 42%);
+  --natally-acrylic-filter: blur(16px) saturate(125%);
+}
+
+:is(
+  .atelier-scene__caption,
+  .reading-stage__view-note,
+  .reading-stage__inset-focus span,
+  .lesson-card,
+  .sheet,
+  .account-panel,
+  .marketing-frame__text,
+  .marketing-frame__caption,
+  .marketing-frame__instruction,
+  .marketing-frame__lesson,
+  .marketing-frame__status,
+  .marketing-frame__notice,
+  .marketing-account__menu,
+  .account-billing,
+  .astrolabe-tooltip
+) {
+  background: var(--natally-acrylic-bg);
+  border-color: var(--natally-acrylic-border);
+  -webkit-backdrop-filter: var(--natally-acrylic-filter);
+  backdrop-filter: var(--natally-acrylic-filter);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :is(.atelier-scene__caption, .reading-stage__view-note,
+    .reading-stage__inset-focus span, .lesson-card, .sheet,
+    .account-panel, .marketing-frame__text, .marketing-frame__caption,
+    .marketing-frame__instruction, .marketing-frame__lesson,
+    .marketing-frame__status, .marketing-frame__notice,
+    .marketing-account__menu, .account-billing, .astrolabe-tooltip) {
+    background: rgb(16 10 25 / 94%);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
