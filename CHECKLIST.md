@@ -817,6 +817,6 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 - [ ] Inspect current landing and app chart geometry and locate top/bottom clipping, including CSS stage bounds and WebGL/SVG renderer framing. Correct clipping without distorting wheel, changing astrological data, or hiding required markers.
 - [ ] Preserve full wheel scale and place Natally inset deliberately over upper-left wheel quadrant, without chart reflow/shrink. Preserve swap-zoom, drag, focus, and click interactions.
 - [ ] Define reusable dark translucent acrylic text-surface treatment in shared design tokens/styles; apply across landing and atelier text-bearing panels including bottom captions, scroll prompt, planet details, educational cards and floating callouts. Do not blanket-style buttons or art.
-- [ ] Prevent canonical build_all.sh from silently bumping already preselected v1.32 to v1.33 on operator's first local invocation; do not alter other release semantics.
+- [x] Version identity was advanced before implementation: version.json and version.txt = 1.32.768. Do not modify build_all.sh, build numbering, or automatic version advancement; operator accepts whatever next version the canonical build produces.
 - [ ] Verify CSS/TS checks, responsive layout, real rendering and user interactions; mark unverified tests explicitly rather than claim they passed.
 - [ ] Commit and push source changes to master, report exact SHA. Operator alone pulls and runs build_all.sh locally; never access ASRock.
