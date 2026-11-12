@@ -37,6 +37,7 @@ import {
  describeSignInFailure,
  googleSignIn,
  googleSignInForIdToken,
+ isNativeAuth,
  onAuthChange,
  redirectSignInFailure,
  signInWithGoogleIdToken,
@@ -75,6 +76,7 @@ import { LandingCards, LANDING_SECTIONS } from './landing/LandingCards';
 import VersionBadge from './VersionBadge';
 import TopUpSheet from './TopUpSheet';
 import './app-shell.css';
+import { SignInPanel } from './SignInPanel';
 
 // The keepsake tree (report authoring + PDF export) is heavy; the dynamic
 // import keeps it out of the app entry chunk and is the seam shared with the
@@ -297,6 +299,7 @@ const LANDING_STORY_MAX_PICKS = 12;
 const LANDING_NARROW_QUERY = '(max-width: 760px)';
 const PRODUCT_LANDING_HOSTS: readonly string[] = ['astronatally.com', 'www.astronatally.com'];
 const GID_FRAGMENT = 'gid';
+const AUTH_METHOD_QUERY = 'auth';
 const EXAMPLE_BIRTH: BirthInput = {
  dateIso: '1988-08-31',
  timeIso: '14:30',
@@ -393,6 +396,17 @@ export default function App() {
  const [souvenirOpen, setSouvenirOpen] = useState(false);
  const [signingIn, setSigningIn] = useState(false);
  const [signInError, setSignInError] = useState<string | null>(null);
+ const [initialAuthMethod, setInitialAuthMethod] = useState<'email' | 'phone' | undefined>(() => {
+  const method = new URLSearchParams(window.location.search).get(AUTH_METHOD_QUERY);
+  return method === 'email' || method === 'phone' ? method : undefined;
+ });
+ const [signInOpen, setSignInOpen] = useState(() => initialAuthMethod !== undefined);
+ useEffect(() => {
+  if (!initialAuthMethod) return;
+  const url = new URL(window.location.href);
+  url.searchParams.delete(AUTH_METHOD_QUERY);
+  window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+ }, [initialAuthMethod]);
  // The landing (§12.1): its own presentation state drives the same stage
  // arrangement the signed-in page uses — ReadingStage's two panes plus the
  // clean-room inset — plus the #gid= handoff status, the renderer's chart
@@ -947,6 +961,7 @@ export default function App() {
     setSignInError(null);
     setSigningIn(false);
     setGidHandoffSigningIn(false);
+    if (user) setSignInOpen(false);
     if (user === null) {
      // While the page is still on the splash: the landing's panes restore
      // their placement as they mount (§12.1 4c), so the seed is written
@@ -958,7 +973,7 @@ export default function App() {
       ? {
        status: 'signedIn',
        uid: user.uid,
-       name: user.displayName ?? user.email ?? 'stargazer',
+       name: user.displayName ?? user.email ?? user.phoneNumber ?? 'stargazer',
        email: user.email ?? null,
        photoUrl: user.photoURL ?? null,
       }
@@ -1314,7 +1329,7 @@ export default function App() {
         type="button"
         className="btn primary small app-header__signin"
         disabled={signingIn}
-        onClick={() => void signIn()}
+        onClick={() => setSignInOpen(true)}
        >
         {signingIn ? 'Signing in…' : 'Sign in'}
        </button>
@@ -1337,7 +1352,7 @@ export default function App() {
           type="button"
           className="btn primary"
           disabled={signingIn}
-          onClick={() => void signIn()}
+          onClick={event => { closeMenuDetails(event); setSignInOpen(true); }}
          >
           {signingIn ? 'Signing in…' : 'Sign in'}
          </button>
@@ -1367,7 +1382,7 @@ export default function App() {
             cards that scroll by over the atelier. */}
     <LandingCards
      onSection={handleLandingSection}
-     onSignIn={() => void signIn()}
+     onSignIn={() => setSignInOpen(true)}
      signingIn={signingIn}
     />
     {/* Her words shown as she speaks them (§12.1 5b): welcome, a tapped
@@ -1376,6 +1391,15 @@ export default function App() {
      <KaraokeCaption />
     </div>
     <VersionBadge />
+    {signInOpen && (
+     <SignInPanel
+      onClose={() => { setSignInOpen(false); setInitialAuthMethod(undefined); }}
+      onGoogle={signIn}
+      initialMethod={initialAuthMethod}
+      googleError={signInError}
+      continueOnApp={PRODUCT_LANDING_HOSTS.includes(window.location.hostname) && !isNativeAuth()}
+     />
+    )}
    </>
   );
  }

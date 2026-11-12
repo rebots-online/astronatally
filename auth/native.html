@@ -36,7 +36,7 @@
       <p id="native-auth-status" role="status" aria-live="polite">Preparing your sign-in…</p>
       <form id="native-auth-phone-form" hidden>
         <label for="native-auth-phone">Mobile phone number</label>
-        <input id="native-auth-phone" name="phone" type="tel" autocomplete="tel" required pattern="\+[1-9][0-9 ().\-]{7,25}" title="Start with + and your country code, using 8–15 digits." />
+        <input id="native-auth-phone" name="phone" type="tel" autocomplete="tel" required pattern="[+][1-9][0-9 .\(\)\-]{7,25}" title="Start with + and your country code, using 8–15 digits." />
         <p class="hint">Include + and your country code, followed by 8–15 digits. SMS sign-in is currently available for Canada and the United States.</p>
         <p class="hint">By choosing Send SMS code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.</p>
         <button type="submit">Send SMS code</button>
