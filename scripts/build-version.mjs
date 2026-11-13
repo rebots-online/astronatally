@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { readProductRelease } from './product-release.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
@@ -18,20 +19,27 @@ export function formatDisplayVersion(version) {
 }
 
 export function stampBuild(now = Date.now(), directory = root) {
+  const policy = readProductRelease(directory);
   const source = JSON.parse(readFileSync(join(directory, 'version.json'), 'utf8'));
   formatDisplayVersion(source.version);
-  const [major, minor] = source.version.split('.');
-  const version = `${major}.${minor}.${epochBuildNumber(now)}`;
-  const identity = { ...source, version, displayVersion: formatDisplayVersion(version), builtAt: new Date(now).toISOString() };
+  const [sourceMajor, sourceMinor] = source.version.split('.').map(Number);
+  if (sourceMajor > policy.releaseMajor) throw Error('Source version is ahead of the configured release lineage');
+  const minor = sourceMajor < policy.releaseMajor ? policy.initialMinor : Math.max(sourceMinor, policy.initialMinor);
+  const version = `${policy.releaseMajor}.${minor}.${epochBuildNumber(now)}`;
+  const identity = { ...source, sourceRole: 'generated', policySource: 'config/product-release.json',
+    projectId: policy.projectId, repository: policy.repository, webOrigin: policy.webOrigin,
+    version, displayVersion: formatDisplayVersion(version), builtAt: new Date(now).toISOString() };
   writeFileSync(join(directory, 'version.json'), JSON.stringify(identity, null, 2) + '\n');
   writeFileSync(join(directory, 'version.txt'), version + '\n');
   return identity;
 }
 
 export function advanceSourceVersion(directory = root) {
+  const policy = readProductRelease(directory);
   const release = JSON.parse(readFileSync(join(directory, 'version.json'), 'utf8'));
   formatDisplayVersion(release.version);
   const [major, minor, build] = release.version.split('.');
+  if (Number(major) !== policy.releaseMajor || Number(minor) < policy.initialMinor) throw Error('Cannot advance a source outside its configured release lineage');
   const version = `${major}.${Number(minor) + 1}.${build}`;
   const identity = { ...release, version, displayVersion: formatDisplayVersion(version), builtAt: null };
   writeFileSync(join(directory, 'version.json'), JSON.stringify(identity, null, 2) + '\n');

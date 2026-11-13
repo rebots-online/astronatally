@@ -2,7 +2,7 @@ use std::{io::{Read, Write}, net::{TcpListener, TcpStream}, sync::atomic::{Atomi
 use serde::{Deserialize, Serialize};
 use tauri_plugin_opener::OpenerExt;
 
-const ORIGIN: &str = "https://asknatally.online";
+const ORIGIN: &str = env!("NATALLY_WEB_ORIGIN");
 const LIMIT: usize = 32768;
 static ACTIVE: AtomicBool = AtomicBool::new(false);
 static CANCELLED: AtomicBool = AtomicBool::new(false);
