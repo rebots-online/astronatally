@@ -1,7 +1,56 @@
 # 2026-11-13 — current cloud revision tasks
 
-Authority: DOCS/ARCHITECTURE.md §23; operator's immersive Stitch request.
+Authority: DOCS/ARCHITECTURE.md §23–25; operator's immersive Stitch and separate
+v2 release requests. §25 supersedes historical dual-host/1.x release recipes.
 Historical completion marks below do not establish acceptance for this revision.
+
+## Separate v2 release — frozen contract
+
+Observation contract: DOCS/RUBRIC-v2-release-2026-11-13.md, authored before adapter
+code. Coders implement §25 exactly; no frozen UI/service redesign, manual version
+edits, new tests, feature branches or unrelated source work.
+
+- [x] V2-PROJECT: restore Manual APP_INVENTORY and register Astronatally as a
+  separate Natally-Ai-studio derivative with v2 host; unranked portfolio pointer.
+- [ ] V2-CREDENTIALS: privately reconcile shared Surge/Namecheap and generated
+  parent/fork scopes, production signer/client/Stitch provenance and QR/compendium.
+- [ ] V2-MASTER: preserve and FF-integrate prior UI work onto master; record
+  delegated before/after guest/auth rendering and verified GitHub reachability.
+- [ ] V2-RELEASE-CODE: implement config/product-release.json and validated
+  readProductRelease; automatic2.1 lineage initialization, sole v2 publication,
+  unchanged minute stamp/success-only minor advancement, Rust origin adapters.
+  Own only §25.7 RELEASE-CODE files. Preserve namespace/services/UI. Add actual
+  CC11 windows-msix package with exact existing assets/current executable and
+  supported Microsoft packer; complete includes this group. Existing inventory
+  adds source identity/local+public locations, actual web archive, complete
+  releases/<version> data and current.json; final same-v2 publication plus served
+  byte/hash readback occurs before minor advancement. No new module names beyond
+  readProductRelease; inner packaging helpers remain closure-local.
+- [ ] V2-FRONTEND-ORIGIN: implement productWebOrigin from raw canonical config;
+  remove activated obsolete cross-domain AppShell branch/continueOnApp; optional
+  existing SignInPanel continuation uses configured origin; native browser guard
+  exact same origin. Own only §25.7 FRONTEND-ORIGIN files. Preserve synchronous
+  Google click, ?auth/#gid consumers, all providers/protocol and exported markup.
+- [ ] V2-DESIGN-LOCATION: move actual baseline/revised exports and DESIGN.md to
+  §25.6 canonical LIBS/UI/STITCH homes byte-for-byte; existing dated DOCS paths
+  become relative symlinks. Add canonical README intent/state/task mapping.
+- [ ] V2-DNS: complete backed-up serialized Namecheap all-hosts update for only
+  v2 CNAME geo.surge.sh; private pre/post raw, normalized, zone and restore recipe
+  committed/pushed with complete semantic comparison. A denied request is pending.
+- [ ] V2-BUILD: delegated canonical build with real Manual credentials and shared
+  cloud tools; actual entire §25.4 matrix plus final publication/readback succeed.
+  Record epoch minute, each actual artifact/signature/hash, release identity and
+  success-only next-source MINOR. No old inventory or unpublished zip is proof.
+- [ ] V2-OBSERVATION: actual v2 TLS/badge/routing and four-viewport frozen UI
+  conformance after release; record what was exercised and provider paths still
+  unobserved. No claim of live login/purchase/market success without observation.
+
+Root owns architecture/checklist/Manual project index and explicit-path commits.
+RELEASE-CODE, FRONTEND-ORIGIN, DESIGN-LOCATION, MANUAL-CREDENTIALS and DNS-ZONE
+have disjoint ownership under §25.7. Workers return source/evidence for immediate
+parent commit/push on master. Root does not run verification commands.
+
+## Immersive revision implementation record
 
 - [x] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
   display with numeric native SemVer; retain current MINOR at build start.

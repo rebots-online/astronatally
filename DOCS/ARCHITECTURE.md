@@ -3,6 +3,9 @@
 **Current authority (2026-11-13):** the operator's cloud-workspace request for
 `rebots-online/astronatally` supersedes conflicting historical instructions.
 The build correction in §23 and immersive UI revision in §24 are frozen.
+The operator-authorized separate v2 release amendment in §25 supersedes
+historical host, lineage and platform-matrix instructions without redesigning
+the frozen screens or changing their functional contracts.
 §24.6 identifies the actual authoritative Stitch exports; no coder may infer
 a revised interface from the historical snapshot below. This work
 uses this repository and its actual assets, not a sibling repository or
@@ -1648,3 +1651,219 @@ The wrapper may retain the actual last submitted draft in memory to bind the
 frozen casting-error Try again/Edit birth details actions to its existing
 calculation callback. No new module entity, service, storage policy or
 calculation behavior is introduced.
+
+
+## 25. Separate Astronatally v2 release — FROZEN 13 November 2026
+
+The operator explicitly identifies `rebots-online/astronatally` as a separate
+derivative of Natally-Ai-studio, requests its own **Admin Manual project entry**,
+and authorizes publication at **https://v2.astronatally.com** with a version
+**above 2.0**. No new repository or replacement Stitch project is implied.
+The original 1.32 lineage at astronatally.com and the existing asknatally.online
+deployment are preserved. This section overrides §12.1, §23/24 domain roles,
+old AGENTS rules11/13 and prior dual-host publication rubrics only where they
+conflict with this explicit release instruction. §24's 52-state interface,
+copy, geometry, assets and existing services remain frozen.
+
+### 25.1 Authority, single sources and project registration
+
+The official GitHub `rebots-online/Admin-Manual` mirror is the operator-designated
+authority. Forgejo is down and must not be contacted. No Composio is used.
+The Manual's existing INC-17 names `DOCS/APP_INVENTORY.md` as the resource index;
+it was absent from this mirror and is restored with the separate Astronatally
+entry. `DOCS/PORTFOLIO.md` receives an organic unranked entry, not an invented
+priority. `CREDENTIALS/Natally/` retains its parent identity/path;
+`CREDENTIALS/Astronatally/` records this fork. Shared Surge and Namecheap records
+are canonical under `CREDENTIALS/global-infrastructure/`. Parent/fork copies
+are explicitly generated mirrors with source/provenance, not competing owners.
+Preserve distinct existing credential sets, the shared production Android signer,
+and complete private QR/compendium coverage. Public source carries no secrets.
+
+The single public machine source is **config/product-release.json**:
+
+```json
+{
+  "sourceRole": "source",
+  "projectId": "astronatally-v2",
+  "repository": "rebots-online/astronatally",
+  "releaseMajor": 2,
+  "initialMinor": 1,
+  "webOrigin": "https://v2.astronatally.com"
+}
+```
+
+`readProductRelease(directory)` validates this schema, integer version policy,
+exact repository identity, and an HTTPS origin with no path/query/fragment.
+It returns this data; its direct CLI supports `origin` and `hostname` for shell
+consumers. It does not stamp versions. `version.json`, version.txt, npm/Cargo/
+Tauri/Android metadata and release inventories are labelled generated identity
+consumers. The native identifier `mba.robin.astronatally`, product name Natally,
+provider settings, prices and business logic do not change.
+
+### 25.2 Automatic lineage initialization and successful-build advancement
+
+`build_all.sh` remains the sole entry and sole caller of identity mutation.
+`stampBuild(now,directory)` reads the release source above and existing numeric
+source identity. When the old major is lower than releaseMajor, it automatically
+starts **2.1**; when the major is2, preserve the current minor at least1. Reject
+a source major above the configured major rather than silently downgrading.
+Never hand-edit generated version files to cross the lineage boundary.
+
+The build field stays exactly `floor(now / 60000) % 10000`. Human display pads
+it to five digits; native SemVer uses its integer representation. The one
+stamped release identity is projected into every web/native package and all
+package manifests. After web publication **and every required native target**
+succeed, `advanceSourceVersion` advances source MINOR once and clears builtAt.
+Artifacts keep the built version. Failed publication/packaging never advances
+source minor. No counter-based build number and no unconditional start-of-run
+minor increment are introduced. This operator-specific contract supersedes
+the Manual's generic CC2 timing. Two observed version numbers per successful
+run (release and next source) are intentional.
+
+### 25.3 One deployment origin and preserved authentication boundaries
+
+The shell derives the sole Surge hostname from readProductRelease and publishes
+only to `v2.astronatally.com` with HTTPS forced. It never publishes this
+fork to the apex or asknatally.online. The original release command's ordering
+remains web first, then native packaging. Existing manifests record the source
+project/repository/origin so separate lineages cannot be confused.
+
+Frontend `productWebOrigin()` reads that same JSON (Vite raw JSON import),
+returning its webOrigin without duplicating a hostname literal. AppShell's
+obsolete dual-domain landing-host branch and activated continueOnApp flag are
+removed: the canonical v2 app and landing are one origin, and Google sign-in
+continues synchronously from the existing click into existing googleSignIn.
+Keep existing `?auth` and `#gid` consumers and all form/provider cleanup.
+SignInPanel's retained optional continuation branch, if called by an existing
+consumer, derives its destination from productWebOrigin rather than the old
+lineage. No new form, screen, provider or identity policy is introduced.
+
+Native browser bootstrap requires exact productWebOrigin. `src-tauri/build.rs`
+reads the same JSON using its existing serde_json dependency, declares the
+rerun input and emits `NATALLY_WEB_ORIGIN` as a Rust compile-time environment
+value. Existing native_auth ORIGIN becomes `env!("NATALLY_WEB_ORIGIN")`, binding
+both the system-browser URL and exact receive Origin check to that value.
+Port/state/provider/nonce/deadline/field checks, memory-only credentials,
+loopback POST and cancellation semantics are unchanged. Do not relax validation
+to make the new host work. Add v2 to the existing Firebase authorized domains
+when the provider requires it, preserving all existing domains and provider
+settings; any existing CORS allowlist addition is similarly configuration-only.
+No billing or inference host substitution is authorized.
+
+### 25.4 Complete platform packaging under Manual CC11
+
+The manual cloud build uses shared persistent toolchains, never CI to discover
+a recipe. Required artifacts are web; Linux x64 AppImage/deb/rpm; Windows x64
+executable, NSIS installer, MSI **and MSIX**; production-signed Android arm64
+APK/AAB and native debug symbols. macOS/iOS are not defined by this repository.
+CC11's MSIX floor is an additional package of the same Windows executable, not
+a new interface, service, namespace or Store submission.
+
+Existing build-native's target wrapper adds `windows-msix`; complete requires
+all five native target groups. Use Microsoft's official MSIX Packaging SDK
+`makemsix pack -d <payload> -p <output>` from the persistent shared toolchain.
+Construct the payload in the named per-release build directory with the actual
+current-version Windows executable and actual non-system runtime sidecars it
+requires. Never collect an executable from a failed Windows target. The actual
+existing StoreLogo50px, Square44x44Logo44px and Square150x150Logo150px assets
+are copied byte-for-byte into Assets. Generated AppxManifest.xml derives:
+
+- Identity Name from `mba.robin.astronatally`, publisher `CN=rebots-online` and
+  PublisherDisplayName from the existing Cargo author `rebots-online`; these
+  describe a local package, not a claimed Store/certificate identity.
+- DisplayName from existing productName Natally; application Id Natally;
+  executable natally-ai-studio.exe; x64 and four-part numeric release version.
+- Windows.Desktop minimum/tested10.0.22000.0, Windows.FullTrustApplication entry,
+  existing product description/background and required runFullTrust capability.
+
+Stage the validated current .msix with bytes/hash in inventory. Record signature
+status honestly; no Store upload, certificate generation or invented signing
+identity is authorized. Existing Windows exe/MSI/NSIS remain ordinary desktop
+distribution artifacts. Android production certificate comparison, ZIP alignment,
+AAB signature verification and real symbol extraction remain mandatory.
+A missing/failed package group means the canonical run is incomplete.
+
+### 25.5 Serialized DNS change and complete zone preservation
+
+The user authorizes the Namecheap change `v2 CNAME geo.surge.sh`. The target is
+exactly geo.surge.sh, not an alternate Surge suffix. Because setHosts replaces
+the record set, the DNS operator must first get the complete live host set,
+preserve raw response, normalized semantic records, usable zone export and
+credential-free restoration recipe in the private Manual under
+`CREDENTIALS/global-infrastructure/dns/astronatally.com/`, commit/push it to
+GitHub master and verify reachability. Immediately re-read to detect concurrent
+changes, then submit every old record plus the one intended v2 record in a
+single serialized operation. If v2 already matches, do not mutate needlessly.
+
+Read back the full provider set and compare all old semantic fields (including
+TTL, MX priority and provider flags) plus v2; provider IDs/order may differ.
+Preserve and commit the resulting complete zone export in the same indexed
+location. DNS errors do not count as backups or successful changes. Use actual
+caller IP metadata and documented authorized provider routes; keep current
+records untouched if a full backup or safe provider access is unavailable.
+No change to original apex/www/asknatally records is authorized.
+
+Release artifacts remain machine data, not a new product screen. Existing
+versioned inventory is the generated CC4 manifest: include project/repository/
+origin, actual local locations and intended v2 public artifact locations with
+their observed publication status. Archive the exact initial dist-web before
+adding native downloads, then stage actual current packages and immutable
+inventory under `dist-web/releases/<version>/`, with generated
+`dist-web/releases/current.json` as the current pointer. Do not include raw
+private environment/log inputs. After every native target succeeds, publish
+that same v2 site again with the complete artifact set, then verify the served
+manifest identity and actual package bytes/hashes before advancing source minor.
+The final publication/readback is part of the successful matrix. A failed final
+publication does not advance minor. No download marketing page or frozen UI
+change is introduced; the final handback can link the generated artifact URLs.
+
+### 25.6 Canonical frozen artifacts and workflow reconciliation
+
+TC12's canonical location is `LIBS/UI/STITCH/`: DESIGN.md plus
+`screens/6e69d41b4a4e418b97b5c83ac901f264/` (baseline) and
+`screens/d69e9b3247ff40fa90415cc2ca24abe4/` (revised52 states). Move the existing
+exports and design there **without changing their bytes**. Existing
+DOCS/STITCH dated paths and DOCS/DESIGN.md become relative read-through
+symlinks so historical links still resolve to the same sole authoritative
+files; they are not independently editable mirrors. A canonical README maps
+IDs to intent and UI-BASELINE/UI-SPECIFICATION/UI-* tasks. Hashes in §24.6 stay
+unchanged, and production's exported CSS remains byte-identical.
+
+TC10 requires master-only work. The preserved feature branch was fast-forward
+integrated into master with no working-tree source-byte changes; remote
+reachability and delegated before/after actual guest/auth rendering establish
+that workflow remediation. Future work is directly on master, explicit-path
+commits/pushes, no force and no loss of concurrent work. Frozen input date
+syntax YYYY/MM/DD is retained as an operator-frozen UI exception to the
+Manual's general month-name display preference; archival timestamps/zone
+exports retain machine formats, while new prose uses month names.
+
+### 25.7 Registered adapters and exclusive coder contracts
+
+| Entity / adapter | File | Exact role |
+| --- | --- | --- |
+| Product release source | config/product-release.json | Sole policy schema in25.1; no credential values |
+| readProductRelease | scripts/product-release.mjs | Exported `(directory=repoRoot)=>validatedConfig`; CLI origin/hostname; no identity mutation |
+| productWebOrigin | src/platform/env.ts | Exported `():string`; consumes canonical source raw JSON |
+| stampBuild / advanceSourceVersion | scripts/build-version.mjs | Existing signatures; automatic2.1 migration and success-only advancement in25.2 |
+| main / ORIGIN adapters | src-tauri/build.rs; src-tauri/src/native_auth.rs | Existing functions/constant; same JSON→compile-time origin→launch/strict-receive |
+| Existing prepare / target / inventory | scripts/build-native.mjs | Reject wrong lineage, existing identity projections; closure-local MSIX packaging and actual inventory |
+| Existing App / signIn / SignInPanel / choose / bootstrapNativeAuth | Existing owning files | Configured single-origin routing; unchanged screens/providers/protocol |
+| Canonical Stitch reference | LIBS/UI/STITCH/README.md | IDs, intent, task mapping and sole-source/legacy-symlink relationship |
+
+RELEASE-CODE owns config/product-release.json, scripts/product-release.mjs,
+scripts/build-version.mjs, scripts/build-native.mjs, build_all.sh,
+src-tauri/build.rs and src-tauri/src/native_auth.rs. FRONTEND-ORIGIN owns
+src/platform/env.ts, src/platform/nativeAuthPage.ts, src/app/AppShell.tsx and
+src/app/SignInPanel.tsx only. DESIGN-LOCATION owns immutable artifact moves,
+legacy symlinks and canonical README. MANUAL-CREDENTIALS and DNS-ZONE own only
+the previously assigned private Manual subtrees. No coder changes version
+files manually or invents further module entities.
+
+Acceptance uses the preauthored v2 rubric and actual canonical command, not
+new unit tests. Delegated actual rendering checks preserve frozen composition,
+auth chooser/email navigation and stable scene; live v2 fetch/TLS/version
+checks establish publication. Inventory/logs/actual package metadata/signatures
+establish every target. Root coordinates Git integration and source review;
+build/visual verification is delegated. Only the complete successful matrix
+permits source-minor advancement and a completion claim.

@@ -13,9 +13,12 @@
     code; acceptance is a recorded screencast against every rubric checkpoint
     (DOCS/DEMONSTRATIONS/). Static inspection and lint never substitute.
 
-11. Every web publish goes to astronatally.com (the landing) and
-    asknatally.online (the webapp). No deploy depends on temporary
-    subdomains (operator 2026-11-11).
+11. Operator 13 November 2026 supersedes the former dual-domain instruction:
+    this separate Astronatally fork publishes only to v2.astronatally.com,
+    with automatically initialized release major2/minor1. The parent1.32 at
+    astronatally.com and asknatally.online are preserved. The Admin Manual
+    registers this as a separate project, not another parent alias. §25 owns
+    the single release configuration and origin adapters; frozen UI stays.
 4. No placeholder functionality, mock customer experiences, dummy payments,
    or invented customer data.
 5. No greps; no verification runs by the orchestrator; coders locate only
@@ -29,7 +32,7 @@
     moment it is made — one change per commit, never batched, never left
     in the working tree.
 13. `build_all.sh` is the only build entry. Its first step deploys the web
-    build to astronatally.com and asknatally.online (rule 11); native packages (Linux, Windows
+    build to the configured v2.astronatally.com (rule 11); native packages (Linux, Windows
     via cross-compilation, Android) build only after that deploy succeeds.
     Do not run it to package a version with known open defects. Every
     invocation stamps MAJOR.MINOR.BUILD using the current source MINOR and
@@ -37,7 +40,8 @@
     digits, retaining equivalent numeric SemVer in package manifests. Only
     after the entire build succeeds, advance source MINOR +1 and synchronize
     manifests (source builtAt null). Web/native artifacts retain the release
-    identity. No manual version numbers. ARCHITECTURE §23 is authoritative.
+    identity. No manual version numbers. ARCHITECTURE §23/25 are authoritative;
+    complete matrix includes CC11 MSIX and final same-host artifact publication.
 
 14. ARCHITECTURE.md, once frozen, is the only thing produced — period, no
     exceptions. CHECKLIST.md translates it 1:1; subagent coders (never the

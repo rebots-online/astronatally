@@ -5,6 +5,13 @@ Status: **FROZEN**, with the actual 52-state Stitch export and binding/hash
 manifest attached to ARCHITECTURE §24.6. Baseline source is commit04322e9, represented
 in [the new current-UI Stitch project](https://stitch.withgoogle.com/projects/6919345441915622012).
 
+Release amendment, 13 November 2026: Astronatally is a separate derivative of
+Natally-Ai-studio, registered independently in the Admin Manual. This fork
+publishes at **https://v2.astronatally.com** with an automatically initialized
+2.1 lineage; the parent 1.32 deployment is preserved. ARCHITECTURE §25 owns the
+host/version/package adapters. This adds no screen, copy or functional redesign
+to the frozen 52-state product described below.
+
 ## Product and adoption hypothesis
 
 Natally is an astrologer companion whose character, responsive room, spoken
