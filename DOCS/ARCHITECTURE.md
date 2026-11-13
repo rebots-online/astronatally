@@ -1678,6 +1678,12 @@ are canonical under `CREDENTIALS/global-infrastructure/`. Parent/fork copies
 are explicitly generated mirrors with source/provenance, not competing owners.
 Preserve distinct existing credential sets, the shared production Android signer,
 and complete private QR/compendium coverage. Public source carries no secrets.
+Different Surge accounts are distinct credential families: an authenticated
+legacy Natally-v3 token is not evidence of current Natally-ai-studio production
+domain permission. Project provenance must identify the actual deployment
+account/source; preserve other valid shared accounts without promoting them
+to production merely because an old pointer says Natally. Record actual
+provider access observations and unresolved pointers truthfully.
 
 The single public machine source is **config/product-release.json**:
 

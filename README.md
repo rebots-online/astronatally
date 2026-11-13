@@ -119,10 +119,13 @@ for every attempt. Native namespace: `mba.robin.astronatally`.
 
 ### Surge deployment account and domain
 
-Use the existing shared Surge context from the private Admin Manual's
-`CREDENTIALS/global-infrastructure/`, mirrored with provenance in
-`CREDENTIALS/Astronatally/`. The Manual's `DOCS/APP_INVENTORY.md` registers this
-fork separately from the parent. Keep credentials outside this public repository.
+Use the production deployment account identified by the private Admin Manual's
+Natally-ai-studio deployment record and Astronatally provenance. Its canonical
+account record belongs in `CREDENTIALS/global-infrastructure/`, with the project
+mirror in `CREDENTIALS/Astronatally/`. Authentication and permission to publish
+the requested domain are separate observed facts. The Manual's
+`DOCS/APP_INVENTORY.md` registers this fork separately from the parent. Keep
+credentials outside this public repository; current release status is in CHECKLIST.
 
 | Public destination | Purpose | Expected DNS target |
 | --- | --- | --- |
