@@ -168,7 +168,7 @@ appear immediately; decorative typewriter timing must not hide a usable field.
 | Field/view | Exact principal label/action | Specific purpose and layout |
 | --- | --- | --- |
 | Name | **What should I call you?**, Name, **Continue** | Personal address in existing reading; one field directly under question |
-| Birth date | **When were you born?**, Day/Month/Year plus existing calendar, **Continue** | Actual chart input; explicit date parts avoid locale ambiguity; calendar remains optional assistance |
+| Birth date | **When were you born?**, **Birth date (YYYY/MM/DD)** and existing calendar, **Continue** | Preserve the actual typed date widget and its month/day/year chooser; the explicit format avoids locale ambiguity and the calendar remains optional assistance |
 | Birthplace | **Where were you born?**, Birthplace search, actual suggestions and confirmed place, **Continue** | Coordinates and historical IANA zone; chosen location remains visible with Change action |
 | Time | **What time were you born?**, Birth time, existing **I don’t know** option, **Cast my chart** | Real angles/houses depend on time; unknown-time behavior stays exactly as existing astrology service specifies |
 
