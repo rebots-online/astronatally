@@ -81,7 +81,7 @@ export const BODY_TARGET_PX = 44;
 /** Inset width cap as a fraction of stage width (the architecture's 60%). */
 export const INSET_MAX_W = 0.6;
 const COMPACT_INSET_MIN_PX = 96;
-const COMPACT_INSET_DEFAULT_PX = 400;
+const COMPACT_INSET_DEFAULT_PX = 260;
 /** Height = width × aspect; the wheel is square. */
 const ASPECT = 1;
 /** Inset chrome that is not wheel: the drag bar plus both borders, px. */
@@ -553,15 +553,16 @@ export function Inset({
     }
     if (compact) {
       const width = Math.min(
-        window.innerWidth <= 760 ? 180 : COMPACT_INSET_DEFAULT_PX,
+        window.innerWidth <= 768 ? 132 : COMPACT_INSET_DEFAULT_PX,
         allowedWidthPx(stage),
       );
-      const header = document.querySelector('.app-header--front')?.getBoundingClientRect();
-      const host = stageElement()?.getBoundingClientRect();
-      const top = Math.max(DOCK_MARGIN, (header?.bottom ?? 0) - (host?.top ?? 0) - stage.top + DOCK_MARGIN);
+      // Frozen stage-local defaults; header is outside this bounded stage.
+      const narrow = window.innerWidth <= 768;
+      const left = narrow ? 12 : 16;
+      const top = narrow ? 12 : 76;
       reportInvert(false);
       setMode('floating');
-      setGeometry(clampGeometry({ x: DOCK_MARGIN / stage.width, y: top / stage.height, w: width / stage.width }, stage, floorPx));
+      setGeometry(clampGeometry({ x: left / stage.width, y: top / stage.height, w: width / stage.width }, stage, floorPx));
       return;
     }
     // The initial composition is deliberately layered, not docked beside
