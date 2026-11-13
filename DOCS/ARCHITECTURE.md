@@ -1,5 +1,13 @@
 # Architecture — codebase snapshot (2026-11-09, commit `3f00f98`)
 
+**Current authority (2026-11-13):** the operator's cloud-workspace request for
+`rebots-online/astronatally` supersedes conflicting historical instructions.
+The build correction in §23 is frozen independently. The immersive UI revision
+will be frozen only after its new Stitch exports exist; until then no coder
+may infer a revised interface from the historical snapshot below. This work
+uses this repository and its actual assets, not a sibling repository or
+cross-project KStore recollections. Composio is excluded by operator order.
+
 **This document describes what the code IS, not what it should be.** It is the
 normalizing snapshot of the in-development codebase: every subsystem as found,
 zoomed-in where the wiring is non-obvious, with diagrams
@@ -1349,3 +1357,69 @@ Every text-bearing panel throughout the atelier and landing (planet detail callo
 
 ### Release contract and invariant
 Operator requested: version first, visual corrections, push, then local pull and canonical build_all.sh on ASRock. The current repository version.json and version.txt are already 1.32.768. The pre-implementation source version is 1.32.768. Leave build_all.sh and all build-numbering logic untouched; the operator expressly accepts the version generated automatically by the next canonical local build. Do not alter Android namespace, billing, credentials, or unrelated build conventions. Keep version files synchronized and avoid claiming builtAt reflects a new build until one actually occurs. No cloud deployment or native build is claimed as part of GitHub-only editing. Verify source-level regression checks and rendered visual geometry before handoff wherever execution is available. Follow existing KStore Admin-Manual and no-placeholder constraints.
+
+## 23. Successful-build source advancement — FROZEN 2026-11-13
+
+This section supersedes AGENTS.md rule13's epoch-day/prebuild-minor policy,
+§14's numbering description, and the preceding amendment's instruction to
+leave numbering untouched. Scope is exactly the operator's two corrections.
+
+### Identity and sequence
+
+1. The sole build entry remains `build_all.sh`; its existing lock, environment
+   resolution, domain order, signing policy and target matrix remain binding.
+2. At the start of an admitted build, keep the source's current MAJOR.MINOR.
+   Assign BUILD = `Math.floor(epochMilliseconds / 60000) % 10000`, calculated
+   once for that build. This is UTC epoch minutes, not epoch days or a counter.
+3. The numeric canonical version remains valid SemVer in `version.json`,
+   `version.txt`, npm/Cargo/Tauri and platform manifests. For human display,
+   pad BUILD to five digits: `major.minor.${String(build).padStart(5,'0')}`.
+   With modulo10000, the five-digit field starts with zero. Do not silently
+   substitute modulo100000. Native manifests cannot contain numeric components
+   with leading zeros; that normalization is a packaging idiosyncrasy, not a
+   second release. Badges and inventories expose the padded display identity.
+4. Record the artifact's actual `builtAt`, synchronize existing manifests,
+   validate, build/publish both purchased web hosts, and build the existing
+   Linux/Windows/Android matrix. All outputs use this one numeric identity and
+   equivalent padded display identity, even if a build crosses a minute.
+5. Invoke the native packager normally rather than replacing the shell with
+   `exec`, so completion can run only after its successful return. After the
+   entire required artifact matrix succeeds, advance the SOURCE MINOR by one,
+   retain MAJOR and the last epoch-minute BUILD, set source `builtAt:null`,
+   synchronize the same manifests, and commit/push the new source identity.
+   This source version is ready for the next build; it is not a second built
+   release. Existing artifacts and their baked-in badges remain unchanged.
+6. Type, web build, publication or native-target failure must exit nonzero
+   without advancing source MINOR. Do not swallow commit/push failures or
+   report partial native inventory as a successful complete run. A completed
+   artifact set remains distinguishable from subsequent source advancement.
+7. No hand-assigned version, manually incremented build counter, new platform,
+   alternate build entry, dummy signing identity or deployment substitution.
+
+### Registered implementation and verification entities
+
+These rows extend §16 before code is written.
+
+| Entity | File | Frozen responsibility |
+| --- | --- | --- |
+| `epochBuildNumber` | `scripts/build-version.mjs` | Pure `(now)` epoch-minute/modulo10000 calculation |
+| `formatDisplayVersion` | same | Pad only the visible build field; validate numeric input |
+| `stampBuild` | same | Stamp current source MAJOR.MINOR, minute BUILD and actual builtAt; testable with fixture root/time |
+| `advanceSourceVersion` | same | Advance MINOR only in explicit successful completion; source builtAt becomes null |
+| `root`, `versionFile`, `identityFiles` | same | Private repository path/identity-file constants; fixture injection must never change the normal repository default |
+| `displayVersion` | `src/platform/version.ts` | Padded human version alongside existing numeric `version`/`builtAt` |
+| Existing `VersionBadge`, version meta/badge consumers | `src/app/VersionBadge.tsx`, `src/landing/main.tsx`, preserved landing badge path if required | Display the padded identity, keeping numeric package versions intact |
+| Existing native inventory fields | `scripts/build-native.mjs` | Record padded `displayVersion` beside the numeric release version; retain actual per-target evidence |
+| `build-version.test.mjs` | `scripts/` | Deterministic actual-helper tests for minute boundaries/modulo/wrap, source advancement and failed-run ordering using isolated fixture files |
+
+Coder ownership: build scripts, version display consumers and version tests.
+No UI composition, billing, auth, astrology or credential changes are part of
+this section. Toolchains may be installed into this cloud user's directories.
+Missing production credentials are reported, never reconstructed or invented.
+
+Required delivery remains web on `astronatally.com` and `asknatally.online`;
+Linux x64 AppImage/deb/rpm; Windows x64 executable/NSIS/MSI; production-signed
+Android arm64 APK/AAB/native symbols. Existing repository scope does not
+define macOS/iOS releases. Rubric12–15 in
+`RUBRIC-immersive-stitch-2026-11-13.md` govern evidence; user-facing visual
+conformance and actual external-service acceptance are separate observations.

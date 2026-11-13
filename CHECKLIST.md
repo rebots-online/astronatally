@@ -1004,3 +1004,20 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 - [x] Version identity was advanced before implementation: version.json and version.txt = 1.32.768. Do not modify build_all.sh, build numbering, or automatic version advancement; operator accepts whatever next version the canonical build produces.
 - [ ] Local build/typecheck, mobile/desktop screenshots, WebGL fallback and interaction regression tests are NOT RUN in GitHub-only execution. Operator must verify after pulling; do not claim a tested release.
 - [ ] Commit and push source changes to master, report exact SHA. Operator alone pulls and runs build_all.sh locally; never access ASRock.
+# 2026-11-13 — current cloud revision tasks
+
+Authority: DOCS/ARCHITECTURE.md §23; operator's immersive Stitch request.
+Historical completion marks below do not establish acceptance for this revision.
+
+- [ ] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
+  display with numeric native SemVer; retain current MINOR at build start.
+- [ ] BUILD-COMPLETION: return from native packaging and advance source MINOR
+  only after the entire successful matrix; synchronize manifests and commit/push.
+- [ ] BUILD-EVIDENCE: run actual-helper numbering regression checks and the
+  canonical release pipeline; preserve target logs, files and SHA-256 inventory.
+- [ ] UI-BASELINE: retain the newly generated current-UI Stitch HTML/PNG and IDs.
+- [ ] UI-SPECIFICATION: amend PRD, design system and architecture for every
+  screen/state; freeze actual new Stitch exports before assigning UI code.
+- [ ] UI-IMPLEMENTATION: wire the frozen export screens to frozen existing
+  services; record necessary platform adaptations and visual walkthroughs.
+
