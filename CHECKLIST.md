@@ -19,7 +19,7 @@ edits, new tests, feature branches or unrelated source work.
   Preserved tip1b4b65c is now GitHub master; actual comparison evidencefc00173
   records identical guest/chooser geometry. Held-session exceptions are retained
   honestly in its report, with a bounded guest follow-up recording none.
-- [ ] V2-RELEASE-CODE: implement config/product-release.json and validated
+- [x] V2-RELEASE-CODE: implement config/product-release.json and validated
   readProductRelease; automatic2.1 lineage initialization, sole v2 publication,
   unchanged minute stamp/success-only minor advancement, Rust origin adapters.
   Own only §25.7 RELEASE-CODE files. Preserve namespace/services/UI. Add actual
@@ -29,6 +29,9 @@ edits, new tests, feature branches or unrelated source work.
   releases/<version> data and current.json; final same-v2 publication plus served
   byte/hash readback occurs before minor advancement. No new module names beyond
   readProductRelease; inner packaging helpers remain closure-local.
+  Sources9a7f6f8/3729ed1/34a85fb/1dd0623; author syntax/type gates passed.
+  Independent source review resolved exact-version collection and AAB signer
+  verification. This establishes source completion, not package/publication success.
 - [x] V2-FRONTEND-ORIGIN: implement productWebOrigin from raw canonical config;
   remove activated obsolete cross-domain AppShell branch/continueOnApp; optional
   existing SignInPanel continuation uses configured origin; native browser guard
@@ -48,12 +51,14 @@ edits, new tests, feature branches or unrelated source work.
   cloud tools; actual entire §25.4 matrix plus final publication/readback succeed.
   Record epoch minute, each actual artifact/signature/hash, release identity and
   success-only next-source MINOR. No old inventory or unpublished zip is proof.
-- [ ] V2-WEB-REVIEW-GATE: implement §25.8 in build_all.sh only: after first
+- [x] V2-WEB-REVIEW-GATE: implement §25.8 in build_all.sh only: after first
   successful publication print URL/display version, pause for literal BUILD
   from controlling terminal after user review; other input/EOF exit75 before
   native compilation or source-minor advance. Run persistent interactive cloud
   session, preserve the same stamp/bundle while paused. No separate build entry
   or repeated user approval for unchanged UI during packaging-only retries.
+  Sourceca6a667; delegated bash -n passed. A successful publication has not yet
+  reached this gate, so native compilation remains held for the requested review.
 - [ ] V2-OBSERVATION: actual v2 TLS/badge/routing and four-viewport frozen UI
   conformance after release; record what was exercised and provider paths still
   unobserved. No claim of live login/purchase/market success without observation.
@@ -64,6 +69,16 @@ have disjoint ownership under §25.7. Workers return source/evidence for immedia
 parent commit/push on master. Root does not run verification commands.
 
 ## Immersive revision implementation record
+
+Actual v2 attempt: source stampfd4e5ca generated2.1.9519 / display2.1.09519
+at13 November2026 11:59:28.574UTC. Type gate and Vite web build succeeded;
+first Surge publication was rejected for domain permissions. No native target
+started and source MINOR remains1. The selected shared credential authenticates
+for a legacy Natally-v3 deployment; its actual current apex/www production
+ownership is not established by the original Manual pointer. Exact production
+credential provenance is being traced across all official GitHub refs/history.
+Do not repeat publication with the known unauthorized context or claim the
+current live404 is the new interface. User review must precede native packaging.
 
 - [x] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
   display with numeric native SemVer; retain current MINOR at build start.

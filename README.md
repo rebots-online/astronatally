@@ -106,7 +106,10 @@ the Astronatally/shared Manual credentials, automatically initializes an older
 source lineage at2.1, and stamps the current source MAJOR.MINOR with
 `floor(epochMilliseconds / 60000) % 10000`, synchronizes and pushes that release
 identity, validates source, builds/publishes v2.astronatally.com, and
-packages Linux, Windows and Android. It publishes and verifies the actual
+pauses for the requested live web review. Run it in an interactive terminal;
+after approval, type `BUILD` to package Linux, Windows and Android. Other input
+or EOF exits75 without starting native packaging or advancing source minor.
+It publishes and verifies the actual
 complete package set at that same v2 host. Only after the complete matrix succeeds
 does it advance the source MINOR and clear source `builtAt` for the next build.
 The artifacts retain the built version. Human badges show the build field with
