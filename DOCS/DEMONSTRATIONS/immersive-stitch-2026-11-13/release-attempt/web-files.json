@@ -1,0 +1,390 @@
+{
+  "scope": "actual-web-build-files-only",
+  "version": "1.32.9425",
+  "displayVersion": "1.32.09425",
+  "root": "dist-web",
+  "fileCount": 76,
+  "totalBytes": 44495280,
+  "files": [
+    {
+      "path": "dist-web/app.html",
+      "bytes": 2491,
+      "sha256": "bec4b840dfe9f41ade4822120999ca1b5976e9e1256ff441fc797126c21ef708"
+    },
+    {
+      "path": "dist-web/assets/AppShell-CyZEuE1-.css",
+      "bytes": 34565,
+      "sha256": "8f42881818a53855964ca1181fc53566cacc63f9e162981d5a0cd501641519ec"
+    },
+    {
+      "path": "dist-web/assets/AppShell-vWbERr0z.js",
+      "bytes": 343887,
+      "sha256": "a1762d3328a85b5aac732c770d1df6cd934c4a8e43386e27819535f00c102ea4"
+    },
+    {
+      "path": "dist-web/assets/SouvenirDialog-RQGRHKCG.js",
+      "bytes": 419943,
+      "sha256": "ef4b7cf8bc562a9c326cafc4e690d515348ff71175e9d5e93382ca7ed6e5f787"
+    },
+    {
+      "path": "dist-web/assets/__vite-browser-external-BDfy7Drd.js",
+      "bytes": 103,
+      "sha256": "f8360f8f5b027ea8953018edeabf06c5861dda3c7f731de7f910438f123c0f38"
+    },
+    {
+      "path": "dist-web/assets/atelier-frozen-BamtDXL8.css",
+      "bytes": 329509,
+      "sha256": "3b13f08978a62fcf132856cb4b3d1778c477e2c7106fefe049d5f6ca9fe45e86"
+    },
+    {
+      "path": "dist-web/assets/atelier-frozen-BjfkC1mD.js",
+      "bytes": 670,
+      "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+    },
+    {
+      "path": "dist-web/assets/core-CwxXejkd.js",
+      "bytes": 95,
+      "sha256": "b4709cdfbc9bdaae22b529c2fe534c689a904ef8e6f58637ebf5b1245729fcc0"
+    },
+    {
+      "path": "dist-web/assets/firebase-Dy2pLZnq.js",
+      "bytes": 127153,
+      "sha256": "de1c6bdb44760d316be79794f094fa20c47c3050abff3ca992c86e87b9c754b4"
+    },
+    {
+      "path": "dist-web/assets/html2canvas-Bw0OShmD.js",
+      "bytes": 199409,
+      "sha256": "45da258667658d3dcf1d97298cdf19ad8e15379a0215849fb3d20c5264d85e8b"
+    },
+    {
+      "path": "dist-web/assets/index.es-CsijctFe.js",
+      "bytes": 151426,
+      "sha256": "583e97a7ccde7ca160b3dc5009446333a9f1c2f53b7dad83b01445a9a8c2e4eb"
+    },
+    {
+      "path": "dist-web/assets/jsx-runtime-C3cWAN_r.js",
+      "bytes": 8243,
+      "sha256": "036e646de62e26433472179f17fa666f8dc6728243a5551af4c11c86b53b2774"
+    },
+    {
+      "path": "dist-web/assets/landing-Cx17E1hj.js",
+      "bytes": 648,
+      "sha256": "6046cec805dd20bae323f2a822936b2b40695ae32eda6888d490cef25de37d1b"
+    },
+    {
+      "path": "dist-web/assets/main-CjKTKjqY.js",
+      "bytes": 218014,
+      "sha256": "d55a5ac963f8b04dc627062c6d465b347a4ee680a8752b719593f504786bdb8f"
+    },
+    {
+      "path": "dist-web/assets/nativeAuth-y46blXYe.js",
+      "bytes": 7153,
+      "sha256": "26b680453d44a61c20b3d1eae1c45e95b443d02ee08db3d5906ca9dac8e2769c"
+    },
+    {
+      "path": "dist-web/assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm",
+      "bytes": 26861777,
+      "sha256": "49871f5a4409519797e127440868a6d1923339d9185907f301a5b2a1d90af082"
+    },
+    {
+      "path": "dist-web/assets/purify.es-Dqk5qvad.js",
+      "bytes": 29023,
+      "sha256": "1cedd641cf71c424a9a1da85d51ce5d898e35d915fea81ac037f16d532a769ea"
+    },
+    {
+      "path": "dist-web/assets/rolldown-runtime-XKyaHtl9.js",
+      "bytes": 726,
+      "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
+    },
+    {
+      "path": "dist-web/assets/supertonic.worker-Dwrjg7n_.js",
+      "bytes": 553635,
+      "sha256": "8071c89eea9b94de1f95972ccc8a25c0052de61c6f665e95577626223d6d63b1"
+    },
+    {
+      "path": "dist-web/assets/swisseph-BqKK9TOX.wasm",
+      "bytes": 561871,
+      "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c"
+    },
+    {
+      "path": "dist-web/assets/three-B54aWqF2.js",
+      "bytes": 523581,
+      "sha256": "27799202756033688d24081c79c6cf2c45f1d997f3f336e4e7fbdf42c41aa17f"
+    },
+    {
+      "path": "dist-web/assets/version-DXuQ5Aby.js",
+      "bytes": 216,
+      "sha256": "93591c6717f93fef55d71bc12b82c08bac97444b958e28f2a286ac0c0ea65558"
+    },
+    {
+      "path": "dist-web/atelier/audio/bowlingball.mp3",
+      "bytes": 17179,
+      "sha256": "f7b4bbd6e71cf12c426b072888a40b1aa74bfa25b39bdae0b5a9ff25c1af49e6"
+    },
+    {
+      "path": "dist-web/atelier/audio/brass-clatter.mp3",
+      "bytes": 48944,
+      "sha256": "a47ee03ab832c0fcbe71fc89f40bcec6d47d7ecb2a208acd692d8bc392b58b1a"
+    },
+    {
+      "path": "dist-web/atelier/audio/chart-ambience.mp3",
+      "bytes": 821333,
+      "sha256": "705280737a74814e154bc9aeda676d5a428c75ea1f184479210997d1a6e08db3"
+    },
+    {
+      "path": "dist-web/atelier/audio/cookie-bite-crunch-v2.mp3",
+      "bytes": 48944,
+      "sha256": "d207c3c2fddff9ebe11eaaac5fec1fde4a15b144a43c3221a522dea97a5a7c30"
+    },
+    {
+      "path": "dist-web/atelier/audio/cookie-bite-crunch.mp3",
+      "bytes": 40585,
+      "sha256": "8cdc9880248985236c7c948238a03b4eb590812309607af5edba929ed81ad014"
+    },
+    {
+      "path": "dist-web/atelier/audio/crystal-break.mp3",
+      "bytes": 48944,
+      "sha256": "4401c0aeb45c98fcdb943f27a5907cad811e753bb533a8a7d03361d84d7e26d1"
+    },
+    {
+      "path": "dist-web/atelier/audio/glass-shatter.mp3",
+      "bytes": 48944,
+      "sha256": "09e7755fbb7418e48aad13ce0e784f1cb211dd38ed87d1a488fc5c410ee56cac"
+    },
+    {
+      "path": "dist-web/atelier/audio/shelf-wobble.mp3",
+      "bytes": 24702,
+      "sha256": "dd2765772b5e6cff7aa822f9d053892df71797cd95fc5c652853a8c1389265ae"
+    },
+    {
+      "path": "dist-web/atelier/audio/workshop-ambience.mp3",
+      "bytes": 821333,
+      "sha256": "6ad94345e844c447f6b603c0b51f3b2f77a1c638fb4facbc127280be7e0e1587"
+    },
+    {
+      "path": "dist-web/atelier/manifest.json",
+      "bytes": 792,
+      "sha256": "614a7fe16798e4a4bc1ade079682657ca03b99ffe55f5e065a77566833928b07"
+    },
+    {
+      "path": "dist-web/atelier/poster.webp",
+      "bytes": 138536,
+      "sha256": "75a9c52d28b1a038021aff6cef74e2ef4631f10ef698464e3379df7631f6f75b"
+    },
+    {
+      "path": "dist-web/atelier/puppet-cleanplate.webp",
+      "bytes": 266970,
+      "sha256": "eae79357aefb93eceb20bac08938914b424b1f7bf8030fd4440699032a5b53db"
+    },
+    {
+      "path": "dist-web/atelier/room.webp",
+      "bytes": 277480,
+      "sha256": "dfedbddc9e098a1a5eff1ad2055978a4581fda235892e15c42b6ddf8e5265b5a"
+    },
+    {
+      "path": "dist-web/auth/native.html",
+      "bytes": 4150,
+      "sha256": "6c23d7afda65a169566415dc67592fd0463041e2a951229b8cd9aa2fb019105c"
+    },
+    {
+      "path": "dist-web/branding/180x180.png",
+      "bytes": 84775,
+      "sha256": "56d2e518e589d61253aa63aa4c914d9449ac617cc842540e2fd414089fda1b31"
+    },
+    {
+      "path": "dist-web/branding/192x192.png",
+      "bytes": 95032,
+      "sha256": "affd59a5874070376856ef351f232e5988ad4b0369a00ec6c6f72a0921dd19d0"
+    },
+    {
+      "path": "dist-web/branding/512x512.png",
+      "bytes": 547168,
+      "sha256": "d5a17305362ba7ad45febf2a0d0a70604c684217542868e7cd259535bea6d894"
+    },
+    {
+      "path": "dist-web/branding/icon-provenance.json",
+      "bytes": 1154,
+      "sha256": "6ac7960c37c669827f9587122036eabc387ec19c8af29e43365df4e7dbd0d3fc"
+    },
+    {
+      "path": "dist-web/branding/natally-guide-512.png",
+      "bytes": 379564,
+      "sha256": "ef4399c7a0fa94efaf9409200d169bbafece47bcc0466a5899ef56a9812164f6"
+    },
+    {
+      "path": "dist-web/branding/natally-guide.png",
+      "bytes": 1851335,
+      "sha256": "a1a7238ab7b764975f4d2374347b997e1c55388c597ceade1626b147d8dd1af5"
+    },
+    {
+      "path": "dist-web/branding/natally-hero-google.jpg",
+      "bytes": 520017,
+      "sha256": "20f54411e49703ceff5d72daab612aa1bac96a1093e91ed3a2e39e7020431910"
+    },
+    {
+      "path": "dist-web/branding/natally-icon-master.png",
+      "bytes": 2692678,
+      "sha256": "1fae657a3774070920efca5fe9d664dad1af48090cc31e909d122f5e530d377c"
+    },
+    {
+      "path": "dist-web/favicon-32.png",
+      "bytes": 3457,
+      "sha256": "01676a4ce01c56a558d1af068e6af8845575e889ca6ad6797d7addd5832fe0f0"
+    },
+    {
+      "path": "dist-web/favicon.ico",
+      "bytes": 187032,
+      "sha256": "0deae80a89b80482cd7816056d97179eb8b4fb6ab81bfa1e52954c16ce990a56"
+    },
+    {
+      "path": "dist-web/fonts/OFL-PlayfairDisplay.txt",
+      "bytes": 4448,
+      "sha256": "0bb2b43ffd21233963b5d0c0eb6f1abffa776ec53c56131b5818708f2730ffd6"
+    },
+    {
+      "path": "dist-web/fonts/playfair-display-latin.woff2",
+      "bytes": 38404,
+      "sha256": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2"
+    },
+    {
+      "path": "dist-web/index.html",
+      "bytes": 2491,
+      "sha256": "bec4b840dfe9f41ade4822120999ca1b5976e9e1256ff441fc797126c21ef708"
+    },
+    {
+      "path": "dist-web/landing.html",
+      "bytes": 2309,
+      "sha256": "1a6300180834af78349d669d39f1fd5e38d5f9bce16397a100815f3f35b15c38"
+    },
+    {
+      "path": "dist-web/legal.css",
+      "bytes": 1107,
+      "sha256": "d84cfeb8ab29c964869a868a0a3562db97a19759656b6008c9fcd9ba49737c18"
+    },
+    {
+      "path": "dist-web/manifest.webmanifest",
+      "bytes": 390,
+      "sha256": "3f02ef1fa80670eca1035fdeb4c3c7159b9b50f5d7f5960a58d6fa3c34aca13e"
+    },
+    {
+      "path": "dist-web/marketing-assets/natally-paywall-original.webp",
+      "bytes": 168450,
+      "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95"
+    },
+    {
+      "path": "dist-web/marketing-assets/natally-still.webp",
+      "bytes": 34010,
+      "sha256": "c543c0c8a44cab2d94e51cf1005b047b585ec71e6ae7db96db3851da8f19a1c5"
+    },
+    {
+      "path": "dist-web/natally-mascot.webp",
+      "bytes": 33462,
+      "sha256": "73122f170a957fb445cdb6a0a793505cf673046757813ab0688b5514e77797ed"
+    },
+    {
+      "path": "dist-web/notices/AGPL-3.0.txt",
+      "bytes": 34020,
+      "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee"
+    },
+    {
+      "path": "dist-web/notices/Swiss-Ephemeris-LICENSE.txt",
+      "bytes": 2371,
+      "sha256": "b6345743292c516d07799dfad46f1a641e5270da2160cc4d6bd54594d6faa991"
+    },
+    {
+      "path": "dist-web/notices/THIRD-PARTY-NOTICES.txt",
+      "bytes": 149549,
+      "sha256": "915f5af24d92ff5b14edf3010c7af281062d1e4e88ed6f153ce78a6c83ddc3c0"
+    },
+    {
+      "path": "dist-web/notices/swisseph-wasm-LICENSE.txt",
+      "bytes": 1498,
+      "sha256": "15808ad767befd8452067f96e191f7e32fbc22a19d1aa2b12967eefa743ee147"
+    },
+    {
+      "path": "dist-web/paywall/natally-original.webp",
+      "bytes": 168450,
+      "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95"
+    },
+    {
+      "path": "dist-web/privacy.html",
+      "bytes": 10878,
+      "sha256": "4caec5e500b70d63e21bed8cfc1c489f7831bb09a55b6eb5ad6711f311f9e261"
+    },
+    {
+      "path": "dist-web/terms.html",
+      "bytes": 8955,
+      "sha256": "c0da91ff643cf9585397bce57a48a7fb6e6a4411003b626eb26c69eccb5b941c"
+    },
+    {
+      "path": "dist-web/vendor/swisseph/swisseph.data",
+      "bytes": 2151204,
+      "sha256": "1aac44b2ea3dfe668a063ed29dada99a7a96d8fa22fdce626cdf9e270b084ed0"
+    },
+    {
+      "path": "dist-web/vendor/swisseph/swisseph.js",
+      "bytes": 74272,
+      "sha256": "f645827dc8620c058101aa2373bd1254c679c2eeb5a6a80e97a1528bfac5df36"
+    },
+    {
+      "path": "dist-web/vendor/swisseph/swisseph.wasm",
+      "bytes": 561871,
+      "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c"
+    },
+    {
+      "path": "dist-web/voice/waiting/closer.wav",
+      "bytes": 184556,
+      "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45"
+    },
+    {
+      "path": "dist-web/voice/waiting/look-v2.wav",
+      "bytes": 184556,
+      "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45"
+    },
+    {
+      "path": "dist-web/voice/waiting/look-v3.wav",
+      "bytes": 184556,
+      "sha256": "db80fba0bdcb1c66d3956c40f3bb6891bbb935eba49ba1902f458a0e91b921a1"
+    },
+    {
+      "path": "dist-web/voice/waiting/look.wav",
+      "bytes": 160640,
+      "sha256": "948f8f13db09f4d89662f9a536df4b7ea80ea4be52caf8829766b0addd678a00"
+    },
+    {
+      "path": "dist-web/voice/waiting/moment-v2.wav",
+      "bytes": 140200,
+      "sha256": "a262a67f60297119855a0cebd11e72f39a481e30fb280e23440bb39f19664bf4"
+    },
+    {
+      "path": "dist-web/voice/waiting/moment-v3.wav",
+      "bytes": 140200,
+      "sha256": "14a5261afa62547f89bbefb07e13d1e17fca7a530a74b3838289bbd0ac673862"
+    },
+    {
+      "path": "dist-web/voice/waiting/moment.wav",
+      "bytes": 181974,
+      "sha256": "3b378b65fd9477cb781ce52b41d1149d35d8fa7022b5008fd4873ffcddd89573"
+    },
+    {
+      "path": "dist-web/voice/waiting/provenance.json",
+      "bytes": 489,
+      "sha256": "5f1a5b4988ba9531340c35addedda6c8adf719351acd802ca6b9e9a3542f4b38"
+    },
+    {
+      "path": "dist-web/voice/waiting/thread-v2.wav",
+      "bytes": 174928,
+      "sha256": "c554e7730b1561566d04aa197b5888dd3b1652524bb8111c7b4a265063bfd0b1"
+    },
+    {
+      "path": "dist-web/voice/waiting/thread-v3.wav",
+      "bytes": 174928,
+      "sha256": "f6b234c3cb91bbb73b78a92d2a7e6a5d7090ba8a014f80a089dd75524d929a83"
+    },
+    {
+      "path": "dist-web/voice/waiting/thread.wav",
+      "bytes": 174928,
+      "sha256": "c557ec4b242c50a0d791ed6062ce7ac4ea210002271baf82adedfa640b1f200c"
+    }
+  ]
+}

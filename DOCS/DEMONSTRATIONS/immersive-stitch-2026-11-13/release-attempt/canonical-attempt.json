@@ -1,0 +1,95 @@
+{
+  "scope": "single-canonical-attempt-and-unpublished-web-output-only",
+  "recordedAt": "2026-11-13T10:29:36.440089+00:00",
+  "repository": "rebots-online/astronatally",
+  "workingDirectory": "/workspace/astronatally",
+  "sourceCommitBeforeStamp": "aad9dac1c30848e40ad469a74f302883fa651bd9",
+  "stampCommit": "beed3991107b344e8121ae454f534a6599b1c4c9",
+  "canonicalCommand": [
+    "./build_all.sh"
+  ],
+  "actualInvocation": [
+    "node",
+    "/workspace/private/with-natally-manual-env.mjs",
+    "./build_all.sh"
+  ],
+  "toolchainEnvironmentSource": "/workspace/tools/natally-build-env.sh",
+  "environmentNote": "The private loader supplied existing authorized Manual inputs to the unchanged canonical entry; no private environment or Manual files are included in this evidence or archive.",
+  "identity": {
+    "version": "1.32.9425",
+    "builtAt": "2026-11-13T10:25:34.557Z",
+    "displayVersion": "1.32.09425"
+  },
+  "epoch": {
+    "millisecondsAtStamp": 1794565534557,
+    "wholeEpochMinutes": 29909425,
+    "formula": "Math.floor(epochMilliseconds / 60000) % 10000",
+    "buildNumber": 9425,
+    "displayFormula": "String(buildNumber).padStart(5, '0')"
+  },
+  "exitCode": 1,
+  "stoppedAt": "first-web-publication:astronatally.com",
+  "checks": {
+    "typeGate": {
+      "state": "PASSED",
+      "command": "npm run lint",
+      "underlyingCommand": "tsc --noEmit"
+    },
+    "vite": {
+      "state": "PASSED",
+      "command": "npx vite build --outDir dist-web",
+      "reportedDuration": "1.21s",
+      "outputDirectory": "dist-web"
+    }
+  },
+  "publication": {
+    "astronatally.com": {
+      "state": "REJECTED",
+      "providerMessage": "Aborted - you do not have permission to publish to astronatally.com"
+    },
+    "asknatally.online": {
+      "state": "NOT STARTED",
+      "reason": "The canonical script stopped after the first publication returned nonzero."
+    }
+  },
+  "native": {
+    "linux-x64-AppImage-deb-rpm": {
+      "state": "NOT STARTED",
+      "reason": "Web publication did not complete."
+    },
+    "windows-x64-executable-NSIS-MSI": {
+      "state": "NOT STARTED",
+      "reason": "Web publication did not complete."
+    },
+    "android-arm64-production-APK-AAB-native-symbols": {
+      "state": "NOT STARTED",
+      "reason": "Web publication did not complete."
+    }
+  },
+  "sourceAdvancement": {
+    "state": "NOT RUN",
+    "minorBefore": 32,
+    "minorAfter": 32,
+    "sourceMinorUnchanged": true,
+    "reason": "The canonical attempt failed before the complete matrix succeeded."
+  },
+  "webOutput": {
+    "state": "BUILT, NOT PUBLISHED",
+    "fileInventory": "web-files.json",
+    "fileCount": 76,
+    "totalBytes": 44495280
+  },
+  "webOnlyArchive": {
+    "path": "dist/natally-v1.32.9425-web-only-unpublished.zip",
+    "bytes": 20581495,
+    "sha256": "bc76017c9abd89f4c1099797ec8192cfe32551e7d543e2e4f386fd4fb3a9dd9c",
+    "scope": "Only the actual dist-web files; no native artifacts, credentials, private logs, environment files or Manual files."
+  },
+  "privateRawLog": {
+    "path": "/workspace/private/canonical-build-single-attempt.log",
+    "bytes": 4385,
+    "sha256": "fe6660bf13a849a47ce185a30570f0336cf7059f012952ef680c9486416a28f8",
+    "included": false
+  },
+  "completePlatformRelease": false
+}
