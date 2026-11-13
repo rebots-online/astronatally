@@ -2,9 +2,9 @@
 
 **Current authority (2026-11-13):** the operator's cloud-workspace request for
 `rebots-online/astronatally` supersedes conflicting historical instructions.
-The build correction in §23 is frozen independently. The immersive UI revision
-will be frozen only after its new Stitch exports exist; until then no coder
-may infer a revised interface from the historical snapshot below. This work
+The build correction in §23 and immersive UI revision in §24 are frozen.
+§24.6 identifies the actual authoritative Stitch exports; no coder may infer
+a revised interface from the historical snapshot below. This work
 uses this repository and its actual assets, not a sibling repository or
 cross-project KStore recollections. Composio is excluded by operator order.
 
@@ -1424,7 +1424,7 @@ define macOS/iOS releases. Rubric12–15 in
 `RUBRIC-immersive-stitch-2026-11-13.md` govern evidence; user-facing visual
 conformance and actual external-service acceptance are separate observations.
 
-## 24. Immersive Stitch revision — specified, awaiting export freeze
+## 24. Immersive Stitch revision — FROZEN 2026-11-13
 
 Repository: **rebots-online/astronatally**, cloud workspace `/workspace/astronatally`.
 Requirements: [PRD.md](PRD.md). Design system: [DESIGN.md](DESIGN.md).
@@ -1434,8 +1434,8 @@ including centered onboarding, fullscreen account backdrops, oversized avatar,
 18-page introduction and the unused current-location question. Service behavior
 is frozen below. Historical sections cannot override this revision.
 
-**Status:** specification complete; UI coding held until actual revised exports
-and their complete state/hash manifest exist. Baseline Stitch project
+**Status:** specification and actual revised exports FROZEN; UI coding assigned
+only against the complete state/hash manifest in §24.6. Baseline Stitch project
 6919345441915622012/screen6e69d41b4a4e418b97b5c83ac901f264 represents the current
 obstructing UI, not the new design. Revised project16384422545803483395 is
 separate. Baseline asset corrections were uploaded and downloaded byte-for-byte;
@@ -1560,3 +1560,65 @@ permit a different screen or service behavior. Report actual unsupported or
 unconfigured operations rather than replacing them with simulations. Completion
 requires visual observations and the complete canonical platform build;
 historical inventories or type checks cannot certify the new artifacts.
+
+### 24.6 Concrete export freeze and coder assignments
+
+Freeze authority is the operator's request, PRD.md and this architecture, now
+embodied by the reviewed, authoritative export committed as `1f9c12a`:
+
+- Project: [16384422545803483395](https://stitch.withgoogle.com/projects/16384422545803483395).
+- Canonical screen: `d69e9b3247ff40fa90415cc2ca24abe4`.
+- Authoritative HTML file: `68077327956557277`; PNG file: `68077327956556163`.
+- `STITCH/2026-11-13/revised/master.html` SHA-256:
+  `58b11534f01da85c2aca9a73aa2dfccf13411274a70509ce65e4ff9090afc0bc`.
+- Verbatim extracted `shared.css` SHA-256:
+  `3d8dcfc54ce9243685c26960894ab31ba1ca97892eb59ebdc49233e674287c32`.
+- Exact `frame.html`, **52** per-state HTML templates, state/binding manifests,
+  source/asset provenance and all artifact hashes are in the same directory.
+  `state-manifest.json` and `SHA256.json` are incorporated into this architecture
+  as the exhaustive state→screen→component/service/observation translation.
+
+Both provider downloads matched the approved uploads byte-for-byte. Root
+reviewed desktop/phone composition. Delegated design QA rendered all52 states
+at1440×900 and390×844; bounded final checks covered360×640, real date/place/report
+structures,44px targets, empty caption and inset bounds. No remaining design
+blocker was reported. This freezes the interface, not a claim of completed
+implementation, live checkout/login or packaged-build success.
+
+Initial outer inset is square260×260 at stage left16/top76 desktop and132×132
+at left12/top12 phone. Preserve30px grip chrome,96px minimum and existing manual
+move/resize/dock persistence. Actual same source room and chart preview occupy
+the prototype slots; existing live renderers replace only those contents.
+Interaction sounds binds the existing foley mute gate, not a claim to mute the
+separately hardcoded ambience engine. Idle caption keeps stable64px geometry
+and is visually transparent until real speech.
+
+The manifest's implementation adapters are binding. Specifically, native
+datalist/calendar/provider widgets retain their real semantics; actual customer
+data replaces binding values. Source-backed Toronto/report references are
+design fixtures only and cannot become fabricated customer records or purchase
+evidence. Retained report reproduces the exported concrete facts/chart/17-section
+structure with the actual retained data. The prototype preview router is not
+production service logic.
+
+All public app entries, including `index.html`, `app.html`, `landing.html`,
+`src/main.tsx` and `src/landing/main.tsx`, resolve to this same canonical frame.
+Legacy landing entry aliasing is an existing-entry adaptation: preserve domain
+roles/query/credential handoff and padded version metadata, leave retired
+marketing source preserved, and do not expose a second obsolete live UI.
+These existing HTML/entry entities extend24.4's initial-poster row before code.
+
+| Coder task | Exclusive source ownership | Required translation |
+| --- | --- | --- |
+| UI-FRAME | AppShell; new prototype wrapper/CSS; shared tokens/shell/landing/chat styles and existing LandingCards/ChatPanel; entry HTML/dispatch; existing Inset initial defaults and stage/scene CSS as needed | Exact shared frame/header/stage/caption/status, six section templates, reading/account/menu and canonical aliases; stable sole live scene; actual allowance-change event binding if absent |
+| UI-FORMS | SignInPanel/sign-in.css; app onboarding FirstLight/CSS; preserved intake FirstLight/CSS/BirthDateFields/CalendarPicker | Exact six auth views, invitation, four-step date/place/time/name widgets, casting/error; no duplicate scene, backdrop, trap or delayed field |
+| UI-COMMERCE | TopUpSheet; SouvenirDialog/SouvenirViewer UI; auth/native.html styling/markup | Exact packs/redemption/checkout/keepsake/retained views and utility bridge; existing service/report/PDF/persistence/native protocol unchanged |
+| UI-OBSERVATION | Delegated observation artifacts only | Compare actual implementation with immutable state templates; run meaningful existing auth/voice/version/type checks; distinguish real external-service acceptance from component-only evidence |
+
+Each coder uses actual exported DOM/CSS/copy, not an independently styled
+approximation. Code callbacks may remain local to existing components; the only
+new shared module entities are registered in24.4. No further PRD/function/design
+change is authorized. Record necessary implementation idiosyncrasies without
+altering these frozen exports. After combined source/visual checks, invoke the
+sole canonical build with real deployment/signing inputs; do not substitute
+unsigned/debug artifacts or old inventories for the required complete set.

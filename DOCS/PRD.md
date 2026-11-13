@@ -1,8 +1,8 @@
 # Natally — the live atelier
 
 Repository: **rebots-online/astronatally**. Revision: 2026-11-13.
-Status: design specification; frozen only when the new Stitch export manifest
-is attached to ARCHITECTURE §24. Baseline source is commit04322e9, represented
+Status: **FROZEN**, with the actual 52-state Stitch export and binding/hash
+manifest attached to ARCHITECTURE §24.6. Baseline source is commit04322e9, represented
 in [the new current-UI Stitch project](https://stitch.withgoogle.com/projects/6919345441915622012).
 
 ## Product and adoption hypothesis

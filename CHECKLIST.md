@@ -1009,15 +1009,28 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 Authority: DOCS/ARCHITECTURE.md §23; operator's immersive Stitch request.
 Historical completion marks below do not establish acceptance for this revision.
 
-- [ ] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
+- [x] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
   display with numeric native SemVer; retain current MINOR at build start.
-- [ ] BUILD-COMPLETION: return from native packaging and advance source MINOR
+- [x] BUILD-COMPLETION: return from native packaging and advance source MINOR
   only after the entire successful matrix; synchronize manifests and commit/push.
 - [ ] BUILD-EVIDENCE: run actual-helper numbering regression checks and the
   canonical release pipeline; preserve target logs, files and SHA-256 inventory.
-- [ ] UI-BASELINE: retain the newly generated current-UI Stitch HTML/PNG and IDs.
-- [ ] UI-SPECIFICATION: amend PRD, design system and architecture for every
+- [x] UI-BASELINE: retain the newly generated current-UI Stitch HTML/PNG and IDs.
+- [x] UI-SPECIFICATION: amend PRD, design system and architecture for every
   screen/state; freeze actual new Stitch exports before assigning UI code.
 - [ ] UI-IMPLEMENTATION: wire the frozen export screens to frozen existing
   services; record necessary platform adaptations and visual walkthroughs.
+- [ ] UI-FRAME: exact §24.6 frame/header/stage/rail/reading/account/navigation
+  templates and canonical entry aliases; stable live scene and inset defaults.
+- [ ] UI-FORMS: exact auth, invitation/intake/calendar/place/time/casting states;
+  retain real providers/calculation and remove duplicate scene/blocking wrappers.
+- [ ] UI-COMMERCE: exact topup/redemption/keepsake/retained/bridge templates;
+  preserve actual checkout, report/PDF, persistence and native validation.
+- [ ] UI-OBSERVATION: delegated browser comparison to immutable52-state exports,
+  appropriate regressions and actual platform artifacts; no fabricated evidence.
+
+Build identity implementation: `53f1fd9`,12/12 isolated helper/pipeline regression
+checks plus TypeScript gate passed. This is not a full release build. UI freeze:
+§24.6; authoritative exports `1f9c12a`. Production Surge/signing inputs remain
+required for canonical release execution in this cloud environment.
 
