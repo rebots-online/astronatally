@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import { flushSync } from 'react-dom';
+import { productWebOrigin } from '../platform/env';
 import {
   cancelNativeSignIn, describeSignInFailure, emailSignIn, emailSignUp,
   isNativeAuth, nativePhoneSignIn, resetEmailPassword, startPhoneSignIn,
@@ -69,7 +70,7 @@ export function SignInPanel({ onClose, onGoogle, initialMethod, googleError, con
   };
   const choose = (method: 'email' | 'phone') => {
     if (continueOnApp && !native) {
-      window.location.assign(`https://asknatally.online/?auth=${method}`);
+      window.location.assign(`${productWebOrigin()}/?auth=${method}`);
       return;
     }
     changeView(method);

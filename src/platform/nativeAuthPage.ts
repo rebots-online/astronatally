@@ -3,7 +3,7 @@ import {
   browserSessionPersistence, getAuth, getRedirectResult, GoogleAuthProvider,
   setPersistence, signInWithRedirect, type Auth,
 } from 'firebase/auth';
-import { firebaseConfig } from './env';
+import { firebaseConfig, productWebOrigin } from './env';
 import { createPhoneSignInSession, describeSignInFailure, type PhoneSignInSession } from './firebase';
 
 async function bootstrapNativeAuth(): Promise<void> {
@@ -65,7 +65,7 @@ async function bootstrapNativeAuth(): Promise<void> {
       && typeof flow.startedAt === 'number' && Number.isFinite(flow.startedAt)
       && flow.startedAt > 0 && Date.now() >= flow.startedAt && Date.now() - flow.startedAt < 300000;
   };
-  if (window.location.origin !== 'https://asknatally.online') { unavailable(); return; }
+  if (window.location.origin !== productWebOrigin()) { unavailable(); return; }
   let flow: Flow;
   const fresh = window.location.hash.length > 1;
   try {

@@ -3,6 +3,14 @@
 // callers surface truthful errors; only defaults frozen by the architecture
 // are substituted.
 
+import productReleaseJson from '../../config/product-release.json?raw';
+
+/** Public product origin from the canonical release-policy source. */
+export function productWebOrigin(): string {
+  const release: { webOrigin: string } = JSON.parse(productReleaseJson);
+  return release.webOrigin;
+}
+
 const DEFAULT_BILLING_API_URL = 'https://natally-hosted-chat.netlify.app';
 const DEFAULT_CREDIT_DISPLAY_PER_USD = 100;
 

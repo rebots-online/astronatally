@@ -36,8 +36,6 @@ import {
  authUnavailable,
  describeSignInFailure,
  googleSignIn,
- googleSignInForIdToken,
- isNativeAuth,
  onAuthChange,
  redirectSignInFailure,
  signInWithGoogleIdToken,
@@ -170,14 +168,10 @@ function AccountPanel({ auth, balanceCr, balanceError, onClose, onTopUp, onKeeps
 
 const CHART_STORE_PREFIX = 'natally.chart.v1:';
 
-/* The landing (ARCHITECTURE §12.1 + §16 pending LANDING rows): the
- * signed-out page below is astronatally.com's landing. On the hosts in
- * PRODUCT_LANDING_HOSTS a successful sign-in continues on the app domain,
- * asknatally.online, with the Google ID token handed over in the URL
- * fragment (#gid=… — a fragment is never sent to a server); on any host a
- * signed-out load carrying that fragment consumes it at once. The natal
- * chart on the landing stage is cast from the birth data below through the
- * shared pipeline (computeAstrolabeChart); it carries no person's name. */
+/* The signed-out stage casts the demonstration from the birth data below
+ * through the shared pipeline; it carries no person's name. The current
+ * product signs in on its own origin (§25), while existing inbound #gid=
+ * links are still consumed and stripped by the handoff effect below. */
 /* The room pane while the chart fills the landing stage (§12.1 4c): a
  * corner card showing Natally whole, always inside the window. On narrow
  * screens the stage is the top band (landing.css), so the pane floors at a
@@ -206,7 +200,6 @@ const LANDING_STORY_BLOCKLIST = /\b(shel(f|ves)|trinkets?|grab(bed|bing)?|broke(
 const LANDING_STORY_MAX_PICKS = 12;
 /* The narrow-screen media query landing.css keys its in-flow stage band to. */
 const LANDING_NARROW_QUERY = '(max-width: 768px)';
-const PRODUCT_LANDING_HOSTS: readonly string[] = ['astronatally.com', 'www.astronatally.com'];
 const GID_FRAGMENT = 'gid';
 const AUTH_METHOD_QUERY = 'auth';
 const EXAMPLE_BIRTH: BirthInput = {
@@ -927,15 +920,6 @@ export default function App() {
   setSigningIn(true);
   setSignInError(null);
   try {
-   if (PRODUCT_LANDING_HOSTS.includes(window.location.hostname)) {
-    // On the landing domain the visit continues on the app domain, already
-    // signed in (§12.1 items 6–7): the Google ID token travels in the URL
-    // fragment — a fragment never reaches a server — and asknatally.online
-    // consumes it the moment it loads (the #gid= effect below).
-    const idToken = await googleSignInForIdToken();
-    window.location.assign(`https://asknatally.online/#${GID_FRAGMENT}=${idToken}`);
-    return;
-   }
    await googleSignIn();
   } catch (error) {
    setSigningIn(false);
@@ -1174,8 +1158,7 @@ export default function App() {
       <button type="button" className="atelier-btn-secondary" onClick={() => openRail(auth.status === 'signedIn' ? 'account' : 'signin')}>{auth.status === 'signedIn' ? 'Account' : 'Sign in'}</button>
      </AtelierRail>}
      {signInOpen && <SignInPanel onClose={() => { closeRail(); setInitialAuthMethod(undefined); }} onGoogle={signIn}
-      initialMethod={initialAuthMethod} googleError={signInError}
-      continueOnApp={PRODUCT_LANDING_HOSTS.includes(window.location.hostname) && !isNativeAuth()} />}
+      initialMethod={initialAuthMethod} googleError={signInError} />}
      {auth.status === 'signedIn' && accountOpen && <AccountPanel auth={auth} balanceCr={allowance.balanceCr} balanceError={allowance.error}
       onClose={closeRail} onTopUp={() => openRail('topup')} onKeepsake={requestKeepsake} onSignOut={() => void handleSignOut()} />}
      {auth.status === 'signedIn' && topUpOpen && <TopUpSheet onClose={closeRail} />}
