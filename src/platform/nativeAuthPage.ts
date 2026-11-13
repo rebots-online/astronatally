@@ -19,7 +19,22 @@ async function bootstrapNativeAuth(): Promise<void> {
   const codeForm = document.getElementById('native-auth-code-form') as HTMLFormElement | null;
   const codeInput = document.getElementById('native-auth-code') as HTMLInputElement | null;
   const resend = document.getElementById('native-auth-resend') as HTMLButtonElement | null;
+  const title = document.getElementById('native-auth-title');
+  const changeNumber = document.getElementById('native-auth-change-number');
+  const back = title?.parentElement?.querySelector<HTMLButtonElement>('[data-native-back]');
+  const errorInstruction = status?.parentElement?.querySelector<HTMLElement>('[data-native-error]');
+  const returnInstruction = status?.parentElement?.querySelector<HTMLElement>('[data-native-return]');
   if (!status || !proceed || !cancel) return;
+  const showView = (view: 'google' | 'phone' | 'code' | 'return' | 'error') => {
+    if (title) title.textContent = view === 'phone' ? 'Sign in by SMS'
+      : view === 'code' ? 'Enter your code'
+        : view === 'return' ? 'Return to Natally'
+          : view === 'error' ? 'Sign-in request expired' : 'Continue in your browser';
+    if (back) back.hidden = view !== 'code';
+    if (errorInstruction) errorInstruction.hidden = view !== 'error';
+    if (returnInstruction) returnInstruction.hidden = view !== 'return';
+    cancel.className = view === 'phone' || view === 'code' ? 'atelier-btn-text' : 'atelier-btn-secondary';
+  };
   let challenge: PhoneSignInSession | null = null;
   let abort: AbortController | null = null;
   let phoneEpoch = 0;
@@ -33,6 +48,7 @@ async function bootstrapNativeAuth(): Promise<void> {
   };
   const say = (message: string) => { status.textContent = message; };
   const unavailable = () => {
+    showView('error');
     clearPhone();
     if (phoneForm) phoneForm.hidden = true;
     if (codeForm) codeForm.hidden = true;
@@ -83,6 +99,7 @@ async function bootstrapNativeAuth(): Promise<void> {
     proceed.disabled = cancel.disabled = true;
     if (phoneForm) phoneForm.hidden = true;
     if (codeForm) codeForm.hidden = true;
+    showView('return');
     say(credential.cancelled ? 'Cancelling sign-in in Natally…' : credential.provider === 'phone'
       ? 'Returning to Natally to verify your SMS code…' : 'Returning your Google sign-in to Natally…');
     const form = document.createElement('form');
@@ -120,6 +137,7 @@ async function bootstrapNativeAuth(): Promise<void> {
   if (flow.provider === 'phone') {
     proceed.hidden = true;
     if (!description || !phoneForm || !phoneInput || !recaptcha || !codeForm || !codeInput || !resend) { unavailable(); return; }
+    showView('phone');
     description.textContent = 'Request an SMS code here, then return to the Natally app to verify it and finish signing in.';
     const send = phoneForm.querySelector<HTMLButtonElement>('button[type="submit"]');
     const verify = codeForm.querySelector<HTMLButtonElement>('button[type="submit"]');
@@ -138,6 +156,7 @@ async function bootstrapNativeAuth(): Promise<void> {
       const signal = abort.signal;
       phoneForm.hidden = false;
       codeForm.hidden = true;
+      showView('phone');
       setBusy(true);
       say('Complete the reCAPTCHA check to request an SMS code.');
       try {
@@ -149,6 +168,7 @@ async function bootstrapNativeAuth(): Promise<void> {
         challenge = session;
         phoneForm.hidden = true;
         codeForm.hidden = false;
+        showView('code');
         say('Your SMS code was sent. Enter its six digits to return to Natally for verification.');
         setBusy(false);
         codeInput.focus();
@@ -160,6 +180,17 @@ async function bootstrapNativeAuth(): Promise<void> {
     };
     phoneForm.addEventListener('submit', event => { event.preventDefault(); void requestCode(); });
     resend.addEventListener('click', () => { void requestCode(); });
+    const changeNumberView = () => {
+      if (busy || submitted) return;
+      clearPhone();
+      phoneForm.hidden = false;
+      codeForm.hidden = true;
+      showView('phone');
+      say('Enter your mobile phone number to request an SMS code.');
+      phoneInput.focus();
+    };
+    changeNumber?.addEventListener('click', changeNumberView);
+    back?.addEventListener('click', changeNumberView);
     codeForm.addEventListener('submit', event => {
       event.preventDefault();
       if (busy || submitted) return;
@@ -175,6 +206,7 @@ async function bootstrapNativeAuth(): Promise<void> {
     phoneInput.focus();
     return;
   }
+  showView('google');
   const retry = async () => {
     if (busy || submitted) return;
     if (!valid(flow)) { unavailable(); return; }
