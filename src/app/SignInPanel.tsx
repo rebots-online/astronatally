@@ -4,6 +4,7 @@ import {
   isNativeAuth, nativePhoneSignIn, resetEmailPassword, startPhoneSignIn,
   type PhoneSignInSession,
 } from '../platform/firebase';
+import { AtelierRail } from './prototype/ImmersiveLayout';
 import './sign-in.css';
 
 type AuthView = 'choose' | 'email' | 'register' | 'reset' | 'phone' | 'code';
@@ -91,35 +92,14 @@ export function SignInPanel({ onClose, onGoogle, initialMethod, googleError, con
   useEffect(() => {
     mountedRef.current = true;
     const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') { event.preventDefault(); close(); return; }
-      if (event.key !== 'Tab') return;
-      const controls = Array.from(panelRef.current?.querySelectorAll<HTMLElement>(
-        'button:not(:disabled), input:not(:disabled), a[href], iframe, [tabindex="0"]',
-      ) ?? []).filter(element => element.getClientRects().length > 0);
-      const first = controls[0];
-      const last = controls.at(-1);
-      if (!first || !last) return;
-      if (event.shiftKey && (document.activeElement === first || !panelRef.current?.contains(document.activeElement))) {
-        event.preventDefault(); last.focus();
-      } else if (!event.shiftKey && (document.activeElement === last || !panelRef.current?.contains(document.activeElement))) {
-        event.preventDefault(); first.focus();
-      }
-    };
-    const onFocus = (event: FocusEvent) => {
-      if (event.target instanceof HTMLIFrameElement && event.target.src.includes('/recaptcha/')) return;
-      if (event.target instanceof Node && !panelRef.current?.contains(event.target)) panelRef.current?.focus();
+      if (event.key === 'Escape') { event.preventDefault(); close(); }
     };
     document.addEventListener('keydown', onKey);
-    document.addEventListener('focusin', onFocus);
     return () => {
       mountedRef.current = false;
       abandon();
-      document.body.style.overflow = oldOverflow;
       document.removeEventListener('keydown', onKey);
-      document.removeEventListener('focusin', onFocus);
       if (previous?.isConnected) previous.focus();
     };
   }, []);
@@ -215,79 +195,77 @@ export function SignInPanel({ onClose, onGoogle, initialMethod, googleError, con
     finally { if (current(epoch)) setCode(''); finish(epoch); }
   };
 
-  const title = view === 'choose' ? 'Sign in to Natally' : view === 'register' ? 'Create your account'
-    : view === 'reset' ? 'Reset your password' : view === 'email' ? 'Sign in with email'
-      : view === 'code' ? 'Enter your SMS code' : 'Sign in with SMS';
+  const title = view === 'choose' ? 'Save your chart' : view === 'register' ? 'Create account'
+    : view === 'reset' ? 'Reset password' : view === 'email' ? 'Sign in'
+      : view === 'code' ? 'Enter your code' : 'Sign in by SMS';
   const visibleError = error ?? (view === 'choose' ? googleError : null);
+  const back = () => changeView(view === 'register' || view === 'reset' ? 'email' : view === 'code' ? 'phone' : 'choose');
   return (
-    <div className="sheet-backdrop sign-in-backdrop" onClick={event => { if (event.target === event.currentTarget) close(); }}>
-      <section className="sheet sign-in-panel" role="dialog" aria-modal="true" aria-labelledby={`${id}-title`} tabIndex={-1} ref={panelRef}>
-        <header className="sheet-head sign-in-head">
-          <h2 id={`${id}-title`}>{title}</h2>
-          <button type="button" className="btn ghost small" onClick={close}>Close</button>
-        </header>
-        {view === 'choose' && (
-          <div className="sign-in-choices">
-            <p>Choose how you’d like to continue to your atelier.</p>
-            <button type="button" className="btn primary" onClick={google} disabled={pending} data-sign-in-focus>Continue with Google</button>
-            <button type="button" className="btn ghost" onClick={() => choose('email')} disabled={pending}>Continue with email</button>
-            <button type="button" className="btn ghost" onClick={() => choose('phone')} disabled={pending}>Continue with SMS</button>
-            {continueOnApp && <p className="sign-in-hint">Email and SMS continue on asknatally.online.</p>}
-          </div>
-        )}
+    <section className="sign-in-panel" aria-labelledby={`${id}-title`} tabIndex={-1} ref={panelRef} aria-busy={pending}>
+      <AtelierRail title={title} labelledBy={`${id}-title`} onClose={view === 'choose' ? close : undefined} onBack={view === 'choose' ? undefined : back}>
+        {view === 'choose' && <>
+          <button type="button" className="atelier-btn-primary" onClick={google} disabled={pending} data-sign-in-focus>Continue with Google</button>
+          <button type="button" className="atelier-btn-secondary" onClick={() => choose('email')} disabled={pending}>Continue with email</button>
+          <button type="button" className="atelier-btn-secondary" onClick={() => choose('phone')} disabled={pending}>Continue with SMS</button>
+          <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden={!visibleError}>{visibleError}</div>
+        </>}
         {(view === 'email' || view === 'register' || view === 'reset') && (
-          <form className="sign-in-form" onSubmit={submitEmail}>
-            {view === 'reset' && <p>Enter your email address to request a password reset link.</p>}
-            <label htmlFor={`${id}-email`}>Email address</label>
-            <input id={`${id}-email`} name="email" type="email" autoComplete="email" required value={email} onChange={event => setEmail(event.target.value)} disabled={pending} data-sign-in-focus />
-            {view !== 'reset' && <>
-              <label htmlFor={`${id}-password`}>Password</label>
-              <input id={`${id}-password`} name="password" type="password" autoComplete={view === 'register' ? 'new-password' : 'current-password'} required minLength={view === 'register' ? 6 : undefined} value={password} onChange={event => setPassword(event.target.value)} disabled={pending} />
-            </>}
-            {view === 'register' && <>
-              <p className="sign-in-hint">Use at least six characters. Additional password requirements may apply.</p>
-              <label htmlFor={`${id}-confirm`}>Confirm password</label>
-              <input id={`${id}-confirm`} name="confirmPassword" type="password" autoComplete="new-password" required minLength={6} value={confirmation} onChange={event => setConfirmation(event.target.value)} disabled={pending} />
-            </>}
-            <button type="submit" className="btn primary" disabled={pending}>{pending ? 'Please wait…' : view === 'register' ? 'Create account' : view === 'reset' ? 'Send reset link' : 'Sign in'}</button>
-            {view === 'email' && <div className="sign-in-links">
-              <button type="button" className="btn ghost" onClick={() => changeView('register')}>Create account</button>
-              <button type="button" className="btn ghost" onClick={() => changeView('reset')}>Forgot password?</button>
+          <form onSubmit={submitEmail}>
+            <div className="atelier-field-group">
+              <label className="atelier-label" htmlFor={`${id}-email`}>Email</label>
+              <input className="atelier-input" id={`${id}-email`} name="email" type="email" autoComplete="email" required value={email} onChange={event => setEmail(event.target.value)} disabled={pending} data-sign-in-focus />
+              <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden={!visibleError}>{visibleError}</div>
+            </div>
+            {view !== 'reset' && <div className="atelier-field-group">
+              <label className="atelier-label" htmlFor={`${id}-password`}>Password</label>
+              <input className="atelier-input" id={`${id}-password`} name="password" type="password" autoComplete={view === 'register' ? 'new-password' : 'current-password'} required minLength={view === 'register' ? 6 : undefined} value={password} onChange={event => setPassword(event.target.value)} disabled={pending} />
+              <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden />
             </div>}
+            {view === 'register' && <div className="atelier-field-group">
+              <label className="atelier-label" htmlFor={`${id}-confirm`}>Confirm password</label>
+              <input className="atelier-input" id={`${id}-confirm`} name="confirmPassword" type="password" autoComplete="new-password" required minLength={6} value={confirmation} onChange={event => setConfirmation(event.target.value)} disabled={pending} />
+              <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden />
+            </div>}
+            <button type="submit" className="atelier-btn-primary" disabled={pending}>{view === 'register' ? 'Create account' : view === 'reset' ? 'Send reset email' : 'Sign in'}</button>
+            {view === 'email' && <>
+              <button type="button" className="atelier-btn-secondary" onClick={() => changeView('register')}>Create account</button>
+              <button type="button" className="atelier-btn-text" onClick={() => changeView('reset')}>Forgot password</button>
+            </>}
+            {view === 'reset' && <div data-bind="status" aria-live="polite">{status}</div>}
           </form>
         )}
         {(view === 'phone' || view === 'code') && (
-          <div className="sign-in-phone">
+          <>
             {native ? <>
-              <p>Continue in your system browser to enter your phone number and complete the SMS check. Verification finishes in Natally.</p>
-              <button type="button" className="btn primary" onClick={() => void requestCode()} disabled={pending} data-sign-in-focus>{pending ? 'Waiting for your browser…' : 'Continue with SMS in browser'}</button>
+              <p className="atelier-body-text">Complete SMS sign-in in your system browser.</p>
+              <button type="button" className="atelier-btn-primary" onClick={() => void requestCode()} disabled={pending} data-sign-in-focus>Continue in your browser</button>
+              <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden={!visibleError}>{visibleError}</div>
             </> : <>
-              <form className="sign-in-form" onSubmit={requestCode} hidden={view !== 'phone'}>
-                <label htmlFor={`${id}-phone`}>Mobile phone number</label>
-                <input id={`${id}-phone`} name="phone" type="tel" autoComplete="tel" required pattern="[+][1-9][0-9 .\(\)\-]{7,25}" title="Start with + and your country code, using 8–15 digits." value={phone} onChange={event => setPhone(event.target.value)} disabled={pending} data-sign-in-focus />
-                <p className="sign-in-hint">Include + and your country code, followed by 8–15 digits. SMS sign-in is currently available for Canada and the United States.</p>
-                <p className="sign-in-consent">By choosing Send SMS code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.</p>
-                <button type="submit" className="btn primary" disabled={pending}>{pending ? 'Requesting SMS…' : 'Send SMS code'}</button>
-              </form>
-              <div className="sign-in-recaptcha" ref={recaptchaRef} aria-label="SMS reCAPTCHA verification" />
-              <form className="sign-in-form" onSubmit={confirmCode} hidden={view !== 'code'}>
-                <label htmlFor={`${id}-code`}>Six-digit SMS code</label>
-                <input id={`${id}-code`} name="code" type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" minLength={6} maxLength={6} required value={code} onChange={event => setCode(event.target.value)} disabled={pending} data-sign-in-focus={view === 'code' ? true : undefined} />
-                <button type="submit" className="btn primary" disabled={pending}>{pending ? 'Verifying…' : 'Verify and sign in'}</button>
-                <div className="sign-in-links">
-                  <button type="button" className="btn ghost" disabled={pending} onClick={() => void requestCode()}>Resend code</button>
-                  <button type="button" className="btn ghost" onClick={() => changeView('phone')}>Use a new number</button>
+              <form onSubmit={requestCode} hidden={view !== 'phone'}>
+                <div className="atelier-field-group">
+                  <label className="atelier-label" htmlFor={`${id}-phone`}>Phone number</label>
+                  <input className="atelier-input" id={`${id}-phone`} name="phone" type="tel" inputMode="tel" autoComplete="tel" required pattern="[+][1-9][0-9 .\(\)\-]{7,25}" title="Start with + and your country code, using 8–15 digits." value={phone} onChange={event => setPhone(event.target.value)} disabled={pending} data-sign-in-focus />
+                  <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden={!visibleError}>{visibleError}</div>
                 </div>
+                <div className="atelier-recaptcha-region" data-bind="recaptcha" ref={recaptchaRef} aria-label="SMS reCAPTCHA verification" />
+                <p className="atelier-body-text">By choosing Send code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.</p>
+                <button type="submit" className="atelier-btn-primary" disabled={pending}>Send code</button>
+              </form>
+              <form onSubmit={confirmCode} hidden={view !== 'code'}>
+                <div className="atelier-field-group">
+                  <label className="atelier-label" htmlFor={`${id}-code`}>Code</label>
+                  <input className="atelier-input" id={`${id}-code`} name="code" type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" minLength={6} maxLength={6} required value={code} onChange={event => setCode(event.target.value)} disabled={pending} data-sign-in-focus={view === 'code' ? true : undefined} />
+                  <div className="atelier-inline-error" data-bind="field-error" role="alert" hidden={!visibleError}>{visibleError}</div>
+                </div>
+                <button type="submit" className="atelier-btn-primary" disabled={pending}>Verify code</button>
+                <button type="button" className="atelier-btn-secondary" disabled={pending} onClick={() => void requestCode()}>Resend code</button>
+                <button type="button" className="atelier-btn-text" onClick={() => changeView('phone')}>Change number</button>
               </form>
             </>}
-          </div>
+          </>
         )}
-        <div className="sign-in-feedback" aria-live="polite" aria-atomic="true">
-          {visibleError && <p className="sign-in-error" role="alert">{visibleError}</p>}
-          {status && <p className="sign-in-status" role="status">{status}</p>}
-        </div>
-        {view !== 'choose' && <button type="button" className="btn ghost sign-in-back" onClick={() => changeView(view === 'register' || view === 'reset' ? 'email' : 'choose')}>Back</button>}
-      </section>
-    </div>
+        {view !== 'reset' && <div data-bind="status" aria-live="polite">{status}</div>}
+      </AtelierRail>
+    </section>
   );
 }
