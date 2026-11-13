@@ -3,6 +3,7 @@ import { resolve, join, basename, extname } from 'node:path';
 import { homedir } from 'node:os';
 import { spawn, spawnSync, execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { formatDisplayVersion } from './build-version.mjs';
 
 const root = process.cwd();
 const identity = JSON.parse(readFileSync('version.json', 'utf8'));
@@ -34,7 +35,7 @@ function prepare() {
   config.build.frontendDist = '../dist-web';
   config.build.devUrl = 'http://localhost:37841';
   for (const window of config.app.windows) {
-    window.title = `Natally v${version}`;
+    window.title = `Natally v${formatDisplayVersion(version)}`;
     window.url = 'app.html';
   }
   const [major, minor, build] = version.split('.').map(Number);
@@ -53,7 +54,7 @@ if (process.argv[2] === 'prepare') {
   if (process.env.NATALLY_CANONICAL_BUILD !== '1') throw Error('Use build_all.sh for native packaging');
   mkdirSync(destination, { recursive: true });
   mkdirSync(join(destination, 'logs'), { recursive: true });
-  const manifest = { version, builtAt: identity.builtAt, sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), artifacts: [], targets: {} };
+  const manifest = { version, displayVersion: formatDisplayVersion(version), builtAt: identity.builtAt, sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), artifacts: [], targets: {} };
   const inventoryPath = join(destination, 'inventory.json');
   const children = new Set();
   const save = () => json(inventoryPath, manifest);
@@ -192,6 +193,6 @@ if (process.argv[2] === 'prepare') {
   manifest.finishedAt = new Date().toISOString();
   manifest.complete = ['linux', 'windows', 'windows-msi', 'android'].every(name => manifest.targets[name]?.state === 'packaged');
   save();
-  console.log(JSON.stringify({ version, complete: manifest.complete, targets: manifest.targets, inventory: inventoryPath }, null, 2));
+  console.log(JSON.stringify({ version, displayVersion: manifest.displayVersion, complete: manifest.complete, targets: manifest.targets, inventory: inventoryPath }, null, 2));
   process.exitCode = manifest.complete ? 0 : 1;
 }

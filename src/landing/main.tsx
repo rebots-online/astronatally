@@ -10,15 +10,17 @@
 // version.json (stamped by build_all.sh), so the meta is planted here
 // before the port loads.
 
-import versionIdentity from '../../version.json';
+import { displayVersion } from '../platform/version';
 
 export {};
 
 const existingMeta = document.querySelector('meta[name="natally-version"]');
-if (!existingMeta) {
+if (existingMeta) {
+  existingMeta.setAttribute('content', `v${displayVersion}`);
+} else {
   const meta = document.createElement('meta');
   meta.name = 'natally-version';
-  meta.content = `v${versionIdentity.version}`;
+  meta.content = `v${displayVersion}`;
   document.head.appendChild(meta);
 }
 
