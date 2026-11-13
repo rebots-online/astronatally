@@ -1816,6 +1816,12 @@ manifest identity and actual package bytes/hashes before advancing source minor.
 The final publication/readback is part of the successful matrix. A failed final
 publication does not advance minor. No download marketing page or frozen UI
 change is introduced; the final handback can link the generated artifact URLs.
+The uploaded immutable manifest/current pointer are a snapshot of the actually
+packaged set with publicationStatus `awaiting-readback`; they cannot claim a
+future readback result. After upload, the local canonical inventory records
+observed per-artifact verification and references that public snapshot/hash.
+This is an explicit generated projection, not two competing release sources;
+no third upload is needed merely to report that the preceding upload was read.
 
 ### 25.6 Canonical frozen artifacts and workflow reconciliation
 

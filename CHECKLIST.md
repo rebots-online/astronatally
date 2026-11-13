@@ -29,14 +29,18 @@ edits, new tests, feature branches or unrelated source work.
   releases/<version> data and current.json; final same-v2 publication plus served
   byte/hash readback occurs before minor advancement. No new module names beyond
   readProductRelease; inner packaging helpers remain closure-local.
-- [ ] V2-FRONTEND-ORIGIN: implement productWebOrigin from raw canonical config;
+- [x] V2-FRONTEND-ORIGIN: implement productWebOrigin from raw canonical config;
   remove activated obsolete cross-domain AppShell branch/continueOnApp; optional
   existing SignInPanel continuation uses configured origin; native browser guard
   exact same origin. Own only §25.7 FRONTEND-ORIGIN files. Preserve synchronous
   Google click, ?auth/#gid consumers, all providers/protocol and exported markup.
-- [ ] V2-DESIGN-LOCATION: move actual baseline/revised exports and DESIGN.md to
+  Source980ac7f; policy source9a7f6f8; delegated npm run lint exit0. Actual
+  post-adapter browser observation remains a separate pending task.
+- [x] V2-DESIGN-LOCATION: move actual baseline/revised exports and DESIGN.md to
   §25.6 canonical LIBS/UI/STITCH homes byte-for-byte; existing dated DOCS paths
   become relative symlinks. Add canonical README intent/state/task mapping.
+  Source4ebbb47; delegated comparison preserved all98 prior files and52 template
+  hashes with unchanged master/CSS/design values and resolving legacy paths.
 - [ ] V2-DNS: complete backed-up serialized Namecheap all-hosts update for only
   v2 CNAME geo.surge.sh; private pre/post raw, normalized, zone and restore recipe
   committed/pushed with complete semantic comparison. A denied request is pending.
