@@ -1534,7 +1534,7 @@ architecture addition first; ad hoc bindings stay local to existing components.
 | --- | --- | --- |
 | `ImmersiveLayoutProps` | `src/app/prototype/ImmersiveLayout.tsx` | `{header:ReactNode;stage:ReactNode;rail:ReactNode;caption?:ReactNode;status?:ReactNode}` |
 | `ImmersiveLayout` | same | Mechanical transcription of exported shared frame/slots, stable live stage mount |
-| `AtelierRailProps` | same | `{title:string;onClose?:()=>void;children:ReactNode;labelledBy?:string}` |
+| `AtelierRailProps` | same | `{title:string;onClose?:()=>void;onBack?:()=>void;children:ReactNode;labelledBy?:string}`; optional `onBack` binds the already frozen Back control rather than rendering Close |
 | `AtelierRail` | same | Exported nonmodal task wrapper; no backdrop/trap/viewport lock |
 | `atelier-frozen.css` | `src/app/prototype/` | Export-extracted CSS, source hash and local-asset/native adaptations recorded |
 | Prototype state/source manifest | `DOCS/STITCH/2026-11-13/revised/` | Immutable actual HTML/PNG/provider responses; state/screen/file IDs, hashes and per-state React/service/observation bindings |
@@ -1622,3 +1622,9 @@ change is authorized. Record necessary implementation idiosyncrasies without
 altering these frozen exports. After combined source/visual checks, invoke the
 sole canonical build with real deployment/signing inputs; do not substitute
 unsigned/debug artifacts or old inventories for the required complete set.
+
+Implementation signature adapter: `AtelierRailProps.onBack` is an optional
+callback for the existing exported Back arrow/accessible name. When present,
+the wrapper renders the frozen Back control; otherwise `onClose` renders the
+frozen Close control. This records a React binding detail, with no PRD, screen,
+functionality or immutable-export change.
