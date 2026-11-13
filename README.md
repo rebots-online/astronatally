@@ -17,13 +17,13 @@ Conversation is paid for with credit packs of US$5, US$10 and US$25. Nothing in
 the product is a placeholder: anything not configured or not yet working fails
 visibly and names what is missing.
 
-[DOCS/ARCHITECTURE.md](DOCS/ARCHITECTURE.md) is the **codebase snapshot** — what
-the code at the current commit *is*, subsystem by subsystem, with diagrams and
-an exhaustive entity registry that doubles as the allow-list of names that may
-be realized in code. (The 2026-11-08 intent document it replaced is preserved as
-`DOCS/ARCHITECTURE.md.bak-2026-11-09`.) [CHECKLIST.md](CHECKLIST.md) translates
-work into coder tasks; [DOCS/TODO-LEDGER.md](DOCS/TODO-LEDGER.md) records every
-open item with its citation.
+[DOCS/PRD.md](DOCS/PRD.md) defines the immersive screen revision.
+[DOCS/ARCHITECTURE.md](DOCS/ARCHITECTURE.md) §23 defines build identity and §24
+translates the complete PRD into screen and service contracts, with an entity
+allow-list. Its earlier snapshot sections remain historical context; the newer
+authority takes precedence. [DOCS/DESIGN.md](DOCS/DESIGN.md) specifies the Stitch
+system. [CHECKLIST.md](CHECKLIST.md) translates that architecture into tasks;
+[DOCS/TODO-LEDGER.md](DOCS/TODO-LEDGER.md) retains historical citations.
 
 ## How the two trees fit together (read this first)
 
@@ -93,13 +93,15 @@ From the repository root, run the single supported build-and-deploy command:
 ./build_all.sh
 ```
 
-The script performs the whole pipeline: resolves the configured credentials,
-automatically increments the shared `MAJOR.MINOR.BUILD` version, commits and
-pushes that stamp, validates the source, builds the web assets, publishes both
-purchased domains with HTTPS forced, then packages Linux, Windows and Android.
-Use this entry for every attempt, including a retry after a fix. Version numbers
-are assigned by the script. The native application namespace is
-`mba.robin.astronatally`.
+The script resolves credentials, stamps the current source MAJOR.MINOR with
+`floor(epochMilliseconds / 60000) % 10000`, synchronizes and pushes that release
+identity, validates source, builds/publishes both purchased web hosts, and
+packages Linux, Windows and Android. Only after the complete matrix succeeds
+does it advance the source MINOR and clear source `builtAt` for the next build.
+The artifacts retain the built version. Human badges show the build field with
+five digits; native/npm/Cargo manifests use its equivalent unpadded integer to
+remain valid SemVer. No day stamp or incremented build counter. Use this entry
+for every attempt. Native namespace: `mba.robin.astronatally`.
 
 ### Surge deployment account and domains
 

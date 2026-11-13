@@ -32,9 +32,12 @@
     build to astronatally.com and asknatally.online (rule 11); native packages (Linux, Windows
     via cross-compilation, Android) build only after that deploy succeeds.
     Do not run it to package a version with known open defects. Every
-    invocation increments the version (MAJOR.MINOR.BUILD, MINOR +1, BUILD =
-    epoch days % 10000) before anything is built; the same version is stamped
-    on web and every native artifact. No manual version numbers.
+    invocation stamps MAJOR.MINOR.BUILD using the current source MINOR and
+    BUILD = floor(epoch milliseconds / 60000) % 10000; display BUILD with five
+    digits, retaining equivalent numeric SemVer in package manifests. Only
+    after the entire build succeeds, advance source MINOR +1 and synchronize
+    manifests (source builtAt null). Web/native artifacts retain the release
+    identity. No manual version numbers. ARCHITECTURE §23 is authoritative.
 
 14. ARCHITECTURE.md, once frozen, is the only thing produced — period, no
     exceptions. CHECKLIST.md translates it 1:1; subagent coders (never the
