@@ -1,0 +1,90 @@
+{
+  "repository": "rebots-online/astronatally",
+  "sourceCommit": "4fbbe0a4566dc9db0e0606969c791c531b3482ac",
+  "scope": "Actual guest UI conformance and source-backed contracts. Ready to attempt canonical build; not complete release/auth/payment acceptance.",
+  "environment": {
+    "url": "http://127.0.0.1:5173/app.html",
+    "aliases": [
+      "/",
+      "/app.html",
+      "/landing.html"
+    ],
+    "browser": "Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        360,
+        640
+      ]
+    ],
+    "browserPluginLimitation": "Associated Browser js tool absent; explicit cloud evidence authorization used managed Playwright/Chromium."
+  },
+  "checks": {
+    "typeGate": {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "afterFinalMappingFix": true
+    },
+    "voiceRegressions": {
+      "command": "node --experimental-vm-modules --test src/voice/index.test.mjs",
+      "exitCode": 0,
+      "tests": 11,
+      "pass": 11,
+      "fail": 0,
+      "scope": "Existing isolated actual-source playback harness run once after combined integration. Voice source unchanged by later UI mapping fixes."
+    },
+    "staticGuestAndEmail": {
+      "cases": 8,
+      "exactCopyMatches": 8,
+      "exactCardSizeMatches": 8,
+      "sceneIdentityStableViewports": 4,
+      "pageExceptions": 0,
+      "horizontalOverflowCases": 0,
+      "narrowFocusAdaptation": "4px document scroll after real autofocus; same dimensions and region relationships."
+    },
+    "sixSectionNavigation": {
+      "requestedHeadingsAndBodies": 6,
+      "passed": 6,
+      "sameSceneNode": true,
+      "file": "section-navigation-final.json"
+    },
+    "actualGuestUsp": {
+      "realHoverTarget": "Virgo",
+      "actualPointerSelection": true,
+      "actualViewSwap": true,
+      "actualAuthoredCaption": true,
+      "actualVoiceDownload": true,
+      "actualPassiveKaraokeEvents": 218,
+      "actualPassiveVoicePerformanceEvents": 235,
+      "syntheticEvents": false,
+      "audibleRecording": false
+    },
+    "console": {
+      "pageExceptions": 0,
+      "existingServiceWorkerMimeError": true,
+      "gpuReadbackWarnings": true,
+      "policy": "Preserved existing PWA behavior; no cosmetic service rewrite."
+    }
+  },
+  "unobservedRealOperations": [
+    "Authenticated customer sign-in success",
+    "Actual SMS challenge/code confirmation or reset-message delivery",
+    "Signed-in intake and customer calculation acceptance",
+    "Paid inference/credit grant/redemption/payment",
+    "Paid/retained customer keepsake/PDF",
+    "Native provider return on actual packaged application",
+    "Canonical release/signing/deployment artifact matrix"
+  ],
+  "noProductSourceEditedByObserver": true
+}

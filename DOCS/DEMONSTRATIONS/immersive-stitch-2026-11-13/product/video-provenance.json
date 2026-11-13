@@ -1,0 +1,17 @@
+{
+  "scope": "Actual cloud Chromium recordings; no audio track and no synthetic customer or service state.",
+  "guest-auth-continuous.webm": {
+    "source": "/workspace/scratch/product-qa/final-walkthrough-video/page@18d4ae0b129b3669b52e6a45a38b702c.webm",
+    "sourceSha256": "f07ffbd3522c4d097121a143d02875bb8422fb0846115b18fe58bae2555fc460",
+    "operation": "Unmodified actual product-page recording from final four-viewport comparison, desktop context; reference-page video excluded."
+  },
+  "focused-voice-continuous.mp4": {
+    "source": "/workspace/scratch/product-qa/video/page@b656adc2ee1ff6ec95d257b12d95c9f6.webm",
+    "sourceSha256": "a2122c5479df92c9d987d54569a77b515630bd95d83b6dce980cf247741da879",
+    "sourceDurationSeconds": 510.32,
+    "sourceStartSeconds": 390,
+    "durationSeconds": 100,
+    "operation": "Continuous100-second excerpt after focused-room correction. Re-encodedH264 for playback; no frame rearrangement, composed scenes, audio replacement or overlays.",
+    "command": "ffmpeg -v error -ss 390 -i <actual-original.webm> -t 100 -an -c:v libx264 -preset veryfast -crf 27 -movflags +faststart <output.mp4>"
+  }
+}

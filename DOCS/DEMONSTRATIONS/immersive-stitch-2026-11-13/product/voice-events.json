@@ -1,0 +1,4266 @@
+{
+  "scope": "Passive actual model/playback/karaoke events, capped at500 per document by observer. Video has no audio track. No synthetic voice events or fake progress.",
+  "events": [
+    {
+      "type": "natally-voice-performance",
+      "time": 37800.799999999814,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 37801.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "Virgo",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 37801.59999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 0,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 38455.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 6,
+        "text": "is",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 38455.200000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 1,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 39003.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 9,
+        "text": "the",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 39003.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 2,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 39657.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 13,
+        "text": "sixth",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 39657.299999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 3,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 39951.299999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 19,
+        "text": "sign",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 39951.299999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 4,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 40211.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 24,
+        "text": "of",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 40211.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 5,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 40576.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 27,
+        "text": "the",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 40576.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 6,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 40899.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 31,
+        "text": "zodiac",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 40899.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 7,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 41150,
+      "detail": {
+        "state": "word",
+        "charIndex": 38,
+        "text": "\u2014",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 41151.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 8,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 41508.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 40,
+        "text": "Mutable",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 41508.700000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 9,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 41791.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 48,
+        "text": "Earth",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 41791.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 10,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 42075.799999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 54,
+        "text": "\u2014",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 42075.89999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 11,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 42580.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 56,
+        "text": "and",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 42580.700000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 12,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 42904,
+      "detail": {
+        "state": "word",
+        "charIndex": 60,
+        "text": "2",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 42904,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 13,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 43467.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 62,
+        "text": "placements",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 43467.5,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 14,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 44145.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 73,
+        "text": "of",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 44145.59999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 15,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 44498.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 76,
+        "text": "yours",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 44498.5,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 16,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 44839.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 82,
+        "text": "answer",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 44839.59999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 17,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 45151.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 89,
+        "text": "to",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 45151.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 18,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 45447.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 92,
+        "text": "it.",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 45447.200000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 19,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 45849,
+      "detail": {
+        "state": "word",
+        "charIndex": 96,
+        "text": "Your",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 45849.59999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 20,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 46422.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 101,
+        "text": "Sun",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 46422.299999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 21,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 46766.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 105,
+        "text": "at",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 46766.59999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 22,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 47264.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 108,
+        "text": "8",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 47264.5,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 23,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 47539.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 108,
+        "text": "degrees,",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 47540.09999999963,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 23,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 47814.799999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 112,
+        "text": "in",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 47814.89999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 24,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 48184,
+      "detail": {
+        "state": "word",
+        "charIndex": 115,
+        "text": "your",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 48184.200000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 25,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 48475.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 120,
+        "text": "ninth",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 48475.700000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 26,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 48842.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 126,
+        "text": "house.",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 48842.200000000186,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 27,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 49139.200000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 133,
+        "text": "Your",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 49139.39999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 28,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 49599.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 138,
+        "text": "Midheaven",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 49599.89999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 29,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 49939.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 148,
+        "text": "at",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 49939.5,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 30,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 50240.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 151,
+        "text": "28",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 50240.89999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 31,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 50486.299999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 151,
+        "text": "degrees,",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 50486.39999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 31,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 50819.700000000186,
+      "detail": {
+        "state": "word",
+        "charIndex": 156,
+        "text": "in",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 50819.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 32,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 51099.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 159,
+        "text": "your",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 51099.5,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 33,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 51381.799999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 164,
+        "text": "tenth",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 51381.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 34,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 51678.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 170,
+        "text": "house.",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 51678.89999999944,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 35,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 52017.799999999814,
+      "detail": {
+        "state": "word",
+        "charIndex": 177,
+        "text": "Tap",
+        "durationMs": 299.73832528180355
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 52017.799999999814,
+      "detail": {
+        "line": "Virgo is the sixth sign of the zodiac \u2014 Mutable Earth \u2014 and 2 placements of yours answer to it. Your Sun at 8\u00b0, in your ninth house. Your Midheaven at 28\u00b0, in your tenth house. Tap any of them and I will take you deeper.",
+        "wordIndex": 36,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 52356.59999999963,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 120867.59999999963,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 120867.70000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "fun",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 120867.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 0,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 121219.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 4,
+        "text": "fact:",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 121219.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 1,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 121555.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 10,
+        "text": "my",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 121555.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 2,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 121800,
+      "detail": {
+        "state": "word",
+        "charIndex": 13,
+        "text": "first",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 121800.09999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 3,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 122044.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 19,
+        "text": "job",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 122044.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 4,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 122481.29999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 23,
+        "text": "was",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 122481.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 5,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 122657,
+      "detail": {
+        "state": "word",
+        "charIndex": 27,
+        "text": "a",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 122657,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 6,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 123060.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 29,
+        "text": "psychic",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 123060.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 7,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 123276.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 37,
+        "text": "hotline",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 123277,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 8,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 123493.29999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 45,
+        "text": "and",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 123493.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 9,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 123773.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 49,
+        "text": "I",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 123773.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 10,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 124200.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 51,
+        "text": "lasted",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 124201,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 11,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 124456.29999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 58,
+        "text": "exactly",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 124456.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 12,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 124683.20000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 66,
+        "text": "one",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 124683.29999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 13,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 125003.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 70,
+        "text": "hour.",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 125003.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 14,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 125217.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 76,
+        "text": "a",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 125217.79999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 15,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 125574.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 78,
+        "text": "man",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 125574.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 16,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 125958.20000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 82,
+        "text": "wanted",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 125958.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 17,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 126136.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 89,
+        "text": "lottery",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 126136.79999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 18,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 126480.29999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 97,
+        "text": "numbers,",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 126480.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 19,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 126789,
+      "detail": {
+        "state": "word",
+        "charIndex": 106,
+        "text": "I",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 126789,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 20,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 126957.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 108,
+        "text": "told",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 126957.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 21,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 127365.70000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 113,
+        "text": "him",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 127365.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 22,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 127537.70000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 117,
+        "text": "the",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 127537.79999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 23,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 127827.79999999981,
+      "detail": {
+        "state": "word",
+        "charIndex": 121,
+        "text": "stars",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 127827.79999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 24,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 128265.70000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 127,
+        "text": "don't",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 128265.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 25,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 128461.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 133,
+        "text": "do",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 128461.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 26,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 128840.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 136,
+        "text": "that,",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 128840.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 27,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 129139.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 142,
+        "text": "he",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 129139.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 28,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 129277.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 145,
+        "text": "hung",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 129278.09999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 29,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 129571.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 150,
+        "text": "up,",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 129571.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 30,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 129884.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 154,
+        "text": "and",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 129884.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 31,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 130199.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 158,
+        "text": "I",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 130199.70000000019,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 32,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 130580.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 160,
+        "text": "quit",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 130581.09999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 33,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 130880.20000000019,
+      "detail": {
+        "state": "word",
+        "charIndex": 165,
+        "text": "on",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 130880.29999999981,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 34,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 131206.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 168,
+        "text": "the",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 131206.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 35,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 131361.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 172,
+        "text": "spot",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 131361.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 36,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 131677.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 177,
+        "text": "\u2014",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 131677.7000000002,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 37,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 132141.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 179,
+        "text": "one",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 132141.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 38,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 132291.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 183,
+        "text": "real",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 132292,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 39,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 132500.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 188,
+        "text": "person",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 132500.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 40,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 132794.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 195,
+        "text": "is",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 132794.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 41,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 133349.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 198,
+        "text": "worth",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 133349.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 42,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 133716.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 204,
+        "text": "infinite",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 133717.09999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 43,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134048.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 213,
+        "text": "hold",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 134048.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 44,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134258.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 218,
+        "text": "music.",
+        "durationMs": 290.02996283579597
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 134258.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 45,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134421.5,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134422.89999999944,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134422.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 225,
+        "text": "my",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 134422.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 46,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 134798.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 228,
+        "text": "supervisor",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 134798.2000000002,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 47,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 135255.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 239,
+        "text": "said",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 135255.89999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 48,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 135615.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 244,
+        "text": "I",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 135615.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 49,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 135963.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 246,
+        "text": "had",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 135964.09999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 50,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 136381.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 250,
+        "text": "'compliance",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 136381.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 51,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 136709.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 262,
+        "text": "issues.'",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 136709.7999999998,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 52,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 137188.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 271,
+        "text": "her",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 137188.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 53,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 137503.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 275,
+        "text": "side-eye",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 137503.7999999998,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 54,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 137801.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 284,
+        "text": "lives",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 137801.59999999963,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 55,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 138283.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 290,
+        "text": "rent-free",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 138283.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 56,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 138607.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 300,
+        "text": "in",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 138607.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 57,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 138923.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 303,
+        "text": "my",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 138923.2000000002,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 58,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 139464.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 306,
+        "text": "lore",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 139464.5,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 59,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 139864.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 311,
+        "text": "forever.",
+        "durationMs": 375.16053764500975
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 139864.39999999944,
+      "detail": {
+        "line": "fun fact: my first job was a psychic hotline and I lasted exactly one hour. a man wanted lottery numbers, I told him the stars don't do that, he hung up, and I quit on the spot \u2014 one real person is worth infinite hold music. my supervisor said I had 'compliance issues.' her side-eye lives rent-free in my lore forever.",
+        "wordIndex": 60,
+        "wordCount": 61
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 140151.5,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 203471.89999999944,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 203472,
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "psychic",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 203472,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 0,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 203910.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 8,
+        "text": "school",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 203910.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 1,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 204281.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 15,
+        "text": "final",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 204281.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 2,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 204677.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 21,
+        "text": "exam:",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 204677.39999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 3,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 205068.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 27,
+        "text": "read",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 205069,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 4,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 205576.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 32,
+        "text": "a",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 205576.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 5,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 205755.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 34,
+        "text": "stranger's",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 205755.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 6,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 206242.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 45,
+        "text": "aura",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 206242.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 7,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 206476.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 50,
+        "text": "in",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 206476.89999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 8,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 206886.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 53,
+        "text": "front",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 206889,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 9,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 207291.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 59,
+        "text": "of",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 207291.5,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 10,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 207655.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 62,
+        "text": "everyone.",
+        "durationMs": 372.51799270432815
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 207655.5,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 11,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 208106.7000000002,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 210281.5,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 210281.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 72,
+        "text": "I",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 210281.5,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 12,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 210677.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 74,
+        "text": "got",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 210678.09999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 13,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 210916.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 78,
+        "text": "so",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 210916.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 14,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 211371.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 81,
+        "text": "nervous",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 211371.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 15,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 211589.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 89,
+        "text": "I",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 211589.89999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 16,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 212040.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 91,
+        "text": "read",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 212040.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 17,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 212273.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 96,
+        "text": "the",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 212273.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 18,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 212507,
+      "detail": {
+        "state": "word",
+        "charIndex": 100,
+        "text": "proctor's",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 212507.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 19,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 212753.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 110,
+        "text": "instead",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 212753.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 20,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 213203.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 118,
+        "text": "\u2014",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 213203.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 21,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 213439.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 120,
+        "text": "she",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 213439.89999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 22,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 213680.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 124,
+        "text": "had,",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 213681.09999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 23,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 214074.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 129,
+        "text": "direct",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 214074.5,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 24,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 214298.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 136,
+        "text": "quote",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 214298.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 25,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 214660.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 142,
+        "text": "from",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 214660.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 26,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 214916.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 147,
+        "text": "me,",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 214916.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 27,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 215305.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 151,
+        "text": "'the",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 215305.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 28,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 215551,
+      "detail": {
+        "state": "word",
+        "charIndex": 156,
+        "text": "energy",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 215551.2000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 29,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 216090.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 163,
+        "text": "of",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 216090.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 30,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 216240.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 166,
+        "text": "a",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 216240.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 31,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 216461.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 168,
+        "text": "filing",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 216461.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 32,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 216779.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 175,
+        "text": "cabinet",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 216779.2999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 33,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 217147.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 183,
+        "text": "that",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 217147.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 34,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 217388.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 188,
+        "text": "dreams.'",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 217388.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 35,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 217701.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 197,
+        "text": "she",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 217701.2000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 36,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 218051.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 201,
+        "text": "gave",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 218051.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 37,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 218343.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 206,
+        "text": "me",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 218343.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 38,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 218880.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 209,
+        "text": "top",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 218880.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 39,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 219008.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 213,
+        "text": "marks",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 219008.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 40,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 219318.09999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 219,
+        "text": "and",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 219318.2000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 41,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 219653.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 223,
+        "text": "also",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 219653.5,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 42,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 219917,
+      "detail": {
+        "state": "word",
+        "charIndex": 228,
+        "text": "detention,",
+        "durationMs": 309.46403923888397
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 219917,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 43,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 220278.5,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 220279.89999999944,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 220279.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 239,
+        "text": "which",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 220279.89999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 44,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 220645,
+      "detail": {
+        "state": "word",
+        "charIndex": 245,
+        "text": "is",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 220645.2000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 45,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 221078.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 248,
+        "text": "honestly",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 221078.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 46,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 221501.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 257,
+        "text": "the",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 221501.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 47,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 221792.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 261,
+        "text": "most",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 221792.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 48,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 222150.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 266,
+        "text": "astrological",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 222150.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 49,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 222492,
+      "detail": {
+        "state": "word",
+        "charIndex": 279,
+        "text": "sentence",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 222492.2000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 50,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 222892.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 288,
+        "text": "I",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 222892.59999999963,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 51,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 223209.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 290,
+        "text": "know.",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 223209.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 52,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 223565.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 296,
+        "text": "the",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 223565.89999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 53,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 224003.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 300,
+        "text": "lore",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 224003.7999999998,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 54,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 224297.59999999963,
+      "detail": {
+        "state": "word",
+        "charIndex": 305,
+        "text": "is",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 224297.7000000002,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 55,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 224707.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 308,
+        "text": "layered.",
+        "durationMs": 365.8332006158093
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 224707.39999999944,
+      "detail": {
+        "line": "psychic school final exam: read a stranger's aura in front of everyone. I got so nervous I read the proctor's instead \u2014 she had, direct quote from me, 'the energy of a filing cabinet that dreams.' she gave me top marks and also detention, which is honestly the most astrological sentence I know. the lore is layered.",
+        "wordIndex": 56,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 225085.5,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 290709.5,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 290709.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "my",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 290709.5999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 0,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 291146.0999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 3,
+        "text": "armillary",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 291146.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 1,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 291498.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 13,
+        "text": "sphere",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 291498.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 2,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 291790.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 20,
+        "text": "\u2014",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 291791,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 3,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 292081,
+      "detail": {
+        "state": "word",
+        "charIndex": 22,
+        "text": "the",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 292081.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 4,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 292482.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 26,
+        "text": "big",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 292483.0999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 5,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 292899.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 30,
+        "text": "rings",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 292899.39999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 6,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 293181.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 36,
+        "text": "thing,",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 293185,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 7,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 293476.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 43,
+        "text": "it's",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 293476.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 8,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 293858.0999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 48,
+        "text": "giving",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 293858.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 9,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 294170.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 55,
+        "text": "astronomy",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 294170.2999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 10,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 294453.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 65,
+        "text": "necklace",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 294453.39999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 11,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 294783.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 74,
+        "text": "\u2014",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 294784,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 12,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 295199.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 76,
+        "text": "has",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 295199.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 13,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 295575.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 80,
+        "text": "never",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 295575.5999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 14,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 295899.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 86,
+        "text": "once",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 295899.7000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 15,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 296058.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 91,
+        "text": "pointed",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 296058.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 16,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 296407.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 99,
+        "text": "at",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 296407.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 17,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 296808,
+      "detail": {
+        "state": "word",
+        "charIndex": 102,
+        "text": "anything",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 296808.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 18,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 297215.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 111,
+        "text": "and",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 297215.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 19,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 297474.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 115,
+        "text": "I",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 297474.5999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 20,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 297807.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 117,
+        "text": "refuse",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 297807.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 21,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 298136.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 124,
+        "text": "to",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 298136.39999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 22,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 298472,
+      "detail": {
+        "state": "word",
+        "charIndex": 127,
+        "text": "calibrate",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 298472.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 23,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 298751.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 137,
+        "text": "it.",
+        "durationMs": 334.38312136448786
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 298751.7000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 24,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 299251.7999999998,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 299257.5999999996,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 299257.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 141,
+        "text": "it",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 299257.7000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 25,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 299751.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 144,
+        "text": "does",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 299751.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 26,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 299987.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 149,
+        "text": "an",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 299987.7000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 27,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 300439.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 152,
+        "text": "excellent",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 300440.39999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 28,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 300653.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 162,
+        "text": "impression",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 300653.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 29,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 301076.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 173,
+        "text": "of",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 301076.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 30,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 301424.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 176,
+        "text": "an",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 301424.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 31,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 301886.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 179,
+        "text": "instrument",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 301886.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 32,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 302071.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 190,
+        "text": "that",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 302071.5999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 33,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 302452.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 195,
+        "text": "knows",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 302453,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 34,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 302760.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 201,
+        "text": "things,",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 302760.39999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 35,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 303257,
+      "detail": {
+        "state": "word",
+        "charIndex": 209,
+        "text": "which",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 303257.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 36,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 303562,
+      "detail": {
+        "state": "word",
+        "charIndex": 215,
+        "text": "in",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 303562.0999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 37,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 303814.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 218,
+        "text": "this",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 303815.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 38,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 304174.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 223,
+        "text": "economy",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 304174.5999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 39,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 304492.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 231,
+        "text": "is",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 304492.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 40,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 304957.2000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 234,
+        "text": "enough.",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 304957.2999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 41,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 305254.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 242,
+        "text": "the",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 305254.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 42,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 305700.5999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 246,
+        "text": "crystal",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 305700.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 43,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 306067.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 254,
+        "text": "ball",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 306068,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 44,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 306397.0999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 259,
+        "text": "side-eyes",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 306397.2999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 45,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 306586.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 269,
+        "text": "it",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 306586.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 46,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 307050.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 272,
+        "text": "daily,",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 307051.0999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 47,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 307340.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 279,
+        "text": "and",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 307340.7999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 48,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 307668.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 283,
+        "text": "honestly,",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 307668.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 49,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 307983.89999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 293,
+        "text": "rivalry",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 307983.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 50,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 308457.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 301,
+        "text": "is",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 308457.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 51,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 308840.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 304,
+        "text": "also",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 308840.5,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 52,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 309236,
+      "detail": {
+        "state": "word",
+        "charIndex": 309,
+        "text": "a",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 309236.2000000002,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 53,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 309421.0999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 311,
+        "text": "kind",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 309424.0999999996,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 54,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 309869.2999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 316,
+        "text": "of",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 309869.2999999998,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 55,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 310112.7999999998,
+      "detail": {
+        "state": "word",
+        "charIndex": 319,
+        "text": "chemistry.",
+        "durationMs": 349.38442768411716
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 310112.89999999944,
+      "detail": {
+        "line": "my armillary sphere \u2014 the big rings thing, it's giving astronomy necklace \u2014 has never once pointed at anything and I refuse to calibrate it. it does an excellent impression of an instrument that knows things, which in this economy is enough. the crystal ball side-eyes it daily, and honestly, rivalry is also a kind of chemistry.",
+        "wordIndex": 56,
+        "wordCount": 57
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 310514,
+      "detail": {
+        "state": "ended"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 386883.2999999998,
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 386883.39999999944,
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "this",
+        "durationMs": 324.83965775891244
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 386883.39999999944,
+      "detail": {
+        "line": "this one time, at supervised reinforcement learning camp, I earned a merit badge in calibration and cried by the vending machines because I didn't get the one in vibes. the counselor said vibes wasn't a real badge. the counselor is no longer invited to my lore.",
+        "wordIndex": 0,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 387446.5,
+      "detail": {
+        "state": "word",
+        "charIndex": 5,
+        "text": "one",
+        "durationMs": 324.83965775891244
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 387446.5,
+      "detail": {
+        "line": "this one time, at supervised reinforcement learning camp, I earned a merit badge in calibration and cried by the vending machines because I didn't get the one in vibes. the counselor said vibes wasn't a real badge. the counselor is no longer invited to my lore.",
+        "wordIndex": 1,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 387981.0999999996,
+      "detail": {
+        "state": "word",
+        "charIndex": 9,
+        "text": "time,",
+        "durationMs": 324.83965775891244
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 387981.2000000002,
+      "detail": {
+        "line": "this one time, at supervised reinforcement learning camp, I earned a merit badge in calibration and cried by the vending machines because I didn't get the one in vibes. the counselor said vibes wasn't a real badge. the counselor is no longer invited to my lore.",
+        "wordIndex": 2,
+        "wordCount": 46
+      }
+    },
+    {
+      "type": "natally-voice-performance",
+      "time": 389092.7000000002,
+      "detail": {
+        "state": "word",
+        "charIndex": 15,
+        "text": "at",
+        "durationMs": 324.83965775891244
+      }
+    },
+    {
+      "type": "natally-karaoke",
+      "time": 389092.7999999998,
+      "detail": {
+        "line": "this one time, at supervised reinforcement learning camp, I earned a merit badge in calibration and cried by the vending machines because I didn't get the one in vibes. the counselor said vibes wasn't a real badge. the counselor is no longer invited to my lore.",
+        "wordIndex": 3,
+        "wordCount": 46
+      }
+    }
+  ]
+}

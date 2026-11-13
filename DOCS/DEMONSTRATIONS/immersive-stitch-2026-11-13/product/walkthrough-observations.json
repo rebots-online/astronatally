@@ -1,0 +1,952 @@
+{
+  "scope": "Actual guest product UI. No auth/billing/provider mocks or synthetic app events.",
+  "startedAt": "2026-11-13T09:51:32.552Z",
+  "normalization": "Duplicate inspect records removed by time/label/action. Repeated passive voice events extracted into voice-events.json. No application event was synthesized.",
+  "sourceCommits": {
+    "initial": "31519da",
+    "focusedInsetAndDemoContext": "abf52ff"
+  },
+  "steps": [
+    {
+      "label": "guest-first-desktop",
+      "time": "2026-11-13T09:51:36.728Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nDownloading Natally\u2019s voice\u2026\n19.6 / 262.8 MB \u00b7 7%\nVoice details\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 285.296875
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BODY"
+    },
+    {
+      "time": "2026-11-13T09:51:59.995Z",
+      "action": "hover-scan",
+      "canvas": {
+        "x": 42,
+        "y": 184,
+        "width": 258,
+        "height": 228
+      },
+      "hits": [
+        {
+          "x": 167,
+          "y": 219,
+          "text": [
+            "\n            \n              ZODIAC SIGN \n            \n            \n              Virgo (\u264d)\n            \n            \n              Earth \u00b7 Mutable \u00b7 Mutable Earth \u00b7 Discernment, craft & calibration\n            \n            \n              \u2726 Shift/Ctrl-click to toggle multi-selection\n            \n          "
+          ]
+        }
+      ],
+      "clicked": {
+        "x": 167,
+        "y": 219,
+        "text": [
+          "\n            \n              ZODIAC SIGN \n            \n            \n              Virgo (\u264d)\n            \n            \n              Earth \u00b7 Mutable \u00b7 Mutable Earth \u00b7 Discernment, craft & calibration\n            \n            \n              \u2726 Shift/Ctrl-click to toggle multi-selection\n            \n          "
+        ]
+      }
+    },
+    {
+      "label": "actual-chart-selection",
+      "time": "2026-11-13T09:52:09.239Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nReading room\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing speech\u2026\nVoice details\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 285.296875
+      },
+      "canvas": [
+        {
+          "w": 560,
+          "h": 600,
+          "css": {
+            "w": 560,
+            "h": 600
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "Demonstration chart \u2014 drag to move, arrow keys to move, Alt and arrow keys to resize"
+    },
+    {
+      "time": "2026-11-13T09:52:32.534Z",
+      "action": "click",
+      "name": "Cast my chart"
+    },
+    {
+      "label": "actual-sign-in-choose",
+      "time": "2026-11-13T09:52:32.535Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nSave your chart\n\u00d7\nContinue with GoogleContinue with emailContinue with SMS\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 343
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BUTTON"
+    },
+    {
+      "time": "2026-11-13T09:52:34.605Z",
+      "action": "click",
+      "name": "Continue with email"
+    },
+    {
+      "label": "actual-email-view",
+      "time": "2026-11-13T09:52:34.605Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nSign in\n\u2190\nEmail\nPassword\nSign inCreate account\nForgot password\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 519
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-email"
+    },
+    {
+      "time": "2026-11-13T09:52:36.512Z",
+      "action": "click",
+      "name": "Back"
+    },
+    {
+      "time": "2026-11-13T09:54:04.006Z",
+      "action": "click",
+      "name": "Continue with email"
+    },
+    {
+      "time": "2026-11-13T09:54:04.214Z",
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "label": "email-keyboard",
+      "time": "2026-11-13T09:54:04.217Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nSign in\n\u2190\nEmail\nPassword\nSign inCreate account\nForgot password\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 519
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-password"
+    },
+    {
+      "time": "2026-11-13T09:54:06.402Z",
+      "action": "click",
+      "name": "Create account"
+    },
+    {
+      "label": "register-view",
+      "time": "2026-11-13T09:54:06.408Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nCreate account\n\u2190\nEmail\nPassword\nConfirm password\nCreate account\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 504
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-email"
+    },
+    {
+      "time": "2026-11-13T09:54:08.303Z",
+      "action": "click",
+      "name": "Back"
+    },
+    {
+      "time": "2026-11-13T09:54:09.237Z",
+      "action": "click",
+      "name": "Forgot password"
+    },
+    {
+      "label": "reset-view",
+      "time": "2026-11-13T09:54:09.245Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nReset password\n\u2190\nEmail\nSend reset email\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 322
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-email"
+    },
+    {
+      "time": "2026-11-13T09:54:10.766Z",
+      "action": "click",
+      "name": "Back"
+    },
+    {
+      "time": "2026-11-13T09:54:11.732Z",
+      "action": "click",
+      "name": "Back"
+    },
+    {
+      "time": "2026-11-13T09:54:12.772Z",
+      "action": "click",
+      "name": "Continue with SMS"
+    },
+    {
+      "label": "sms-view",
+      "time": "2026-11-13T09:54:12.777Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nSign in by SMS\n\u2190\nPhone number\n\nBy choosing Send code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.\n\nSend code\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 528
+      },
+      "canvas": [
+        {
+          "w": 258,
+          "h": 228,
+          "css": {
+            "w": 258,
+            "h": 228
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-phone"
+    },
+    {
+      "time": "2026-11-13T09:56:09.836Z",
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "label": "sms-phone",
+      "time": "2026-11-13T09:56:09.846Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nSign in by SMS\n\u2190\nPhone number\n\nBy choosing Send code, you consent to receive an SMS for sign-in. Message and data rates may apply. Google uses phone numbers to help prevent spam and abuse.\n\nSend code\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 520
+      },
+      "canvas": [
+        {
+          "w": 146,
+          "h": 116,
+          "css": {
+            "w": 146.15625,
+            "h": 116.15625
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-phone"
+    },
+    {
+      "time": "2026-11-13T09:56:12.438Z",
+      "action": "click",
+      "name": "Back"
+    },
+    {
+      "time": "2026-11-13T09:56:13.658Z",
+      "action": "click",
+      "name": "Close"
+    },
+    {
+      "time": "2026-11-13T09:56:15.164Z",
+      "action": "click",
+      "name": "Open menu"
+    },
+    {
+      "label": "menu-phone",
+      "time": "2026-11-13T09:56:15.171Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nMenu\n\u00d7\nMeet NatallyYour chartReading aloudPersonal readingsPricesLearn astrologySign in\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 567
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "H1"
+    },
+    {
+      "time": "2026-11-13T09:56:16.804Z",
+      "action": "click",
+      "name": "Prices"
+    },
+    {
+      "label": "prices-phone",
+      "time": "2026-11-13T09:56:16.817Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPrices\n\u00d7\n\nYour chart is free. Conversation packs: US$5, US$10 or US$25. Keepsake: US$30.\n\nPrevious\nNext\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 299
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "H1"
+    },
+    {
+      "time": "2026-11-13T09:57:52.277Z",
+      "action": "resize",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "time": "2026-11-13T09:57:55.669Z",
+      "action": "click",
+      "name": "Chart"
+    },
+    {
+      "label": "focused-room-inset-corrected",
+      "time": "2026-11-13T09:57:55.702Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nReading room\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing speech\u2026\nVoice details\nYour chart\n\u00d7\n\nThis demonstration uses an example sky. Your chart is calculated from your birth details.\n\nPrevious\nNext\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 331
+      },
+      "canvas": [
+        {
+          "w": 560,
+          "h": 600,
+          "css": {
+            "w": 560,
+            "h": 600
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BUTTON"
+    },
+    {
+      "time": "2026-11-13T09:58:01.103Z",
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "label": "focused-room-inset-corrected-phone",
+      "time": "2026-11-13T09:58:01.119Z",
+      "url": "http://127.0.0.1:5173/app.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nReading room\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing speech\u2026\nVoice details\n\nthis one time, at supervised reinforcement learning camp, I earned a merit badge in\n\nYour chart\n\u00d7\n\nThis demonstration uses an example sky. Your chart is calculated from your birth details.\n\nPrevious\nNext\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 323
+      },
+      "canvas": [
+        {
+          "w": 560,
+          "h": 616,
+          "css": {
+            "w": 560,
+            "h": 616
+          }
+        }
+      ],
+      "caption": [
+        "this one time, at supervised reinforcement learning camp, I earned a merit badge in",
+        "this one time, at supervised reinforcement learning camp, I earned a merit badge in"
+      ],
+      "focus": "BUTTON"
+    },
+    {
+      "time": "2026-11-13T09:59:45.183Z",
+      "action": "go",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "label": "alias-root-phone",
+      "time": "2026-11-13T09:59:45.226Z",
+      "url": "http://127.0.0.1:5173/",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing Natally\u2019s voice\u2026\n262.8 / 262.8 MB \u00b7 100%\nVoice details\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 277.296875
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BODY"
+    },
+    {
+      "time": "2026-11-13T09:59:51.418Z",
+      "action": "go",
+      "url": "http://127.0.0.1:5173/landing.html"
+    },
+    {
+      "label": "alias-landing-phone",
+      "time": "2026-11-13T09:59:51.434Z",
+      "url": "http://127.0.0.1:5173/landing.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 277.296875
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BODY"
+    },
+    {
+      "time": "2026-11-13T09:59:56.372Z",
+      "action": "resize",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "label": "narrow-guest",
+      "time": "2026-11-13T09:59:56.389Z",
+      "url": "http://127.0.0.1:5173/landing.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 441.59375,
+        "w": 328,
+        "h": 277.296875
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "BODY"
+    },
+    {
+      "time": "2026-11-13T09:59:59.546Z",
+      "action": "click",
+      "name": "Cast my chart"
+    },
+    {
+      "time": "2026-11-13T10:00:00.824Z",
+      "action": "click",
+      "name": "Continue with email"
+    },
+    {
+      "label": "narrow-email",
+      "time": "2026-11-13T10:00:00.853Z",
+      "url": "http://127.0.0.1:5173/landing.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing speech\u2026\nVoice details\nSign in\n\u2190\nEmail\nPassword\nSign inCreate account\nForgot password\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": -4,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 60,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 437.59375,
+        "w": 328,
+        "h": 511
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "_r_4_-email"
+    },
+    {
+      "time": "2026-11-13T10:00:01.621Z",
+      "action": "key",
+      "key": "Shift+Tab"
+    },
+    {
+      "label": "email-back-keyboard-focus",
+      "time": "2026-11-13T10:00:01.638Z",
+      "url": "http://127.0.0.1:5173/landing.html",
+      "title": "Natally \u2014 the live atelier",
+      "screenText": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nPreparing speech\u2026\nVoice details\nSign in\n\u2190\nEmail\nPassword\nSign inCreate account\nForgot password\nPrivacy\nTerms\nv1.32.00768",
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": -4,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 60,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 437.59375,
+        "w": 328,
+        "h": 511
+      },
+      "canvas": [
+        {
+          "w": 130,
+          "h": 100,
+          "css": {
+            "w": 130,
+            "h": 100
+          }
+        }
+      ],
+      "caption": [
+        ""
+      ],
+      "focus": "Back"
+    }
+  ],
+  "pageExceptions": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html')."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x22dc01631200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x22dc01631200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x22dc01631200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x22dc01631200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html')."
+    },
+    {
+      "type": "warning",
+      "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+    },
+    {
+      "type": "warning",
+      "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+    },
+    {
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html')."
+    },
+    {
+      "type": "warning",
+      "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+    },
+    {
+      "type": "warning",
+      "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+    }
+  ],
+  "failedRequests": [
+    {
+      "url": "http://127.0.0.1:5173/sw.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:5173/sw.js",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:5173/sw.js",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "originalOutsideRepository": {
+    "path": "/workspace/scratch/product-qa/session-observations.json",
+    "sha256": "f3296c22200f5b581822971e4274d020b6e647739f4f0b162132a56f0198f237"
+  }
+}

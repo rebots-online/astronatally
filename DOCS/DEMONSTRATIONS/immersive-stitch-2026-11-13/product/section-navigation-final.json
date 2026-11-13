@@ -1,0 +1,44 @@
+[
+  {
+    "requested": "Meet Natally",
+    "heading": "Meet Natally",
+    "text": "Meet Natally\n×\n\nSit with me and explore the wheel.\n\nNext",
+    "sceneStable": true,
+    "focused": "false"
+  },
+  {
+    "requested": "Your chart",
+    "heading": "Your chart",
+    "text": "Your chart\n×\n\nThis demonstration uses an example sky. Your chart is calculated from your birth details.\n\nPrevious\nNext",
+    "sceneStable": true,
+    "focused": "true"
+  },
+  {
+    "requested": "Reading aloud",
+    "heading": "Reading aloud",
+    "text": "Reading aloud\n×\n\nTap a chart detail to hear its explanation and see it highlighted.\n\nPrevious\nNext",
+    "sceneStable": true,
+    "focused": "true"
+  },
+  {
+    "requested": "Personal readings",
+    "heading": "Personal readings",
+    "text": "Personal readings\n×\n\nAsk about your chart. Conversation uses credits when you choose to buy them.\n\nPrevious\nNext",
+    "sceneStable": true,
+    "focused": "false"
+  },
+  {
+    "requested": "Prices",
+    "heading": "Prices",
+    "text": "Prices\n×\n\nYour chart is free. Conversation packs: US$5, US$10 or US$25. Keepsake: US$30.\n\nPrevious\nNext",
+    "sceneStable": true,
+    "focused": "false"
+  },
+  {
+    "requested": "Learn astrology",
+    "heading": "Learn astrology",
+    "text": "Learn astrology\n×\n\nSelect a planet, sign, house or aspect to hear what it means.\n\nPrevious",
+    "sceneStable": true,
+    "focused": "false"
+  }
+]

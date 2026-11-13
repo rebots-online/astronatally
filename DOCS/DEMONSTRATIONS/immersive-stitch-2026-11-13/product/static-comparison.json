@@ -1,0 +1,926 @@
+[
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 900,
+    "actualGuest": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 229.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 1089,
+          "y": 202.796875,
+          "w": 302,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "refGuest": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 229.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 1089,
+          "y": 202.796875,
+          "w": 302,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "actualEmail": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 463
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 1347,
+          "y": 101,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 1089,
+          "y": 360,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 1089,
+          "y": 416,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 1089,
+          "y": 470,
+          "w": 302,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 1089,
+          "y": 205,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 1089,
+          "y": 296,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "refEmail": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 1016,
+        "h": 730
+      },
+      "rail": {
+        "x": 1064,
+        "y": 76,
+        "w": 352,
+        "h": 463
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 1347,
+          "y": 101,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 1089,
+          "y": 360,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 1089,
+          "y": 416,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 1089,
+          "y": 470,
+          "w": 302,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 1089,
+          "y": 205,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 1089,
+          "y": 296,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "sceneStable": true,
+    "errors": []
+  },
+  {
+    "viewport": "short",
+    "width": 1280,
+    "height": 720,
+    "actualGuest": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 856,
+        "h": 550
+      },
+      "rail": {
+        "x": 904,
+        "y": 76,
+        "w": 352,
+        "h": 229.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 929,
+          "y": 202.796875,
+          "w": 302,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "refGuest": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 856,
+        "h": 550
+      },
+      "rail": {
+        "x": 904,
+        "y": 76,
+        "w": 352,
+        "h": 229.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 929,
+          "y": 202.796875,
+          "w": 302,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "actualEmail": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 856,
+        "h": 550
+      },
+      "rail": {
+        "x": 904,
+        "y": 76,
+        "w": 352,
+        "h": 463
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 1187,
+          "y": 101,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 929,
+          "y": 360,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 929,
+          "y": 416,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 929,
+          "y": 470,
+          "w": 302,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 929,
+          "y": 205,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 929,
+          "y": 296,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "refEmail": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 52
+      },
+      "stage": {
+        "x": 24,
+        "y": 76,
+        "w": 856,
+        "h": 550
+      },
+      "rail": {
+        "x": 904,
+        "y": 76,
+        "w": 352,
+        "h": 463
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 1187,
+          "y": 101,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 929,
+          "y": 360,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 929,
+          "y": 416,
+          "w": 302,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 929,
+          "y": 470,
+          "w": 302,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 929,
+          "y": 205,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 929,
+          "y": 296,
+          "w": 302,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "sceneStable": true,
+    "errors": []
+  },
+  {
+    "viewport": "phone",
+    "width": 390,
+    "height": 844,
+    "actualGuest": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 221.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 37,
+          "y": 654.15625,
+          "w": 316,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "refGuest": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 221.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 37,
+          "y": 654.15625,
+          "w": 316,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "actualEmail": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 455
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 309,
+          "y": 552.359375,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 37,
+          "y": 811.359375,
+          "w": 316,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 37,
+          "y": 867.359375,
+          "w": 316,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 37,
+          "y": 921.359375,
+          "w": 316,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 37,
+          "y": 656.359375,
+          "w": 316,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 37,
+          "y": 747.359375,
+          "w": 316,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "refEmail": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 358,
+        "h": 371.359375
+      },
+      "rail": {
+        "x": 16,
+        "y": 531.359375,
+        "w": 358,
+        "h": 455
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 309,
+          "y": 552.359375,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 37,
+          "y": 811.359375,
+          "w": 316,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 37,
+          "y": 867.359375,
+          "w": 316,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 37,
+          "y": 921.359375,
+          "w": 316,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 37,
+          "y": 656.359375,
+          "w": 316,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 37,
+          "y": 747.359375,
+          "w": 316,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "sceneStable": true,
+    "errors": []
+  },
+  {
+    "viewport": "narrow",
+    "width": 360,
+    "height": 640,
+    "actualGuest": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 441.59375,
+        "w": 328,
+        "h": 221.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 37,
+          "y": 564.390625,
+          "w": 286,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "refGuest": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 441.59375,
+        "w": 328,
+        "h": 221.296875
+      },
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Cast my chart",
+          "x": 37,
+          "y": 564.390625,
+          "w": 286,
+          "h": 48
+        }
+      ],
+      "inputs": []
+    },
+    "actualEmail": {
+      "title": "Natally — the live atelier",
+      "header": {
+        "x": 0,
+        "y": -4,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 60,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 437.59375,
+        "w": 328,
+        "h": 455
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 1,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 279,
+          "y": 458.59375,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 37,
+          "y": 717.59375,
+          "w": 286,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 37,
+          "y": 773.59375,
+          "w": 286,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 37,
+          "y": 827.59375,
+          "w": 286,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 37,
+          "y": 562.59375,
+          "w": 286,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 37,
+          "y": 653.59375,
+          "w": 286,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "refEmail": {
+      "title": "Natally — live atelier master",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 48
+      },
+      "stage": {
+        "x": 16,
+        "y": 64,
+        "w": 328,
+        "h": 281.59375
+      },
+      "rail": {
+        "x": 16,
+        "y": 441.59375,
+        "w": 328,
+        "h": 455
+      },
+      "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+      "sceneCount": 0,
+      "overflow": false,
+      "fontOutfit": true,
+      "fontDisplay": "\"Playfair Display\", Georgia, serif",
+      "modalCount": 0,
+      "buttons": [
+        {
+          "name": "Back",
+          "x": 279,
+          "y": 462.59375,
+          "w": 44,
+          "h": 44
+        },
+        {
+          "name": "Sign in",
+          "x": 37,
+          "y": 721.59375,
+          "w": 286,
+          "h": 48
+        },
+        {
+          "name": "Create account",
+          "x": 37,
+          "y": 777.59375,
+          "w": 286,
+          "h": 48
+        },
+        {
+          "name": "Forgot password",
+          "x": 37,
+          "y": 831.59375,
+          "w": 286,
+          "h": 44
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "x": 37,
+          "y": 566.59375,
+          "w": 286,
+          "h": 48,
+          "font": "16px"
+        },
+        {
+          "type": "password",
+          "x": 37,
+          "y": 657.59375,
+          "w": 286,
+          "h": 48,
+          "font": "16px"
+        }
+      ]
+    },
+    "sceneStable": true,
+    "errors": []
+  }
+]

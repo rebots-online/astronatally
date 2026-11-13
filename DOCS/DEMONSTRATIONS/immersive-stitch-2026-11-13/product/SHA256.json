@@ -1,0 +1,19 @@
+{
+  "README.md": "23840bef32f781efb376a42669515e7c6ab1df253ccc01627c429f9553b0a5ba",
+  "before-focused-inset.png": "035de2dff7feb17684f95b695d16f22028451ef8cd1624da076f738d15c51261",
+  "chart-focused-desktop.png": "19c47c82681d22ce3c2340d598a25158371b69f3a22dcbef926f64d303106765",
+  "chart-focused-phone.png": "e2919d1fa2670e49b71861fe495b433cc23a686e318687580fc1288e22eb61a4",
+  "email-narrow.png": "dc6607a009d8b43d5063d57fa6dca1c6fcb1bfa61cdaa77734d221664c780e84",
+  "email-phone.png": "5398ea1f00d30f299c4d1c62eb2e73b4ac4896d86a32cdda6e9ea661d620ce3f",
+  "focused-voice-continuous.mp4": "8d27dec69ec3e4deb8d2ced2ef69f60b8f4f99dd957c31639c9603c3b012b0c2",
+  "guest-auth-continuous.webm": "f07ffbd3522c4d097121a143d02875bb8422fb0846115b18fe58bae2555fc460",
+  "guest-desktop.png": "578fd2ab7ccd06d29fc92a29097fe402dca3ec5e8ae4747694f320183c6e43fd",
+  "section-navigation-before-fix.json": "7b3536268dcc442dfc9abea6b8e08864c424f11f07ee3271671c5a5bb2761201",
+  "section-navigation-final.json": "f83d84d8b7608f3c81a3ec013559c189e62f745b63e37de822ded3a184a4ef8c",
+  "sms-form-desktop.png": "a61bf0f5464592f7b5e3e1539b773e185622301d9a77380a96baf1ddc5375f30",
+  "static-comparison.json": "e3b5fe1b5f56bc83878d2b3eb1d4a41e645bbcfaf2ba790f54d051a56f5d3947",
+  "verification.json": "36d96897fa0401e74e7c2c5ae02570aa512a0c6290055008a3cf8a2f4cede6ca",
+  "video-provenance.json": "77f20a18840ef8ab682132282c20ae82aaa55bf181578d6b4a38293b163724af",
+  "voice-events.json": "fd874df79fa127d99f9269d6042c73e5717ff827e9ff6e20747923a23e661a23",
+  "walkthrough-observations.json": "da01bdfd0efc1a3a5e2486cfa9cd68314dcf19a7c27949a30d11d2034bf0108a"
+}
