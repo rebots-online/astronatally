@@ -1,0 +1,461 @@
+{
+  "scope": "final pre-freeze design check only",
+  "sha256": "58b11534f01da85c2aca9a73aa2dfccf13411274a70509ce65e4ff9090afc0bc",
+  "results": [
+    {
+      "w": 360,
+      "h": 640,
+      "state": "S01-guest",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 72.984375,
+          "h": 44,
+          "x": 16,
+          "y": 1.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 244,
+          "y": 1.5
+        },
+        {
+          "name": "Open menu",
+          "w": 44,
+          "h": 44,
+          "x": 300,
+          "y": 1.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 132,
+        "h": 132,
+        "x": 29,
+        "y": 77
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [],
+      "confirmed": [],
+      "inputs": [],
+      "reportSections": 0,
+      "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "state": "S04-place-suggestions",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 72.984375,
+          "h": 44,
+          "x": 16,
+          "y": 1.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 274,
+          "y": 1.5
+        },
+        {
+          "name": "Open menu",
+          "w": 44,
+          "h": 44,
+          "x": 330,
+          "y": 1.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 132,
+        "h": 132,
+        "x": 29,
+        "y": 77
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [
+        {
+          "id": "birthplace-options",
+          "options": [
+            "Toronto, CA"
+          ]
+        }
+      ],
+      "confirmed": [],
+      "inputs": [
+        {
+          "id": "birth-place",
+          "type": "text",
+          "placeholder": "",
+          "list": "birthplace-options"
+        }
+      ],
+      "reportSections": 0,
+      "railText": "Where were you born?\n←\n\n3 of 4\n\nBirthplace search\nToronto, CA\nAmerica/Toronto\nContinue",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "state": "S04-place-confirmed",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 72.984375,
+          "h": 44,
+          "x": 16,
+          "y": 1.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 274,
+          "y": 1.5
+        },
+        {
+          "name": "Open menu",
+          "w": 44,
+          "h": 44,
+          "x": 330,
+          "y": 1.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 132,
+        "h": 132,
+        "x": 29,
+        "y": 77
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [],
+      "confirmed": [
+        "Toronto, CA\n43.71° N · 79.40° W\nAmerica/Toronto\n×"
+      ],
+      "inputs": [],
+      "reportSections": 0,
+      "railText": "Where were you born?\n←\n\n3 of 4\n\nToronto, CA\n43.71° N · 79.40° W\nAmerica/Toronto\n×\nContinue",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "state": "S04-date-calendar",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 85.15625,
+          "h": 44,
+          "x": 24,
+          "y": 3.5
+        },
+        {
+          "name": "Meet Natally",
+          "w": 87.796875,
+          "h": 44,
+          "x": 133.15625,
+          "y": 3.5
+        },
+        {
+          "name": "Your chart",
+          "w": 72.90625,
+          "h": 44,
+          "x": 240.953125,
+          "y": 3.5
+        },
+        {
+          "name": "Reading aloud",
+          "w": 96.578125,
+          "h": 44,
+          "x": 333.859375,
+          "y": 3.5
+        },
+        {
+          "name": "Personal readings",
+          "w": 119.21875,
+          "h": 44,
+          "x": 450.4375,
+          "y": 3.5
+        },
+        {
+          "name": "Prices",
+          "w": 45.609375,
+          "h": 44,
+          "x": 589.65625,
+          "y": 3.5
+        },
+        {
+          "name": "Learn astrology",
+          "w": 106.546875,
+          "h": 44,
+          "x": 655.265625,
+          "y": 3.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 1372,
+          "y": 3.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 260,
+        "h": 260,
+        "x": 41,
+        "y": 153
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [],
+      "confirmed": [],
+      "inputs": [
+        {
+          "id": "birth-date",
+          "type": "text",
+          "placeholder": "YYYY/MM/DD",
+          "list": null
+        }
+      ],
+      "reportSections": 0,
+      "railText": "When were you born?\n←\n\n2 of 4\n\nBirth date — year, month, day\nOr choose your date\n‹\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec\n2026 ▾\n›\nSu\nMo\nTu\nWe\nTh\nFr\nSa\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nContinue",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "state": "S09-retained",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 85.15625,
+          "h": 44,
+          "x": 24,
+          "y": 3.5
+        },
+        {
+          "name": "Meet Natally",
+          "w": 87.796875,
+          "h": 44,
+          "x": 133.15625,
+          "y": 3.5
+        },
+        {
+          "name": "Your chart",
+          "w": 72.90625,
+          "h": 44,
+          "x": 240.953125,
+          "y": 3.5
+        },
+        {
+          "name": "Reading aloud",
+          "w": 96.578125,
+          "h": 44,
+          "x": 333.859375,
+          "y": 3.5
+        },
+        {
+          "name": "Personal readings",
+          "w": 119.21875,
+          "h": 44,
+          "x": 450.4375,
+          "y": 3.5
+        },
+        {
+          "name": "Prices",
+          "w": 45.609375,
+          "h": 44,
+          "x": 589.65625,
+          "y": 3.5
+        },
+        {
+          "name": "Learn astrology",
+          "w": 106.546875,
+          "h": 44,
+          "x": 655.265625,
+          "y": 3.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 1372,
+          "y": 3.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 260,
+        "h": 260,
+        "x": 41,
+        "y": 153
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [],
+      "confirmed": [],
+      "inputs": [],
+      "reportSections": 0,
+      "railText": "My keepsake\n×\nA Keepsake of the Sky\n\nDemonstration chart\n\nThe Moment You Arrived\nDate of birth\n31 August 1988\nTime of birth\n14:30 local time\nPlace of birth\nToronto, Ontario, Canada\nCoordinates\n43.7°N, 79.4°W\nTime zone\nAmerica/Toronto\nPrepared\nPrepared 13 November 2026\nSun — The Core Flame\n\nSun in Virgo, house 9 — The Sun is your vitality and center of gravity: the self you are slowly growing into rather than the role you woke up with. Its sign describes what makes you feel alive, and its house shows the life area where you need to shine for the day to feel like it counted. When your Sun is fed, everything else in the chart has a hearth to gather around.\n\nIn the tradition: Classical astrology called the Sun the great significator of the heart and the life force, giving it rulership of Leo and the fifth house of creative self-expression. Its ancient symbol was a dot in a circle — spirit at the center of matter — marking it as both creator and sustainer. Modern practice keeps that thread: the Sun is the quest, not the starting point.\n\nA question to sit with: When do you feel most unmistakably, radiantly yourself?\n\nMoon — The Inner Weather\n\nMoon in Taurus, house 5 — The Moon is your inner weather: how you feel safe, how you soothe yourself, and what you need when the day turns stormy. Its sign is your emotional dialect and its house is the room of life where moods rise and fall most visibly. Tend it like a garden and the whole chart eats better.\n\nIn the tradition: The Moon is the",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        },
+        {
+          "alt": "Chart rendered by the existing keepsake viewer from the public demonstration sky",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "state": "S09-retained",
+      "overflow": false,
+      "headerControls": [
+        {
+          "name": "Natally home",
+          "w": 72.984375,
+          "h": 44,
+          "x": 16,
+          "y": 1.5
+        },
+        {
+          "name": "Account details",
+          "w": 44,
+          "h": 44,
+          "x": 274,
+          "y": 1.5
+        },
+        {
+          "name": "Open menu",
+          "w": 44,
+          "h": 44,
+          "x": 330,
+          "y": 1.5
+        }
+      ],
+      "tinyTargets": [],
+      "inset": {
+        "w": 132,
+        "h": 132,
+        "x": 29,
+        "y": 77
+      },
+      "caption": [
+        {
+          "display": "flex",
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "text": ""
+        }
+      ],
+      "datalist": [],
+      "confirmed": [],
+      "inputs": [],
+      "reportSections": 0,
+      "railText": "My keepsake\n×\nA Keepsake of the Sky\n\nDemonstration chart\n\nThe Moment You Arrived\nDate of birth\n31 August 1988\nTime of birth\n14:30 local time\nPlace of birth\nToronto, Ontario, Canada\nCoordinates\n43.7°N, 79.4°W\nTime zone\nAmerica/Toronto\nPrepared\nPrepared 13 November 2026\nSun — The Core Flame\n\nSun in Virgo, house 9 — The Sun is your vitality and center of gravity: the self you are slowly growing into rather than the role you woke up with. Its sign describes what makes you feel alive, and its house shows the life area where you need to shine for the day to feel like it counted. When your Sun is fed, everything else in the chart has a hearth to gather around.\n\nIn the tradition: Classical astrology called the Sun the great significator of the heart and the life force, giving it rulership of Leo and the fifth house of creative self-expression. Its ancient symbol was a dot in a circle — spirit at the center of matter — marking it as both creator and sustainer. Modern practice keeps that thread: the Sun is the quest, not the starting point.\n\nA question to sit with: When do you feel most unmistakably, radiantly yourself?\n\nMoon — The Inner Weather\n\nMoon in Taurus, house 5 — The Moon is your inner weather: how you feel safe, how you soothe yourself, and what you need when the day turns stormy. Its sign is your emotional dialect and its house is the room of life where moods rise and fall most visibly. Tend it like a garden and the whole chart eats better.\n\nIn the tradition: The Moon is the",
+      "visibleImages": [
+        {
+          "alt": "Natally's atelier",
+          "loaded": true
+        },
+        {
+          "alt": "Demonstration chart from the current live renderer",
+          "loaded": true
+        },
+        {
+          "alt": "Chart rendered by the existing keepsake viewer from the public demonstration sky",
+          "loaded": true
+        }
+      ]
+    }
+  ]
+}

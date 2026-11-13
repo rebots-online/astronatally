@@ -1,0 +1,199 @@
+[
+  {
+    "width": 360,
+    "height": 640,
+    "state": "S02-register",
+    "overflow": false,
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Interaction sounds",
+        "type": "button",
+        "w": 40,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pause motion",
+        "type": "button",
+        "w": 40,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "type": null,
+        "w": 39.71875,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Terms",
+        "type": null,
+        "w": 32.59375,
+        "h": 44,
+        "parent": null
+      }
+    ],
+    "scrolling": [
+      {
+        "tag": "HTML",
+        "id": "",
+        "className": "",
+        "clientHeight": 640,
+        "scrollHeight": 954
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "height": 640,
+    "state": "S04-date-year",
+    "overflow": false,
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Interaction sounds",
+        "type": "button",
+        "w": 40,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pause motion",
+        "type": "button",
+        "w": 40,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "type": null,
+        "w": 39.71875,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Terms",
+        "type": null,
+        "w": 32.59375,
+        "h": 44,
+        "parent": null
+      }
+    ],
+    "scrolling": [
+      {
+        "tag": "HTML",
+        "id": "",
+        "className": "",
+        "clientHeight": 640,
+        "scrollHeight": 2751
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "state": "S08-topup",
+    "overflow": false,
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "type": "radio",
+        "w": 18,
+        "h": 18,
+        "parent": {
+          "w": 302,
+          "h": 54
+        }
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "type": "radio",
+        "w": 18,
+        "h": 18,
+        "parent": {
+          "w": 302,
+          "h": 54
+        }
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "type": "radio",
+        "w": 18,
+        "h": 18,
+        "parent": {
+          "w": 302,
+          "h": 54
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "type": null,
+        "w": 39.71875,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Terms",
+        "type": null,
+        "w": 32.59375,
+        "h": 44,
+        "parent": null
+      }
+    ],
+    "scrolling": [
+      {
+        "tag": "HTML",
+        "id": "",
+        "className": "",
+        "clientHeight": 720,
+        "scrollHeight": 730
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "state": "S06-chart-focus",
+    "overflow": false,
+    "controls": [
+      {
+        "tag": "A",
+        "text": "Privacy",
+        "type": null,
+        "w": 39.71875,
+        "h": 44,
+        "parent": null
+      },
+      {
+        "tag": "A",
+        "text": "Terms",
+        "type": null,
+        "w": 32.59375,
+        "h": 44,
+        "parent": null
+      }
+    ],
+    "scrolling": [
+      {
+        "tag": "HTML",
+        "id": "",
+        "className": "",
+        "clientHeight": 720,
+        "scrollHeight": 730
+      }
+    ]
+  }
+]

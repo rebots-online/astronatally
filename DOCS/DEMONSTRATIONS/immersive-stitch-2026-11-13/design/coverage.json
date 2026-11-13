@@ -1,0 +1,128 @@
+{
+  "scope": "Design-reference review only. No product, live service, deployed site or native release acceptance.",
+  "repository": "rebots-online/astronatally",
+  "freezeCommit": "8842cd5",
+  "prototypeCommit": "1f9c12a",
+  "project": "16384422545803483395",
+  "screen": "projects/16384422545803483395/screens/d69e9b3247ff40fa90415cc2ca24abe4",
+  "master": {
+    "path": "DOCS/STITCH/2026-11-13/revised/master.html",
+    "sha256": "58b11534f01da85c2aca9a73aa2dfccf13411274a70509ce65e4ff9090afc0bc"
+  },
+  "sharedCss": {
+    "path": "DOCS/STITCH/2026-11-13/revised/shared.css",
+    "sha256": "3d8dcfc54ce9243685c26960894ab31ba1ca97892eb59ebdc49233e674287c32"
+  },
+  "initialPass": {
+    "sourceSha256": "7a4f99ea71c06260a4a32e7c83a293147c742f016158b2b9538d9fc4fd567bee",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "states": [
+      "S01-guest",
+      "S01-meet",
+      "S01-chart",
+      "S01-aloud",
+      "S01-personal",
+      "S01-prices",
+      "S01-learn",
+      "S02-choose",
+      "S02-email",
+      "S02-register",
+      "S02-reset",
+      "S02-phone",
+      "S02-code",
+      "S03-first-visit",
+      "S04-name",
+      "S04-date",
+      "S04-date-calendar",
+      "S04-date-year",
+      "S04-place",
+      "S04-place-suggestions",
+      "S04-place-confirmed",
+      "S04-time",
+      "S04-time-unknown",
+      "S05-casting",
+      "S05-error",
+      "S06-reading",
+      "S06-chart-focus",
+      "S07-menu",
+      "S07-account",
+      "S08-topup",
+      "S08-checkout",
+      "S08-cancelled",
+      "S08-error",
+      "S08-redeem-result",
+      "S09-offer",
+      "S09-preparing",
+      "S09-done",
+      "S09-retained",
+      "S10-google",
+      "S10-phone",
+      "S10-code",
+      "S10-return",
+      "S10-error",
+      "S11-signing-in",
+      "S11-voice-loading",
+      "S11-voice-error",
+      "S11-art-error",
+      "S11-network-error",
+      "S11-no-allowance",
+      "S11-rate-limited",
+      "S11-privacy",
+      "S11-terms"
+    ],
+    "stateRenders": 104,
+    "result": "No horizontal overflow, scene/rail overlap, visible modal, visible image load failure or page error in these design renders. Separate narrow stress exposed sub44px controls, subsequently corrected."
+  },
+  "finalBoundedPass": {
+    "sourceSha256": "58b11534f01da85c2aca9a73aa2dfccf13411274a70509ce65e4ff9090afc0bc",
+    "observationFile": "final-changed-area-observations.json",
+    "cases": [
+      [
+        360,
+        640,
+        "S01-guest"
+      ],
+      [
+        390,
+        844,
+        "S04-place-suggestions"
+      ],
+      [
+        390,
+        844,
+        "S04-place-confirmed"
+      ],
+      [
+        1440,
+        900,
+        "S04-date-calendar"
+      ],
+      [
+        1440,
+        900,
+        "S09-retained"
+      ],
+      [
+        390,
+        844,
+        "S09-retained"
+      ]
+    ],
+    "result": "Changed areas ready for freeze:44px targets,132/260px square inset, transparent idle caption, real gazetteer option/chip, reconciled typed date/calendar and concrete17-section report reference."
+  },
+  "browser": {
+    "plugin": "Listed, but required Browser JavaScript runtime tool unavailable in ALL_TOOLS",
+    "fallback": "User explicitly required cloud-workspace evidence. Managed headless /usr/bin/chromium controlled with installed Playwright; no local computer/browser used.",
+    "url": "http://127.0.0.1:5175/DOCS/STITCH/2026-11-13/revised/master.html?screen=<state>"
+  },
+  "serviceBoundary": "Prototype preview selectors only. No fake product auth, invented account, phone contact, paid grant, provider payment, or real-service success. Toronto/chart/report are documented public demonstration source references; production must bind actual data."
+}

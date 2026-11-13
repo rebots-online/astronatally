@@ -1,0 +1,8 @@
+{
+  "scope": "pre-freeze design QA only, not product acceptance",
+  "source": "DOCS/STITCH/2026-11-13/revised/prototype-review.html",
+  "sha256": "7a4f99ea71c06260a4a32e7c83a293147c742f016158b2b9538d9fc4fd567bee",
+  "mtime": 1794560941.6680343,
+  "mainObservations": "observations.json",
+  "stressObservations": "stress-observations.json"
+}
