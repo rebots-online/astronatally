@@ -1785,6 +1785,11 @@ status honestly; no Store upload, certificate generation or invented signing
 identity is authorized. Existing Windows exe/MSI/NSIS remain ordinary desktop
 distribution artifacts. Android production certificate comparison, ZIP alignment,
 AAB signature verification and real symbol extraction remain mandatory.
+AAB verification includes inspecting its actual JAR signing certificate
+(`keytool -printcert -jarfile ... -rfc`), hashing the certificate DER and comparing
+it to the same configured production SHA-256 used for the APK; an unsigned JAR's
+zero `jarsigner -verify` exit cannot count as a signed AAB. Bundle collection
+matches the exact numeric version token, so2.1.95 cannot collect2.1.9534.
 A missing/failed package group means the canonical run is incomplete.
 
 ### 25.5 Serialized DNS change and complete zone preservation
