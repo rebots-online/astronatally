@@ -1,7 +1,11 @@
 # Natally — astrologer companion
 
-Natally is a warm, sincere astrologer who lives in an atelier. A customer signs
-in with Google, casts their natal chart once, and then talks with her: she reads
+Astronatally is a separate derivative of Natally-Ai-studio, publishing this
+lineage at **https://v2.astronatally.com** with versions above2.0. The parent's
+1.32 deployment at astronatally.com is preserved.
+
+Natally is an astrologer who lives in an atelier. A customer signs
+in with Google, email or SMS, casts their natal chart, and talks with her: she reads
 the chart aloud, explains its parts, and points at what she is talking about on
 a live 3D chart beside her.
 
@@ -20,8 +24,10 @@ visibly and names what is missing.
 [DOCS/PRD.md](DOCS/PRD.md) defines the immersive screen revision.
 [DOCS/ARCHITECTURE.md](DOCS/ARCHITECTURE.md) §23 defines build identity and §24
 translates the complete PRD into screen and service contracts, with an entity
-allow-list. Its earlier snapshot sections remain historical context; the newer
-authority takes precedence. [DOCS/DESIGN.md](DOCS/DESIGN.md) specifies the Stitch
+allow-list. §25 defines the separate v2 lineage and release adapters. Its earlier snapshot sections remain historical context; the newer
+authority takes precedence. [LIBS/UI/STITCH/](LIBS/UI/STITCH/) contains the frozen
+actual Stitch exports and design system; [DOCS/DESIGN.md](DOCS/DESIGN.md) is its
+read-through historical link. It specifies the Stitch
 system. [CHECKLIST.md](CHECKLIST.md) translates that architecture into tasks;
 [DOCS/TODO-LEDGER.md](DOCS/TODO-LEDGER.md) retains historical citations.
 
@@ -95,32 +101,35 @@ From the repository root, run the single supported build-and-deploy command:
 ./build_all.sh
 ```
 
-The script resolves credentials, stamps the current source MAJOR.MINOR with
+The script reads release policy from `config/product-release.json`, resolves
+the Astronatally/shared Manual credentials, automatically initializes an older
+source lineage at2.1, and stamps the current source MAJOR.MINOR with
 `floor(epochMilliseconds / 60000) % 10000`, synchronizes and pushes that release
-identity, validates source, builds/publishes both purchased web hosts, and
-packages Linux, Windows and Android. Only after the complete matrix succeeds
+identity, validates source, builds/publishes v2.astronatally.com, and
+packages Linux, Windows and Android. It publishes and verifies the actual
+complete package set at that same v2 host. Only after the complete matrix succeeds
 does it advance the source MINOR and clear source `builtAt` for the next build.
 The artifacts retain the built version. Human badges show the build field with
 five digits; native/npm/Cargo manifests use its equivalent unpadded integer to
 remain valid SemVer. No day stamp or incremented build counter. Use this entry
 for every attempt. Native namespace: `mba.robin.astronatally`.
 
-### Surge deployment account and domains
+### Surge deployment account and domain
 
-The existing Surge deployment account is **`robinsai.world@gmail.com`**
-(Free plan; ownership of both domains verified on 2026-11-11). Run the pipeline
-with that account's authorized Surge CLI context. Keep its token/password in
-private credential configuration, outside this repository.
+Use the existing shared Surge context from the private Admin Manual's
+`CREDENTIALS/global-infrastructure/`, mirrored with provenance in
+`CREDENTIALS/Astronatally/`. The Manual's `DOCS/APP_INVENTORY.md` registers this
+fork separately from the parent. Keep credentials outside this public repository.
 
 | Public destination | Purpose | Expected DNS target |
 | --- | --- | --- |
-| `astronatally.com` / `www.astronatally.com` | Landing and atelier introduction | `geo.surge.world` |
-| `asknatally.online` / `www.asknatally.online` | Web app | `geo.surge.world` |
+| `v2.astronatally.com` | This separate fork's immersive app and release artifacts | `geo.surge.sh` |
 
-Wildcard CNAME records, where configured, use that same target. The spelling is
-`geo.surge.world`, with one `geo`. The pipeline publishes the named purchased
-domains directly. Surge manages their custom-domain certificates; correct DNS
-routing and valid certificates are both required for HTTPS.
+Namecheap's API replaces all hosts: the complete live zone must be backed up
+and committed to the private Manual before adding the v2 CNAME, and the complete
+resulting zone is preserved there too. Existing parent records are unchanged.
+Surge manages custom-domain certificates; publication evidence includes actual
+DNS routing and valid HTTPS.
 
 ### Outputs and verification
 
@@ -128,9 +137,12 @@ The web bundle includes the app, preserved landing entry and
 `/auth/native.html` browser handoff. Web publication must succeed before native
 packaging starts. Native outputs are staged under `dist/natally-v<version>/`
 with a SHA-256 inventory and per-target logs: Linux AppImage/deb/rpm, Windows
-x64 executable/NSIS/MSI, and signed Android arm64 APK/AAB plus native symbols.
+x64 executable/NSIS/MSI/MSIX, and production-signed Android arm64 APK/AAB plus
+native symbols. The exact web bundle is archived too. Generated versioned
+manifests and `releases/current.json` identify actual local/public artifacts;
+MSIX signature status is stated independently of Store publication.
 A failed or incomplete target remains recorded in the inventory; it is not a
-complete platform set. Verify the actual version badge on both deployed sites
+complete platform set. Verify the actual version badge on the v2 deployment
 and report the produced artifacts and any failed targets. Build success and
 functional sign-in/reading acceptance are recorded separately in CHECKLIST.md.
 
@@ -163,7 +175,7 @@ voice and the top-up sheet opens. A second function,
 ## Process
 
 `DOCS/ARCHITECTURE.md` (snapshot + registry allow-list) → `CHECKLIST.md` →
-coder agents → `build_all.sh` → version badge verified on both hosts. Coders
+coder agents → `build_all.sh` → version badge verified on the v2 host. Coders
 read the architecture, the checklist, the TODO ledger and the files they edit.
 Work is recorded in the ledger and acted on only when Robin says go.
 

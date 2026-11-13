@@ -14,8 +14,11 @@ edits, new tests, feature branches or unrelated source work.
   separate Natally-Ai-studio derivative with v2 host; unranked portfolio pointer.
 - [ ] V2-CREDENTIALS: privately reconcile shared Surge/Namecheap and generated
   parent/fork scopes, production signer/client/Stitch provenance and QR/compendium.
-- [ ] V2-MASTER: preserve and FF-integrate prior UI work onto master; record
+- [x] V2-MASTER: preserve and FF-integrate prior UI work onto master; record
   delegated before/after guest/auth rendering and verified GitHub reachability.
+  Preserved tip1b4b65c is now GitHub master; actual comparison evidencefc00173
+  records identical guest/chooser geometry. Held-session exceptions are retained
+  honestly in its report, with a bounded guest follow-up recording none.
 - [ ] V2-RELEASE-CODE: implement config/product-release.json and validated
   readProductRelease; automatic2.1 lineage initialization, sole v2 publication,
   unchanged minute stamp/success-only minor advancement, Rust origin adapters.
