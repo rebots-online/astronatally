@@ -1,0 +1,87 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 5931,
+    "sha256": "60bdaddd05535790bc8654a89018b2354e84bbfdfab8b29c2338b1a8d7f1c1a2"
+  },
+  {
+    "path": "comparison.json",
+    "bytes": 6969,
+    "sha256": "1b091267ce6ebf0445fe6965b7befa309bb98fb4d2f8a8394999f621eca56f86"
+  },
+  {
+    "path": "desktop-email.png",
+    "bytes": 984042,
+    "sha256": "d7728885c8f3ba735cf5e0276739a5ac4a106be9667fd0bf88433a2fe4ca5e6d"
+  },
+  {
+    "path": "desktop-guest.png",
+    "bytes": 983049,
+    "sha256": "b828a3d33b9b217b76b45d0a1a695c0a7ee3f4bd89efe3d0e690b168fd9813e9"
+  },
+  {
+    "path": "narrow-email.png",
+    "bytes": 150149,
+    "sha256": "350f47413d571bd26f774adf49e1ea473dfc7ec37313cea43d2d4a63114b9fa3"
+  },
+  {
+    "path": "narrow-guest.png",
+    "bytes": 151158,
+    "sha256": "f6c16fa8b0aad0bad6baa7974a61c10c532f97f85cd198ee42a79b2a82079168"
+  },
+  {
+    "path": "native-invalid-desktop.png",
+    "bytes": 29207,
+    "sha256": "79614d108fe9c1e31472c398bf0cbc2547ee44f74b11f28908870cb5ad1d7c72"
+  },
+  {
+    "path": "native-invalid-phone.png",
+    "bytes": 21949,
+    "sha256": "eb9ecbb08ae78a8a2dbb4795fcf31f3697d124316d3b1b9d2b44611ba2901ef7"
+  },
+  {
+    "path": "observations.json",
+    "bytes": 63308,
+    "sha256": "dd8db9d699b9e68ff6a910b4ef4bbf78167429ba4153ff04d544d7462649fa22"
+  },
+  {
+    "path": "observe.cjs",
+    "bytes": 8969,
+    "sha256": "e661a230c7dbb2bb806a525d15a543d369d8c160720b01f431cec5ff8a12145c"
+  },
+  {
+    "path": "phone-email.png",
+    "bytes": 185147,
+    "sha256": "7b289fda046806bc1560bc631efe2aa94a1308e7a598375b3e084fced1a80147"
+  },
+  {
+    "path": "phone-guest.png",
+    "bytes": 193713,
+    "sha256": "64a09e835db78d2ac764cb5d4fb23164bf1a33dba6a6e914ba2c37e00448b49f"
+  },
+  {
+    "path": "short-email.png",
+    "bytes": 718300,
+    "sha256": "2dcfbbc11d9ff728407ffa4a0455dff479e6939e9eecf9d478d37a8dea76b7c0"
+  },
+  {
+    "path": "short-guest.png",
+    "bytes": 716106,
+    "sha256": "d107c94634592d54cee6cdce7659e81ac1c1a5b29ed59551027ecb1ee04ff0e5"
+  },
+  {
+    "path": "summary.json",
+    "bytes": 1271,
+    "sha256": "33aa364d5527d251ed089615e63d672d921f16f01bd29771525129c79434a0c2"
+  },
+  {
+    "path": "voice-early.png",
+    "bytes": 149018,
+    "sha256": "4dc5bf1375a2ce411d62e3567cdc20523c0ad0631adec0e865ca11bbbe047836"
+  },
+  {
+    "path": "voice-last.png",
+    "bytes": 139453,
+    "sha256": "ce0be88e86d1df89869d95b1796563f1849181299f9e4db990750de918d4901d"
+  }
+]

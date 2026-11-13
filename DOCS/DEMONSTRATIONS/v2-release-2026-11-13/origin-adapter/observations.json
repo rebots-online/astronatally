@@ -1,0 +1,2235 @@
+{
+  "scope": "Actual cloud guest/origin-adapter observation only; no account/provider/payment/native-return or release certification.",
+  "startedAt": "2026-11-13T11:42:44.182Z",
+  "source": {
+    "commit": "10205a4906fbec00717ee33e880d476dca9d6469",
+    "branch": "master"
+  },
+  "environment": {
+    "base": "http://127.0.0.1:5173",
+    "browser": "/usr/bin/chromium",
+    "driver": "installed managed Playwright",
+    "browserAppLimitation": "Associated Browser app js tool absent from available tools; cloud Playwright explicitly authorized."
+  },
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "at": "2026-11-13T11:42:50.320Z",
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 1016,
+          "h": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "w": 352,
+          "h": 229.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": null,
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "67.5 / 262.8 MB · 25%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 1016,
+          "h": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "w": 352,
+          "h": 287
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "103.7 / 262.8 MB · 39%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "email": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 1016,
+          "h": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "w": 352,
+          "h": 463
+        },
+        "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "email",
+        "inputs": [
+          {
+            "type": "email",
+            "x": 1089,
+            "y": 205,
+            "w": 302,
+            "h": 48,
+            "font": "16px"
+          },
+          {
+            "type": "password",
+            "x": 1089,
+            "y": 296,
+            "w": 302,
+            "h": 48,
+            "font": "16px"
+          }
+        ],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "103.7 / 262.8 MB · 39%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "tabFocus": "password",
+      "returnedChooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 1016,
+          "h": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "w": 352,
+          "h": 287
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "153.9 / 262.8 MB · 58%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "closed": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 1016,
+          "h": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "w": 352,
+          "h": 229.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "175.8 / 262.8 MB · 66%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "sameScene": true
+    },
+    {
+      "name": "short",
+      "width": 1280,
+      "height": 720,
+      "at": "2026-11-13T11:42:59.219Z",
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 856,
+          "h": 550
+        },
+        "rail": {
+          "x": 904,
+          "y": 76,
+          "w": 352,
+          "h": 229.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "183.8 / 262.8 MB · 69%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 856,
+          "h": 550
+        },
+        "rail": {
+          "x": 904,
+          "y": 76,
+          "w": 352,
+          "h": 287
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "207.2 / 262.8 MB · 78%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "email": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 856,
+          "h": 550
+        },
+        "rail": {
+          "x": 904,
+          "y": 76,
+          "w": 352,
+          "h": 463
+        },
+        "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "email",
+        "inputs": [
+          {
+            "type": "email",
+            "x": 929,
+            "y": 205,
+            "w": 302,
+            "h": 48,
+            "font": "16px"
+          },
+          {
+            "type": "password",
+            "x": 929,
+            "y": 296,
+            "w": 302,
+            "h": 48,
+            "font": "16px"
+          }
+        ],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "220.5 / 262.8 MB · 83%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "tabFocus": "password",
+      "returnedChooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 856,
+          "h": 550
+        },
+        "rail": {
+          "x": 904,
+          "y": 76,
+          "w": 352,
+          "h": 287
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "240.7 / 262.8 MB · 91%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "closed": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "w": 856,
+          "h": 550
+        },
+        "rail": {
+          "x": 904,
+          "y": 76,
+          "w": 352,
+          "h": 229.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "250.6 / 262.8 MB · 95%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "sameScene": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "at": "2026-11-13T11:43:05.431Z",
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "255.9 / 262.8 MB · 97%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 279
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Preparing Natally’s voice…",
+          "numbers": "262.8 / 262.8 MB · 100%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "email": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 455
+        },
+        "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "email",
+        "inputs": [
+          {
+            "type": "email",
+            "x": 37,
+            "y": 656.359375,
+            "w": 316,
+            "h": 48,
+            "font": "16px"
+          },
+          {
+            "type": "password",
+            "x": 37,
+            "y": 747.359375,
+            "w": 316,
+            "h": 48,
+            "font": "16px"
+          }
+        ],
+        "voice": {
+          "text": "Downloading Natally’s voice…",
+          "numbers": "0.0 / 0.1 MB · 0%",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "tabFocus": "password",
+      "returnedChooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 279
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Preparing speech…",
+          "numbers": "0.1 / 0.1 MB",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "closed": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Preparing speech…",
+          "numbers": "0.1 / 0.1 MB",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "sameScene": true
+    },
+    {
+      "name": "narrow",
+      "width": 360,
+      "height": 640,
+      "at": "2026-11-13T11:43:12.287Z",
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 360,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 328,
+          "h": 281.59375
+        },
+        "rail": {
+          "x": 16,
+          "y": 441.59375,
+          "w": 328,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Preparing speech…",
+          "numbers": "0.1 / 0.1 MB",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 360,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 328,
+          "h": 281.59375
+        },
+        "rail": {
+          "x": 16,
+          "y": 441.59375,
+          "w": 328,
+          "h": 279
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": "Preparing speech…",
+          "numbers": "0.1 / 0.1 MB",
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "email": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": -4,
+          "w": 360,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 60,
+          "w": 328,
+          "h": 281.59375
+        },
+        "rail": {
+          "x": 16,
+          "y": 437.59375,
+          "w": 328,
+          "h": 455
+        },
+        "railText": "Sign in\n←\nEmail\nPassword\nSign inCreate account\nForgot password",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 4,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "email",
+        "inputs": [
+          {
+            "type": "email",
+            "x": 37,
+            "y": 562.59375,
+            "w": 286,
+            "h": 48,
+            "font": "16px"
+          },
+          {
+            "type": "password",
+            "x": 37,
+            "y": 653.59375,
+            "w": 286,
+            "h": 48,
+            "font": "16px"
+          }
+        ],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": null,
+          "speaking": "false"
+        }
+      },
+      "tabFocus": "password",
+      "returnedChooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": -153,
+          "w": 360,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": -89,
+          "w": 328,
+          "h": 281.59375
+        },
+        "rail": {
+          "x": 16,
+          "y": 288.59375,
+          "w": 328,
+          "h": 279
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 153,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": "Hello — I'm Natally, and this is my atelier.",
+          "speaking": "true"
+        }
+      },
+      "closed": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": -95,
+          "w": 360,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": -31,
+          "w": 328,
+          "h": 281.59375
+        },
+        "rail": {
+          "x": 16,
+          "y": 346.59375,
+          "w": 328,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 95,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": "button",
+        "inputs": [],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": "Hello — I'm Natally, and this is my atelier.",
+          "speaking": "true"
+        }
+      },
+      "sameScene": true
+    }
+  ],
+  "aliases": [
+    {
+      "route": "/",
+      "status": 200,
+      "observation": {
+        "url": "http://127.0.0.1:5173/",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": null,
+        "inputs": [],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": null,
+          "speaking": "false"
+        }
+      }
+    },
+    {
+      "route": "/app.html",
+      "status": 200,
+      "observation": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": null,
+        "inputs": [],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": null,
+          "speaking": "false"
+        }
+      }
+    },
+    {
+      "route": "/landing.html",
+      "status": 200,
+      "observation": {
+        "url": "http://127.0.0.1:5173/landing.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "w": 358,
+          "h": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "w": 358,
+          "h": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "scrollY": 0,
+        "modalCount": 0,
+        "frameworkOverlay": false,
+        "version": "v1.32.09425",
+        "fontOutfit": true,
+        "fontDisplay": "\"Playfair Display\", Georgia, serif",
+        "activeType": null,
+        "inputs": [],
+        "voice": {
+          "text": null,
+          "numbers": null,
+          "caption": null,
+          "speaking": "false"
+        }
+      }
+    }
+  ],
+  "nativeInvalid": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "url": "http://127.0.0.1:5173/auth/native.html",
+      "title": "Sign in to Natally",
+      "body": "Natally\nSign-in request expired\n\nYour Google sign-in takes place in this browser, then returns to the Natally app.\n\nStart again in Natally.\n\nOpen Natally and choose Sign in again. This browser sign-in link is missing, invalid, or expired.",
+      "overflow": false,
+      "frameworkOverlay": 0
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "url": "http://127.0.0.1:5173/auth/native.html",
+      "title": "Sign in to Natally",
+      "body": "Natally\nSign-in request expired\n\nYour Google sign-in takes place in this browser, then returns to the Natally app.\n\nStart again in Natally.\n\nOpen Natally and choose Sign in again. This browser sign-in link is missing, invalid, or expired.",
+      "overflow": false,
+      "frameworkOverlay": 0
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "at": "2026-11-13T11:42:45.304Z",
+      "step": "guest initial load",
+      "label": "main",
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html').",
+      "location": {
+        "url": "",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:48.851Z",
+      "step": "guest initial load",
+      "label": "main",
+      "type": "warning",
+      "text": "[.WebGL-0x19ec001ec800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.181Z",
+      "step": "guest initial load",
+      "label": "main",
+      "type": "warning",
+      "text": "[.WebGL-0x19ec001ec800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.340Z",
+      "step": "guest initial load",
+      "label": "main",
+      "type": "warning",
+      "text": "[.WebGL-0x19ec001ec800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.467Z",
+      "step": "guest initial load",
+      "label": "main",
+      "type": "warning",
+      "text": "[.WebGL-0x19ec001ec800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+      "location": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:44:07.671Z",
+      "step": "alias /",
+      "label": "routes",
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html').",
+      "location": {
+        "url": "",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:44:12.943Z",
+      "step": "alias /app.html",
+      "label": "routes",
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html').",
+      "location": {
+        "url": "",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "at": "2026-11-13T11:44:18.047Z",
+      "step": "alias /landing.html",
+      "label": "routes",
+      "type": "error",
+      "text": "The script has an unsupported MIME type ('text/html').",
+      "location": {
+        "url": "",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "workers": [
+    {
+      "at": "2026-11-13T11:42:45.015Z",
+      "step": "guest initial load",
+      "label": "main",
+      "url": "http://127.0.0.1:5173/src/atelier-original/services/supertonic.worker.ts?keys=worker_file,type"
+    }
+  ],
+  "failedRequests": [
+    {
+      "at": "2026-11-13T11:42:45.048Z",
+      "step": "guest initial load",
+      "label": "main",
+      "url": "http://127.0.0.1:5173/sw.js",
+      "method": "HEAD",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "at": "2026-11-13T11:44:07.466Z",
+      "step": "alias /",
+      "label": "routes",
+      "url": "http://127.0.0.1:5173/sw.js",
+      "method": "HEAD",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "at": "2026-11-13T11:44:12.916Z",
+      "step": "alias /app.html",
+      "label": "routes",
+      "url": "http://127.0.0.1:5173/sw.js",
+      "method": "HEAD",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "at": "2026-11-13T11:44:18.012Z",
+      "step": "alias /landing.html",
+      "label": "routes",
+      "url": "http://127.0.0.1:5173/sw.js",
+      "method": "HEAD",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "voiceEvents": [
+    {
+      "at": "2026-11-13T11:42:48.800Z",
+      "performanceMs": 3949.7000000011176,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "0.0 / 262.8 MB · 0%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.200Z",
+      "performanceMs": 4349.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "37.9 / 262.8 MB · 14%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.634Z",
+      "performanceMs": 4783.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "45.7 / 262.8 MB · 17%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:49.809Z",
+      "performanceMs": 4958.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "52.0 / 262.8 MB · 19%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:50.110Z",
+      "performanceMs": 5259.4000000003725,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "61.0 / 262.8 MB · 23%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:50.281Z",
+      "performanceMs": 5430.800000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "67.5 / 262.8 MB · 25%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:50.585Z",
+      "performanceMs": 5734.60000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "72.9 / 262.8 MB · 27%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:51.122Z",
+      "performanceMs": 6271.60000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "78.6 / 262.8 MB · 29%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:51.367Z",
+      "performanceMs": 6516.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "83.5 / 262.8 MB · 31%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:51.579Z",
+      "performanceMs": 6728.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "85.1 / 262.8 MB · 32%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:51.874Z",
+      "performanceMs": 7023.9000000003725,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "93.8 / 262.8 MB · 35%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:52.441Z",
+      "performanceMs": 7590.200000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "97.5 / 262.8 MB · 37%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:52.697Z",
+      "performanceMs": 7846.60000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "103.7 / 262.8 MB · 39%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:55.421Z",
+      "performanceMs": 10569.900000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "127.6 / 262.8 MB · 48%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:56.322Z",
+      "performanceMs": 11471.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "136.4 / 262.8 MB · 51%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:56.754Z",
+      "performanceMs": 11903.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "150.2 / 262.8 MB · 57%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:56.953Z",
+      "performanceMs": 12102.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "152.3 / 262.8 MB · 57%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:57.322Z",
+      "performanceMs": 12471.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "156.1 / 262.8 MB · 59%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:57.495Z",
+      "performanceMs": 12644.60000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "161.9 / 262.8 MB · 61%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:57.917Z",
+      "performanceMs": 13066.400000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "163.7 / 262.8 MB · 62%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:58.246Z",
+      "performanceMs": 13395.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "169.9 / 262.8 MB · 64%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:58.520Z",
+      "performanceMs": 13669.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "173.6 / 262.8 MB · 66%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:58.868Z",
+      "performanceMs": 14017.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "175.8 / 262.8 MB · 66%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:59.112Z",
+      "performanceMs": 14261,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "181.6 / 262.8 MB · 69%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:59.330Z",
+      "performanceMs": 14479.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "185.5 / 262.8 MB · 70%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:42:59.714Z",
+      "performanceMs": 14863.60000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "189.1 / 262.8 MB · 71%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:00.036Z",
+      "performanceMs": 15185.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "195.0 / 262.8 MB · 74%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:00.396Z",
+      "performanceMs": 15545.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "197.1 / 262.8 MB · 75%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:00.673Z",
+      "performanceMs": 15822.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "200.8 / 262.8 MB · 76%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:00.807Z",
+      "performanceMs": 15956.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "205.1 / 262.8 MB · 78%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:01.161Z",
+      "performanceMs": 16310.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "210.9 / 262.8 MB · 80%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:01.502Z",
+      "performanceMs": 16651.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "214.7 / 262.8 MB · 81%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:01.912Z",
+      "performanceMs": 17061.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "218.4 / 262.8 MB · 83%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:02.152Z",
+      "performanceMs": 17301.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "222.6 / 262.8 MB · 84%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:02.296Z",
+      "performanceMs": 17445.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "226.8 / 262.8 MB · 86%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:02.919Z",
+      "performanceMs": 18068.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "232.8 / 262.8 MB · 88%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:03.202Z",
+      "performanceMs": 18351.300000000745,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "238.8 / 262.8 MB · 90%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:03.664Z",
+      "performanceMs": 18812.900000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "240.7 / 262.8 MB · 91%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:04.342Z",
+      "performanceMs": 19491.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "246.9 / 262.8 MB · 93%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:04.465Z",
+      "performanceMs": 19613.900000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "248.6 / 262.8 MB · 94%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:04.773Z",
+      "performanceMs": 19922.5,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "251.5 / 262.8 MB · 95%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:05.080Z",
+      "performanceMs": 20229.700000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "253.7 / 262.8 MB · 96%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:05.438Z",
+      "performanceMs": 20587.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "254.8 / 262.8 MB · 96%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:05.914Z",
+      "performanceMs": 21063.200000001118,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "257.0 / 262.8 MB · 97%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:06.261Z",
+      "performanceMs": 21410.400000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Downloading Natally’s voice…",
+        "numbers": "261.7 / 262.8 MB · 99%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:06.499Z",
+      "performanceMs": 21648.10000000149,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Preparing Natally’s voice…",
+        "numbers": "262.8 / 262.8 MB · 100%"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:09.296Z",
+      "performanceMs": 24445.400000000373,
+      "type": "observed-voice-hud",
+      "detail": {
+        "text": "Preparing speech…",
+        "numbers": "0.1 / 0.1 MB"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.224Z",
+      "performanceMs": 30373.700000001118,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "started"
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.225Z",
+      "performanceMs": 30374,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 0,
+        "text": "Hello",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.225Z",
+      "performanceMs": 30374.200000001118,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 0,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.551Z",
+      "performanceMs": 30700,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 6,
+        "text": "—",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.551Z",
+      "performanceMs": 30700.200000001118,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 1,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.833Z",
+      "performanceMs": 30982.5,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 8,
+        "text": "I'm",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:15.833Z",
+      "performanceMs": 30982.5,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 2,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:16.041Z",
+      "performanceMs": 31190.900000000373,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 12,
+        "text": "Natally,",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:16.042Z",
+      "performanceMs": 31191.10000000149,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 3,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:17.608Z",
+      "performanceMs": 32757.700000001118,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 21,
+        "text": "and",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:17.609Z",
+      "performanceMs": 32758.10000000149,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 4,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:17.893Z",
+      "performanceMs": 33042.5,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 25,
+        "text": "this",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:17.893Z",
+      "performanceMs": 33042.60000000149,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 5,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.264Z",
+      "performanceMs": 33413,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 30,
+        "text": "is",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.264Z",
+      "performanceMs": 33413.20000000112,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 6,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.443Z",
+      "performanceMs": 33592.40000000037,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 33,
+        "text": "my",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.443Z",
+      "performanceMs": 33592.90000000037,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 7,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.814Z",
+      "performanceMs": 33963.70000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 36,
+        "text": "ah-tell-yay.",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:18.815Z",
+      "performanceMs": 33964,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 8,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.029Z",
+      "performanceMs": 34178.70000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 45,
+        "text": "Sit",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.029Z",
+      "performanceMs": 34178.800000000745,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 9,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.251Z",
+      "performanceMs": 34400.300000000745,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 49,
+        "text": "with",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.251Z",
+      "performanceMs": 34400.5,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 10,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.452Z",
+      "performanceMs": 34601.800000000745,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 54,
+        "text": "me",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.453Z",
+      "performanceMs": 34601.90000000037,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 11,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.809Z",
+      "performanceMs": 34958.60000000149,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 57,
+        "text": "a",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.809Z",
+      "performanceMs": 34958.70000000112,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 12,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.979Z",
+      "performanceMs": 35127.90000000037,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 59,
+        "text": "while.",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:19.979Z",
+      "performanceMs": 35128.20000000112,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 13,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.309Z",
+      "performanceMs": 35458,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 66,
+        "text": "I",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.309Z",
+      "performanceMs": 35458,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 14,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.628Z",
+      "performanceMs": 35777.300000000745,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 68,
+        "text": "read",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.628Z",
+      "performanceMs": 35777.5,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 15,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.808Z",
+      "performanceMs": 35957.20000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 73,
+        "text": "natal",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:20.808Z",
+      "performanceMs": 35957.40000000037,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 16,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:21.203Z",
+      "performanceMs": 36352.20000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 79,
+        "text": "charts",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:21.203Z",
+      "performanceMs": 36352.300000000745,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 17,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:21.621Z",
+      "performanceMs": 36770.40000000037,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 86,
+        "text": "aloud,",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:21.621Z",
+      "performanceMs": 36770.5,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 18,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.109Z",
+      "performanceMs": 37258.5,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 93,
+        "text": "and",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.109Z",
+      "performanceMs": 37258.60000000149,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 19,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.421Z",
+      "performanceMs": 37570.60000000149,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 97,
+        "text": "I",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.421Z",
+      "performanceMs": 37570.70000000112,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 20,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.933Z",
+      "performanceMs": 38082.40000000037,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 99,
+        "text": "show",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:22.933Z",
+      "performanceMs": 38082.5,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 21,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:23.468Z",
+      "performanceMs": 38617.20000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 104,
+        "text": "you",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:23.468Z",
+      "performanceMs": 38617.60000000149,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 22,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:23.929Z",
+      "performanceMs": 39078.70000000112,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 108,
+        "text": "every",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:23.929Z",
+      "performanceMs": 39078.800000000745,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 23,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:24.332Z",
+      "performanceMs": 39480.90000000037,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 114,
+        "text": "part",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:24.332Z",
+      "performanceMs": 39481,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 24,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:25.023Z",
+      "performanceMs": 40172.10000000149,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "word",
+        "charIndex": 119,
+        "text": "of",
+        "durationMs": 264.1374293548207
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:25.023Z",
+      "performanceMs": 40172.20000000112,
+      "type": "natally-karaoke",
+      "detail": {
+        "line": "Hello — I'm Natally, and this is my atelier. Sit with me a while. I read natal charts aloud, and I show you every part of yours as I go. When you're ready, we'll cast yours together.",
+        "wordIndex": 25,
+        "wordCount": 37
+      }
+    },
+    {
+      "at": "2026-11-13T11:43:25.038Z",
+      "performanceMs": 40187.60000000149,
+      "type": "natally-voice-performance",
+      "detail": {
+        "state": "ended"
+      }
+    }
+  ],
+  "voiceLast": {
+    "url": "http://127.0.0.1:5173/app.html",
+    "title": "Natally — the live atelier",
+    "header": {
+      "x": 0,
+      "y": -95,
+      "w": 360,
+      "h": 48
+    },
+    "stage": {
+      "x": 16,
+      "y": -31,
+      "w": 328,
+      "h": 281.59375
+    },
+    "rail": {
+      "x": 16,
+      "y": 346.59375,
+      "w": 328,
+      "h": 221.296875
+    },
+    "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+    "sceneCount": 1,
+    "overflow": false,
+    "scrollY": 95,
+    "modalCount": 0,
+    "frameworkOverlay": false,
+    "version": "v1.32.09425",
+    "fontOutfit": true,
+    "fontDisplay": "\"Playfair Display\", Georgia, serif",
+    "activeType": "button",
+    "inputs": [],
+    "voice": {
+      "text": null,
+      "numbers": null,
+      "caption": null,
+      "speaking": "false"
+    }
+  },
+  "endedAt": "2026-11-13T11:44:24.807Z"
+}

@@ -1,0 +1,60 @@
+{
+  "observedAt": [
+    "2026-11-13T11:42:44.182Z",
+    "2026-11-13T11:44:24.807Z"
+  ],
+  "source": {
+    "commit": "10205a4906fbec00717ee33e880d476dca9d6469",
+    "branch": "master"
+  },
+  "pageExceptionCount": 0,
+  "consoleCounts": {
+    "error": 4,
+    "warning": 4
+  },
+  "voiceEventCounts": {
+    "observed-voice-hud": 47,
+    "natally-voice-performance": 28,
+    "natally-karaoke": 26
+  },
+  "actualVoicePerformanceStates": {
+    "started": 1,
+    "word": 26,
+    "ended": 1
+  },
+  "firstPerformanceEvent": {
+    "at": "2026-11-13T11:43:15.224Z",
+    "performanceMs": 30373.700000001118,
+    "type": "natally-voice-performance",
+    "detail": {
+      "state": "started"
+    }
+  },
+  "lastPerformanceEvent": {
+    "at": "2026-11-13T11:43:25.038Z",
+    "performanceMs": 40187.60000000149,
+    "type": "natally-voice-performance",
+    "detail": {
+      "state": "ended"
+    }
+  },
+  "routeStatuses": {
+    "/": 200,
+    "/app.html": 200,
+    "/landing.html": 200
+  },
+  "nativeInvalid": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "displayedState": "Sign-in request expired"
+    },
+    {
+      "viewport": "phone",
+      "status": 200,
+      "overflow": false,
+      "displayedState": "Sign-in request expired"
+    }
+  ]
+}

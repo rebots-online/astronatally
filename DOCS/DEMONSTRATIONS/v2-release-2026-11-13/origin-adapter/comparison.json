@@ -1,0 +1,280 @@
+{
+  "scope": "Actual guest/email comparison to previously captured immutable-reference geometry/copy; canvas/art, live captions/voice state and badge are data bindings.",
+  "frozenMasterSha256": "58b11534f01da85c2aca9a73aa2dfccf13411274a70509ce65e4ff9090afc0bc",
+  "referenceEvidence": "DOCS/DEMONSTRATIONS/immersive-stitch-2026-11-13/product/static-comparison.json",
+  "referenceEvidenceSha256": "e3b5fe1b5f56bc83878d2b3eb1d4a41e645bbcfaf2ba790f54d051a56f5d3947",
+  "actualSource": {
+    "commit": "10205a4906fbec00717ee33e880d476dca9d6469",
+    "branch": "master"
+  },
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sameActualSceneAcrossAllRailChanges": true,
+      "tabFromEmailFocus": "password",
+      "states": {
+        "guest": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        },
+        "email": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        }
+      },
+      "allObservedRailStatesHaveOneSceneAndNoOverflowOrOverlay": true,
+      "actualScrollTimeline": {
+        "guest": 0,
+        "chooser": 0,
+        "email": 0,
+        "returnedChooser": 0,
+        "closed": 0
+      }
+    },
+    {
+      "viewport": "short",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sameActualSceneAcrossAllRailChanges": true,
+      "tabFromEmailFocus": "password",
+      "states": {
+        "guest": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        },
+        "email": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        }
+      },
+      "allObservedRailStatesHaveOneSceneAndNoOverflowOrOverlay": true,
+      "actualScrollTimeline": {
+        "guest": 0,
+        "chooser": 0,
+        "email": 0,
+        "returnedChooser": 0,
+        "closed": 0
+      }
+    },
+    {
+      "viewport": "phone",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sameActualSceneAcrossAllRailChanges": true,
+      "tabFromEmailFocus": "password",
+      "states": {
+        "guest": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0.0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        },
+        "email": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0.0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        }
+      },
+      "allObservedRailStatesHaveOneSceneAndNoOverflowOrOverlay": true,
+      "actualScrollTimeline": {
+        "guest": 0,
+        "chooser": 0,
+        "email": 0,
+        "returnedChooser": 0,
+        "closed": 0
+      }
+    },
+    {
+      "viewport": "narrow",
+      "dimensions": [
+        360,
+        640
+      ],
+      "sameActualSceneAcrossAllRailChanges": true,
+      "tabFromEmailFocus": "password",
+      "states": {
+        "guest": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": true,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": 0
+            },
+            "stage": {
+              "x": 0,
+              "y": 0
+            },
+            "rail": {
+              "x": 0,
+              "y": 0.0
+            }
+          },
+          "scrollY": 0,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        },
+        "email": {
+          "railCopyExact": true,
+          "headerStageRailDimensionsExact": true,
+          "allPositionsExact": false,
+          "positionDelta": {
+            "header": {
+              "x": 0,
+              "y": -4
+            },
+            "stage": {
+              "x": 0,
+              "y": -4
+            },
+            "rail": {
+              "x": 0,
+              "y": -4.0
+            }
+          },
+          "scrollY": 4,
+          "sceneCount": 1,
+          "overflow": false,
+          "modalCount": 0,
+          "frameworkOverlay": false
+        }
+      },
+      "allObservedRailStatesHaveOneSceneAndNoOverflowOrOverlay": true,
+      "actualScrollTimeline": {
+        "guest": 0,
+        "chooser": 0,
+        "email": 4,
+        "returnedChooser": 153,
+        "closed": 95
+      }
+    }
+  ]
+}
