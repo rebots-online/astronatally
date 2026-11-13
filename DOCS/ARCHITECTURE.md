@@ -1882,3 +1882,31 @@ checks establish publication. Inventory/logs/actual package metadata/signatures
 establish every target. Root coordinates Git integration and source review;
 build/visual verification is delegated. Only the complete successful matrix
 permits source-minor advancement and a completion claim.
+
+### 25.8 Web review before native packaging — operator correction
+
+The operator explicitly requests deployment before native compilation so the
+live screens can be checked before spending time on packages that would need
+rebuilding. After the first successful Surge publication, `build_all.sh`
+prints the configured public URL and exact display version, then reads one
+line from its controlling terminal. Only the literal `BUILD`, supplied by the
+build operator after the user's review approval, proceeds to native packaging.
+Other input or EOF exits75 with a truthful review-pending message. No native
+command runs and no source-minor advancement occurs at that exit. A successful
+web publication alone is not a successful complete build.
+
+Run the canonical entry in a persistent interactive cloud execution session;
+capture its log without closing its input. Keep that same process/stamp/web
+bundle while waiting, then send BUILD through its terminal after approval.
+Do not edit product source while the process waits. If review requires a
+change, end the paused attempt, amend/refreeze the applicable architecture and
+prototype before coding, then invoke the same canonical entry again. The
+already-existing per-release artifact and failure rules continue to apply.
+
+This is a build-operator checkpoint, not a product screen or a new build entry.
+No new module entity or business function is introduced. Existing review
+authorization persists across retries when the reviewed UI/function remains
+unchanged; do not ask the user to approve the same interface again for a
+packaging-only retry. A publication failure before this checkpoint never
+constitutes a live review opportunity. The observed2.1.09519 attempt failed at
+its first Surge command and started no native compilation.

@@ -48,6 +48,12 @@ edits, new tests, feature branches or unrelated source work.
   cloud tools; actual entire §25.4 matrix plus final publication/readback succeed.
   Record epoch minute, each actual artifact/signature/hash, release identity and
   success-only next-source MINOR. No old inventory or unpublished zip is proof.
+- [ ] V2-WEB-REVIEW-GATE: implement §25.8 in build_all.sh only: after first
+  successful publication print URL/display version, pause for literal BUILD
+  from controlling terminal after user review; other input/EOF exit75 before
+  native compilation or source-minor advance. Run persistent interactive cloud
+  session, preserve the same stamp/bundle while paused. No separate build entry
+  or repeated user approval for unchanged UI during packaging-only retries.
 - [ ] V2-OBSERVATION: actual v2 TLS/badge/routing and four-viewport frozen UI
   conformance after release; record what was exercised and provider paths still
   unobserved. No claim of live login/purchase/market success without observation.

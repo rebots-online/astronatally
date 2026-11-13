@@ -44,3 +44,8 @@ supersede the old dual-host expectation in the immersive rubric. Architecture
     under the named release/evidence directories. Type checks and package
     validation support the observation; no new unit tests substitute for it.
     Separate build, rendering, provider login/payment and market-adoption claims.
+12. After the first actual successful web publication, observe the exact live
+    URL/badge and pause the canonical process before native compilation. Resume
+    only after the requested user review. EOF/other input yields review-pending
+    exit75 with no native command or minor advancement. Retain unchanged UI
+    review authorization across packaging-only retries.
