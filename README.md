@@ -33,7 +33,7 @@ clean-room rewrite**, and the running product is a composition of all of them:
 | Tree | Status | What the running product uses it for |
 | --- | --- | --- |
 | `src/app/`, `src/astro/`, `src/chart/`, `src/commerce/`, `src/platform/`, `src/voice/`, `src/souvenir/`, `src/content/`, `src/services/`, `src/shared/` | **Active rewrite** | App shell, stage + inset card, chat + inference client, billing client, platform, voice adapter, keepsake, authored content |
-| `src/landing-original/` | **Verbatim port (v1.42), operator-authorized** | The entire live landing: `marketing.tsx` self-mounts via `src/landing/main.tsx`, including its own services (billing access, authored education, soul memory, checkout catalog, supertonic voice…) |
+| `src/landing-original/` | **Preserved historical port (v1.42)** | Retained source/reference only; public entries now resolve to the frozen AppShell frame and do not mount the retired marketing interface |
 | `src/atelier-original/` | **Verbatim copies, still live** | The 3D wheel (`Astrolabe3D.tsx`), the atelier scene components, the supertonic TTS worker, the original ephemeris pipeline (`services/ephemeris.ts`) that feeds the renderer |
 | `src/onboarding-original/` | **Verbatim copy, still live** | The first-light intake questionnaire (`FirstLight.tsx`) wrapped by `src/app/onboarding/` |
 
@@ -52,8 +52,10 @@ corner-resizable card persisted per account (per guest on the landing):
 
 - **Click swaps** the two views (a click acts on whatever hover highlighted; a
   drag only ever moves the card).
-- **Size floor** is computed from usefulness — every body a ~44 px target
-  (`insetFloorPx`), capped at 60% of the stage.
+- **Initial compact size** matches the frozen prototype: 260 px on desktop,
+  132 px on phones, with a 96 px minimum and existing manual geometry preserved.
+  Detailed chart annotations appear on focus/selection. Other noncompact callers
+  retain the existing usefulness-derived floor.
 - **Layout by range:** dock beside the scene when there is room (the scene
   re-zooms), float clear of her face when roomy, least-overlap when tight, and
   invert (chart focused, Natally inset) when the floor cannot fit.

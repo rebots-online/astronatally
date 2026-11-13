@@ -1,3 +1,46 @@
+# 2026-11-13 — current cloud revision tasks
+
+Authority: DOCS/ARCHITECTURE.md §23; operator's immersive Stitch request.
+Historical completion marks below do not establish acceptance for this revision.
+
+- [x] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
+  display with numeric native SemVer; retain current MINOR at build start.
+- [x] BUILD-COMPLETION: return from native packaging and advance source MINOR
+  only after the entire successful matrix; synchronize manifests and commit/push.
+- [ ] BUILD-EVIDENCE: run actual-helper numbering regression checks and the
+  canonical release pipeline; preserve target logs, files and SHA-256 inventory.
+- [x] UI-BASELINE: retain the newly generated current-UI Stitch HTML/PNG and IDs.
+- [x] UI-SPECIFICATION: amend PRD, design system and architecture for every
+  screen/state; freeze actual new Stitch exports before assigning UI code.
+- [x] UI-IMPLEMENTATION: wire the frozen export screens to frozen existing
+  services; record necessary platform adaptations and visual walkthroughs.
+- [x] UI-FRAME: exact §24.6 frame/header/stage/rail/reading/account/navigation
+  templates and canonical entry aliases; stable live scene and inset defaults.
+- [x] UI-FORMS: exact auth, invitation/intake/calendar/place/time/casting states;
+  retain real providers/calculation and remove duplicate scene/blocking wrappers.
+- [x] UI-COMMERCE: exact topup/redemption/keepsake/retained/bridge templates;
+  preserve actual checkout, report/PDF, persistence and native validation.
+- [ ] UI-OBSERVATION: delegated browser comparison to immutable52-state exports,
+  appropriate regressions and actual platform artifacts; no fabricated evidence.
+
+Build identity implementation: `53f1fd9`,12/12 isolated helper/pipeline regression
+checks plus TypeScript gate passed. This is not a full release build. UI freeze:
+§24.6; authoritative exports `1f9c12a`. Production Surge/signing inputs remain
+required for canonical release execution in this cloud environment.
+
+
+Final UI source: `4fbbe0a`; integrated observation evidence: `049667a`.
+Four viewport guest/email comparisons, all six sections, canonical aliases,
+stable scene identity, live chart selection and actual voice/karaoke passed.
+Existing voice suite11/11 and native-auth suite18/18 passed; build-identity
+suite12/12 passed. Actual authenticated/paid provider paths remain unobserved,
+with source-backed bindings recorded; no invented service acceptance.
+The required complete canonical release matrix remains pending.
+
+---
+
+Historical task records follow; current authority is the revision above.
+
 # Checklist — 2026-11-08 (clean-room one-shot)
 
 ## AUTH-EMAIL-SMS — active operator correction, 2026-11-11
@@ -1004,33 +1047,3 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 - [x] Version identity was advanced before implementation: version.json and version.txt = 1.32.768. Do not modify build_all.sh, build numbering, or automatic version advancement; operator accepts whatever next version the canonical build produces.
 - [ ] Local build/typecheck, mobile/desktop screenshots, WebGL fallback and interaction regression tests are NOT RUN in GitHub-only execution. Operator must verify after pulling; do not claim a tested release.
 - [ ] Commit and push source changes to master, report exact SHA. Operator alone pulls and runs build_all.sh locally; never access ASRock.
-# 2026-11-13 — current cloud revision tasks
-
-Authority: DOCS/ARCHITECTURE.md §23; operator's immersive Stitch request.
-Historical completion marks below do not establish acceptance for this revision.
-
-- [x] BUILD-IDENTITY: implement §23's minute/modulo10000 stamp and five-digit
-  display with numeric native SemVer; retain current MINOR at build start.
-- [x] BUILD-COMPLETION: return from native packaging and advance source MINOR
-  only after the entire successful matrix; synchronize manifests and commit/push.
-- [ ] BUILD-EVIDENCE: run actual-helper numbering regression checks and the
-  canonical release pipeline; preserve target logs, files and SHA-256 inventory.
-- [x] UI-BASELINE: retain the newly generated current-UI Stitch HTML/PNG and IDs.
-- [x] UI-SPECIFICATION: amend PRD, design system and architecture for every
-  screen/state; freeze actual new Stitch exports before assigning UI code.
-- [ ] UI-IMPLEMENTATION: wire the frozen export screens to frozen existing
-  services; record necessary platform adaptations and visual walkthroughs.
-- [ ] UI-FRAME: exact §24.6 frame/header/stage/rail/reading/account/navigation
-  templates and canonical entry aliases; stable live scene and inset defaults.
-- [ ] UI-FORMS: exact auth, invitation/intake/calendar/place/time/casting states;
-  retain real providers/calculation and remove duplicate scene/blocking wrappers.
-- [ ] UI-COMMERCE: exact topup/redemption/keepsake/retained/bridge templates;
-  preserve actual checkout, report/PDF, persistence and native validation.
-- [ ] UI-OBSERVATION: delegated browser comparison to immutable52-state exports,
-  appropriate regressions and actual platform artifacts; no fabricated evidence.
-
-Build identity implementation: `53f1fd9`,12/12 isolated helper/pipeline regression
-checks plus TypeScript gate passed. This is not a full release build. UI freeze:
-§24.6; authoritative exports `1f9c12a`. Production Surge/signing inputs remain
-required for canonical release execution in this cloud environment.
-
