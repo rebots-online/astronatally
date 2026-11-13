@@ -1106,7 +1106,8 @@ export default function App() {
  };
  // The frozen demonstration template follows the existing view state,
  // without a second effect or a competing automatic view dispatch.
- const visibleInformation = !personalStage && chartFocused ? 'your-chart' : infoSection;
+ const visibleInformation = !personalStage && chartFocused && infoSection !== 'your-chart' && infoSection !== 'reading-aloud'
+  ? 'your-chart' : infoSection;
  const baseHidden = currentTask !== null || visibleInformation !== null;
 
  return (
