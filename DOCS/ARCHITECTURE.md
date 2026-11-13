@@ -1639,3 +1639,12 @@ provider/state/origin/nonce/port/deadline validation, persist sensitive fields o
 claim authentication success. UI-COMMERCE owns this local DOM binding in
 `src/platform/nativeAuthPage.ts` alongside its existing utility markup; the
 native protocol and provider operations remain frozen.
+
+Intake binding adapter: existing preserved `FirstLightProps` in
+`src/onboarding-original/FirstLight.tsx` gains optional `onBack?:()=>void`.
+The already exported first-step Back control calls the wrapper's existing
+welcome phase; later Back controls retain existing previous-step behavior.
+The wrapper may retain the actual last submitted draft in memory to bind the
+frozen casting-error Try again/Edit birth details actions to its existing
+calculation callback. No new module entity, service, storage policy or
+calculation behavior is introduced.
