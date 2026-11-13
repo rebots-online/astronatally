@@ -1764,7 +1764,11 @@ all five native target groups. Use Microsoft's official MSIX Packaging SDK
 `makemsix pack -d <payload> -p <output>` from the persistent shared toolchain.
 Construct the payload in the named per-release build directory with the actual
 current-version Windows executable and actual non-system runtime sidecars it
-requires. Never collect an executable from a failed Windows target. The actual
+requires. The Windows target uses `-C target-feature=+crt-static` as a target-only
+linker adapter, preserving relevant inherited flags without applying it to Linux
+or Android. Still inspect the actual PE imports and package any remaining real
+non-system sidecars; the flag is not evidence of the final dependency list.
+Never collect an executable from a failed Windows target. The actual
 existing StoreLogo50px, Square44x44Logo44px and Square150x150Logo150px assets
 are copied byte-for-byte into Assets. Generated AppxManifest.xml derives:
 
