@@ -1,29 +1,17 @@
-// First-light composition (DOCS/RUBRIC-landing-firstlight-2026-11-08.md,
-// F1–F7): the signed-in, no-chart-yet onboarding, mounted by the app shell
-// as <FirstLight onSitDown={setChart} />. The five-question intake itself is
-// the VERBATIM src/onboarding-original/FirstLight.tsx; everything here is
-// glue around it — the atelier scene, the welcome stage, the honest casting
-// moment while the ephemeris computes, and Natally's voice (gesture-gated,
-// with a truthful notice whenever audio is not admitted).
-//
-// Casting completes → the chart is handed straight to the app stage
-// (onSitDown): no separate wheel is ever drawn over Natally; the only chart
-// on screen is the stage's, where she reads it aloud as her first message.
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { natalChart } from '../../astro/chart';
-import { AtelierScene } from '../../atelier-original/components/atelier/AtelierScene';
 import type { NatalChart } from '../../shared/types';
-import type { Voice, VoiceState } from '../../voice';
+import type { Voice } from '../../voice';
 import { loadGazetteer } from '../../services/gazetteer';
 import type { IntakeDraft } from '../../services/onboarding';
 import { getPreloadedVoice } from '../../services/supertonicTts';
 import OriginalFirstLight from '../../onboarding-original/FirstLight';
+import { AtelierRail } from '../prototype/ImmersiveLayout';
 import './onboarding.css';
 
-const GREETING =
- "Hi hi — I'm Natally. Tell me when and where you were born and we'll cast your first chart together; I already cleared a space on the table for you, and the candles are behaving.";
+const GREETING = 'Let’s find your sky.';
 
-type Phase = 'welcome' | 'intake' | 'casting';
+type Phase = 'welcome' | 'intake' | 'casting' | 'error';
 
 /** Partial-intake stash: a submitted draft survives reloads/back so the
  * flow never dead-ends; cleared once the chart lands. */
@@ -58,14 +46,11 @@ function clearStashedDraft(): void {
 }
 
 export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChart) => void }) {
+ const id = useId();
  const [phase, setPhase] = useState<Phase>('welcome');
+ const submittedDraft = useRef<IntakeDraft | null>(null);
  const [error, setError] = useState<string | null>(null);
  const [castSeconds, setCastSeconds] = useState(0);
- const [voiceState, setVoiceState] = useState<VoiceState>({
-  admitted: false,
-  speaking: false,
-  error: null,
- });
  // True only while a real computation is in flight. A bfcache/back
  // restore can resurrect a 'casting' phase whose promise died with the
  // page — that stale state must fall back to the intake (whose answers
@@ -83,7 +68,9 @@ export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChar
  if (voiceRef.current === null) voiceRef.current = getPreloadedVoice();
  const voice = voiceRef.current;
 
- useEffect(() => voice.onState(setVoiceState), [voice]);
+ useEffect(() => {
+  if (phase !== 'intake') document.getElementById(`${id}-title`)?.focus({ preventScroll: true });
+ }, [phase, id]);
 
  // First user gesture anywhere in the flow admits audio and speaks the
  // current line. Browsers require this to run inside a real event handler.
@@ -134,6 +121,7 @@ export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChar
 
  const onCreate = async (draft: IntakeDraft) => {
   setError(null);
+  submittedDraft.current = draft;
   stashDraft(draft);
   castInFlight.current = true;
   setPhase('casting');
@@ -163,7 +151,7 @@ export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChar
      ? failure.message
      : 'Casting failed — please check your answers and try again.',
    );
-   setPhase('intake');
+   setPhase('error');
   } finally {
    castInFlight.current = false;
   }
@@ -179,82 +167,27 @@ useEffect(() => {
  if (draft) void onCreate(draft);
 }, []);
 
- if (phase === 'welcome') {
-  return (
-   <>
-    <div className="scene-mount" aria-hidden="true">
-     <AtelierScene phase="idle" motionEnabled accountUid={null} />
-    </div>
-    <div className="onboarding">
-     <div className="onboarding-card welcome-card">
-      <img
-       className="welcome-mascot"
-       src="/natally-mascot.webp"
-       alt="Natally, the atelier astrologer"
-       draggable={false}
-      />
-      <p className="welcome-kicker">First light</p>
-      <h1>Welcome to the atelier — I&rsquo;m Natally.</h1>
-      <p className="welcome-line">{GREETING}</p>
-      <button
-       type="button"
-       className="btn primary wide"
-       onClick={() => setPhase('intake')}
-      >
-       Cast my first chart
-      </button>
-      <VoiceNote state={voiceState} />
-     </div>
-    </div>
-   </>
-  );
- }
-
  return (
-  <>
-   <div className="scene-mount" aria-hidden="true">
-    <AtelierScene phase="idle" motionEnabled accountUid={null} />
-   </div>
-   {/* Preserve answers for an error retry without covering the reveal
-          with the completed full-screen intake. */}
+  <div className="onboarding-flow">
+   {phase === 'welcome' && <AtelierRail title="Your birth chart" labelledBy={`${id}-title`}>
+    <p className="atelier-body-text">{GREETING}</p>
+    <button type="button" className="atelier-btn-primary" onClick={() => setPhase('intake')}>Cast my chart</button>
+   </AtelierRail>}
    <div hidden={phase !== 'intake'}>
-    <OriginalFirstLight
-     gazetteer={loadGazetteer()}
-     busy={phase === 'casting'}
-     error={error}
-     onCreate={onCreate}
-    />
+    <OriginalFirstLight gazetteer={loadGazetteer()} busy={phase !== 'intake'} error={error} onCreate={onCreate} onBack={() => setPhase('welcome')} />
    </div>
-   {phase === 'casting' && (
-    <section className="onboarding casting" role="status" aria-live="polite">
-     <div className="onboarding-card casting-card">
-      <img className="casting-mascot" src="/natally-mascot.webp" alt="" draggable={false} />
-      <h2>Casting your chart…</h2>
-      <p>
-       Swiss Ephemeris, computed right here on your device — no server
-       sees your birth data.
-      </p>
-      <p className="casting-elapsed" aria-hidden="true">
-       {castSeconds}s
-      </p>
-     </div>
-    </section>
-   )}
-  </>
- );
-}
-
-/** Truthful voice status — the unadmitted state is never silently missing. */
-function VoiceNote({ state }: { state: VoiceState }) {
- const status = state.admitted
-  ? state.speaking
-   ? 'Natally is speaking.'
-   : 'Voice is on.'
-  : 'Voice waits for your first tap or key — browsers keep sound behind a gesture.';
- return (
-  <p className="voice-note" role="note">
-   {status}
-   {state.error ? ` ${state.error}` : ''}
-  </p>
+   {phase === 'casting' && <AtelierRail title="Casting your chart…" labelledBy={`${id}-title`}>
+    <p className="atelier-secondary-text" data-bind="elapsed" role="status">{castSeconds}s</p>
+   </AtelierRail>}
+   {phase === 'error' && <AtelierRail title="Your chart could not be calculated." labelledBy={`${id}-title`} onBack={() => setPhase('intake')}>
+    <div className="atelier-status-banner error" data-bind="error" role="alert">{error}</div>
+    <button type="button" className="atelier-btn-primary" data-action="calculate-chart" onClick={() => {
+     const draft = submittedDraft.current ?? unstashDraft();
+     if (draft) void onCreate(draft);
+     else setPhase('intake');
+    }}>Try again</button>
+    <button type="button" className="atelier-btn-secondary" onClick={() => setPhase('intake')}>Edit birth details</button>
+   </AtelierRail>}
+  </div>
  );
 }
