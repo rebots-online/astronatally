@@ -131,3 +131,12 @@ Temporary observer scripts remain under `/workspace/scratch/`. Main commands:
 Actual external authentication, sending SMS/reset mail, spending money, granting
 credits, provider return, release signing and deployment remain separate
 operations requiring their real authorized inputs. None was fabricated here.
+
+## Canonical compiled-web follow-up
+
+The canonical build later produced the real web bundle with display version
+`1.32.09425` at build stamp `beed399`, then stopped at an actual Surge permission
+rejection. A separate [compiled-web smoke](compiled-web/README.md) checked that
+unchanged artifact once at desktop/phone, including all entry aliases, baked
+version and native invalid-link page. This adds compiled-web evidence only;
+it does not convert the earlier UI report into publication/native certification.

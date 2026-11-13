@@ -1,0 +1,1694 @@
+[
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 900,
+    "path": "/",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      },
+      {
+        "type": "warning",
+        "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x6c40040b800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x6c40040b800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x6c40040b800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x6c40040b800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 52
+    },
+    "stage": {
+      "x": 24,
+      "y": 76,
+      "w": 1016,
+      "h": 730
+    },
+    "rail": {
+      "x": 1064,
+      "y": 76,
+      "w": 352,
+      "h": 229.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 900,
+    "path": "/app.html",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      },
+      {
+        "type": "warning",
+        "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/app.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 52
+    },
+    "stage": {
+      "x": 24,
+      "y": 76,
+      "w": 1016,
+      "h": 730
+    },
+    "rail": {
+      "x": 1064,
+      "y": 76,
+      "w": 352,
+      "h": 229.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 900,
+    "path": "/landing.html",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/landing.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/landing-Cx17E1hj.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nMeet Natally\nYour chart\nReading aloud\nPersonal readings\nPrices\nLearn astrology\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 52
+    },
+    "stage": {
+      "x": 24,
+      "y": 76,
+      "w": 1016,
+      "h": 730
+    },
+    "rail": {
+      "x": 1064,
+      "y": 76,
+      "w": 352,
+      "h": 229.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 900,
+    "path": "/auth/native.html",
+    "exceptions": [],
+    "console": [],
+    "failed": [],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/auth/native.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/nativeAuth-y46blXYe.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      }
+    ],
+    "title": "Sign in to Natally",
+    "text": "Natally\nSign-in request expired\n\nYour Google sign-in takes place in this browser, then returns to the Natally app.\n\nStart again in Natally.\n\nOpen Natally and choose Sign in again. This browser sign-in link is missing, invalid, or expired.",
+    "header": null,
+    "stage": null,
+    "rail": null,
+    "overflow": false,
+    "sceneCount": 0,
+    "canvasCount": 0,
+    "version": null,
+    "images": [],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "phone",
+    "width": 390,
+    "height": 844,
+    "path": "/",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      },
+      {
+        "type": "warning",
+        "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 48
+    },
+    "stage": {
+      "x": 16,
+      "y": 64,
+      "w": 358,
+      "h": 371.359375
+    },
+    "rail": {
+      "x": 16,
+      "y": 531.359375,
+      "w": 358,
+      "h": 221.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "phone",
+    "width": 390,
+    "height": 844,
+    "path": "/app.html",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/app.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 48
+    },
+    "stage": {
+      "x": 16,
+      "y": 64,
+      "w": 358,
+      "h": 371.359375
+    },
+    "rail": {
+      "x": 16,
+      "y": 531.359375,
+      "w": 358,
+      "h": 221.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "phone",
+    "width": 390,
+    "height": 844,
+    "path": "/landing.html",
+    "exceptions": [],
+    "console": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+      }
+    ],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/landing.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/room.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/landing-Cx17E1hj.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/version-DXuQ5Aby.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/rolldown-runtime-XKyaHtl9.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/jsx-runtime-C3cWAN_r.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/favicon-32.png",
+        "status": 200,
+        "type": "other",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/main-CjKTKjqY.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-CyZEuE1-.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/sw.js",
+        "status": 404,
+        "type": "fetch",
+        "method": "HEAD"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/AppShell-vWbERr0z.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/three-B54aWqF2.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/poster.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/puppet-cleanplate.webp",
+        "status": 200,
+        "type": "image",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/cookie-bite-crunch-v2.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/glass-shatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/crystal-break.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/brass-clatter.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/shelf-wobble.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/atelier/audio/bowlingball.mp3",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.data",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/vendor/swisseph/swisseph.wasm",
+        "status": 200,
+        "type": "fetch",
+        "method": "GET"
+      }
+    ],
+    "title": "Natally \u2014 the live atelier",
+    "text": "Natally\nChart\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\n\u2727\nFRESH MACARONS\n\u2727\n\u2727\n\u2727\nYour birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree \u00b7 No card needed\n\nPrivacy\nTerms\nv1.32.09425",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 48
+    },
+    "stage": {
+      "x": 16,
+      "y": 64,
+      "w": 358,
+      "h": 371.359375
+    },
+    "rail": {
+      "x": 16,
+      "y": 531.359375,
+      "w": 358,
+      "h": 221.296875
+    },
+    "overflow": false,
+    "sceneCount": 1,
+    "canvasCount": 1,
+    "version": "v1.32.09425",
+    "images": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Natally, a silver robot with amber eyes, a violet turban and cloak, holds a glowing crystal ball among candlelit wooden shelves.",
+        "loaded": true
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  },
+  {
+    "viewport": "phone",
+    "width": 390,
+    "height": 844,
+    "path": "/auth/native.html",
+    "exceptions": [],
+    "console": [],
+    "failed": [],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:5180/auth/native.html",
+        "status": 200,
+        "type": "document",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BamtDXL8.css",
+        "status": 200,
+        "type": "stylesheet",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/nativeAuth-y46blXYe.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/atelier-frozen-BjfkC1mD.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      },
+      {
+        "url": "http://127.0.0.1:5180/assets/firebase-Dy2pLZnq.js",
+        "status": 200,
+        "type": "script",
+        "method": "GET"
+      }
+    ],
+    "title": "Sign in to Natally",
+    "text": "Natally\nSign-in request expired\n\nYour Google sign-in takes place in this browser, then returns to the Natally app.\n\nStart again in Natally.\n\nOpen Natally and choose Sign in again. This browser sign-in link is missing, invalid, or expired.",
+    "header": null,
+    "stage": null,
+    "rail": null,
+    "overflow": false,
+    "sceneCount": 0,
+    "canvasCount": 0,
+    "version": null,
+    "images": [],
+    "fonts": [
+      {
+        "family": "Playfair Display",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "500"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "600"
+      },
+      {
+        "family": "Outfit",
+        "status": "unloaded",
+        "weight": "700"
+      }
+    ],
+    "fontOutfit": true,
+    "frameworkOverlay": false,
+    "voiceStatus": null,
+    "httpStatus": 200
+  }
+]

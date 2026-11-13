@@ -1,0 +1,45 @@
+{
+  "scope": "ONE bounded compiled-web artifact smoke. Not a deployment or native-package acceptance.",
+  "sourceBuildStampCommit": "beed3991107b344e8121ae454f534a6599b1c4c9",
+  "identity": {
+    "version": "1.32.9425",
+    "builtAt": "2026-11-13T10:25:34.557Z",
+    "displayVersion": "1.32.09425"
+  },
+  "server": "http://127.0.0.1:5180",
+  "preference": "Save-Data on; no gestures, credential/contact/purchase submissions or network substitutions.",
+  "routes": [
+    "/",
+    "/app.html",
+    "/landing.html",
+    "/auth/native.html"
+  ],
+  "viewports": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "loads": 8,
+  "http200": 8,
+  "pageExceptions": 0,
+  "horizontalOverflowCases": 0,
+  "guestBadgeMatches": 6,
+  "guestCases": 6,
+  "guestSceneCountOne": true,
+  "nativeInvalidLinkClear": true,
+  "remoteResponses": 0,
+  "assetFailuresExcludingOptionalServiceWorker": [],
+  "consoleDifferences": [
+    "Static server returns404to optional HEAD/sw.js, rather than development SPA HTML/MIME rejection.",
+    "Some pages report expected autoplay AudioContext gesture warnings; no gesture/audio playback was requested.",
+    "Headless WebGL readback performance warnings remain nonfatal."
+  ],
+  "normalization": "DOM voiceStatus initially shared a property name with HTTP status. HTTP document statuses were recovered from the recorded response list into httpStatus; no request rerun or status assumption.",
+  "compiledFiles": 76,
+  "compiledBytes": 44495280
+}
