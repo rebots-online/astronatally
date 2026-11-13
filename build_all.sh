@@ -14,6 +14,7 @@ export ANDROID_SDK_ROOT="$ANDROID_HOME"
 
 # Stamp this release once from UTC epoch minutes; source MINOR advances only
 # after the complete web/native matrix has returned successfully.
+release_hostname="$(node scripts/product-release.mjs hostname)"
 node scripts/build-version.mjs stamp
 node scripts/build-native.mjs prepare
 git add version.json version.txt package.json package-lock.json src-tauri/Cargo.toml src-tauri/Cargo.lock src-tauri/tauri.conf.json
@@ -23,11 +24,11 @@ npm run lint
 npx vite build --outDir dist-web
 cp dist-web/app.html dist-web/index.html
 echo "Web build complete → dist-web/"
-# astronatally.com is the landing; the webapp lands on asknatally.online
-# (ARCHITECTURE §12.1). No temporary subdomains.
-npx --yes surge@0.56.0 dist-web astronatally.com --force https
-npx --yes surge@0.56.0 dist-web asknatally.online --force https
+# The fork has one configured origin. Original-lineage sites are untouched.
+npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
 node scripts/build-native.mjs
+npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
+node scripts/build-native.mjs verify-publication
 node scripts/build-version.mjs advance
 node scripts/build-native.mjs prepare
 git add version.json version.txt package.json package-lock.json src-tauri/Cargo.toml src-tauri/Cargo.lock src-tauri/tauri.conf.json

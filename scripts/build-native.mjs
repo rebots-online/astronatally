@@ -1,9 +1,10 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, copyFileSync, openSync, closeSync, rmSync } from 'node:fs';
 import { resolve, join, basename, extname } from 'node:path';
-import { homedir } from 'node:os';
+import { homedir, hostname } from 'node:os';
 import { spawn, spawnSync, execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { formatDisplayVersion } from './build-version.mjs';
+import { readProductRelease } from './product-release.mjs';
 
 const root = process.cwd();
 const identity = JSON.parse(readFileSync('version.json', 'utf8'));
@@ -16,6 +17,10 @@ const readJson = file => JSON.parse(readFileSync(file, 'utf8'));
 const json = (file, value) => writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
 
 function prepare() {
+  const release = readProductRelease(root);
+  const [major, minor, build] = version.split('.').map(Number);
+  formatDisplayVersion(version);
+  if (major !== release.releaseMajor || minor < release.initialMinor) throw Error('Native identity is outside the configured release lineage');
   const pkg = readJson('package.json');
   pkg.version = version;
   json('package.json', pkg);
@@ -38,7 +43,6 @@ function prepare() {
     window.title = `Natally v${formatDisplayVersion(version)}`;
     window.url = 'app.html';
   }
-  const [major, minor, build] = version.split('.').map(Number);
   const code = major * 100000000 + minor * 10000 + build;
   if (!Number.isSafeInteger(code) || code >= 2100000000) throw Error('Android versionCode exceeds platform range');
   config.bundle.android.versionCode = code;
@@ -48,13 +52,80 @@ function prepare() {
   console.log(`Native identity prepared: ${config.identifier}, v${version}, Android versionCode ${code}`);
 }
 
+if (process.env.NATALLY_CANONICAL_BUILD !== '1') throw Error('Use build_all.sh for native packaging');
 if (process.argv[2] === 'prepare') {
   prepare();
+} else if (process.argv[2] === 'verify-publication') {
+  const release = readProductRelease(root);
+  const inventoryPath = join(destination, 'inventory.json');
+  const manifest = readJson(inventoryPath);
+  if (!manifest.packagingComplete || manifest.version !== version || manifest.projectId !== release.projectId
+      || manifest.repository !== release.repository || manifest.webOrigin !== release.webOrigin || !manifest.publicSnapshot) {
+    throw Error('Current release is not ready for publication readback');
+  }
+  const verify = async (url, expected, retain = false) => {
+    if (new URL(url).origin !== release.webOrigin) throw Error('Release readback escaped its configured origin');
+    console.log(`Reading published ${url}`);
+    const response = await fetch(url, { redirect: 'error', cache: 'no-store', signal: AbortSignal.timeout(600000) });
+    if (!response.ok || !response.body) throw Error(`Published artifact returned HTTP ${response.status}: ${url}`);
+    const hash = createHash('sha256');
+    const chunks = [];
+    let bytes = 0;
+    let reported = 0;
+    for await (const chunk of response.body) {
+      hash.update(chunk);
+      bytes += chunk.length;
+      if (retain) chunks.push(chunk);
+      if (bytes - reported >= 16777216) { console.log(`${basename(new URL(url).pathname)}: ${bytes}/${expected.bytes} bytes received`); reported = bytes; }
+    }
+    const sha256 = hash.digest('hex');
+    if (bytes !== expected.bytes || sha256 !== expected.sha256) throw Error(`Published bytes/hash do not match ${url}`);
+    console.log(`Verified ${basename(new URL(url).pathname)}: ${bytes} bytes, SHA-256 ${sha256}`);
+    return { bytes, sha256, verifiedAt: new Date().toISOString(), ...(retain ? { content: Buffer.concat(chunks).toString('utf8') } : {}) };
+  };
+  try {
+    const observed = await verify(manifest.publicSnapshot.url, manifest.publicSnapshot, true);
+    const publicManifest = JSON.parse(observed.content);
+    if (publicManifest.version !== version || publicManifest.projectId !== release.projectId
+        || publicManifest.repository !== release.repository || publicManifest.webOrigin !== release.webOrigin
+        || publicManifest.publicationStatus !== 'awaiting-readback') throw Error('Published release manifest identity mismatch');
+    const pointer = await verify(manifest.publicSnapshot.current.url, manifest.publicSnapshot.current, true);
+    const current = JSON.parse(pointer.content);
+    if (current.version !== version || current.projectId !== release.projectId || current.manifest.sha256 !== observed.sha256) {
+      throw Error('Published current release pointer mismatch');
+    }
+    for (const artifact of manifest.artifacts) {
+      const location = artifact.locations.find(item => item.role === 'web-origin');
+      const receipt = await verify(location.url, artifact);
+      location.publicationStatus = 'verified';
+      location.verification = receipt;
+      json(inventoryPath, manifest);
+    }
+    manifest.publicSnapshot.verification = { bytes: observed.bytes, sha256: observed.sha256, verifiedAt: observed.verifiedAt };
+    manifest.publicSnapshot.current.verification = { bytes: pointer.bytes, sha256: pointer.sha256, verifiedAt: pointer.verifiedAt };
+    manifest.publicationStatus = 'verified';
+    manifest.complete = true;
+    manifest.verifiedAt = new Date().toISOString();
+    json(inventoryPath, manifest);
+  } catch (error) {
+    manifest.complete = false;
+    manifest.publicationStatus = 'failed';
+    manifest.publicationError = error.message;
+    json(inventoryPath, manifest);
+    throw error;
+  }
 } else {
-  if (process.env.NATALLY_CANONICAL_BUILD !== '1') throw Error('Use build_all.sh for native packaging');
+  if (process.argv[2]) throw Error('Expected prepare, verify-publication or the canonical packaging phase');
+  const release = readProductRelease(root);
+  const [major, minor] = version.split('.').map(Number);
+  if (major !== release.releaseMajor || minor < release.initialMinor || !identity.builtAt) throw Error('A current configured-lineage build stamp is required');
   mkdirSync(destination, { recursive: true });
   mkdirSync(join(destination, 'logs'), { recursive: true });
-  const manifest = { version, displayVersion: formatDisplayVersion(version), builtAt: identity.builtAt, sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), artifacts: [], targets: {} };
+  const manifest = { schema: 'mba.robin.release-manifest.v1', sourceRole: 'generated', policySource: 'config/product-release.json',
+    projectId: release.projectId, repository: release.repository, webOrigin: release.webOrigin,
+    version, displayVersion: formatDisplayVersion(version), builtAt: identity.builtAt,
+    sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
+    artifacts: [], targets: {}, packagingComplete: false, complete: false, publicationStatus: 'not-staged' };
   const inventoryPath = join(destination, 'inventory.json');
   const children = new Set();
   const save = () => json(inventoryPath, manifest);
@@ -67,12 +138,12 @@ if (process.argv[2] === 'prepare') {
     save();
     process.exit(130);
   });
-  function run(label, command, args, cwd = root) {
+  function run(label, command, args, cwd = root, environment = childEnv) {
     const logfile = join(destination, 'logs', label + '.log');
     console.log(`\n=== ${label}: ${command} ${args.join(' ')} ===`);
     const fd = openSync(logfile, 'a');
     return new Promise((done) => {
-      const child = spawn(command, args, { cwd, env: childEnv, detached: process.platform !== 'win32', stdio: ['ignore', fd, fd] });
+      const child = spawn(command, args, { cwd, env: environment, detached: process.platform !== 'win32', stdio: ['ignore', fd, fd] });
       children.add(child);
       child.once('error', error => { children.delete(child); closeSync(fd); done({ code: 1, message: error.code || error.message }); });
       child.once('exit', code => { children.delete(child); closeSync(fd); done({ code: code ?? 1, log: logfile }); });
@@ -85,9 +156,15 @@ if (process.argv[2] === 'prepare') {
   function stage(file, name, kind) {
     if (!existsSync(file)) throw Error(`Missing ${kind}: ${file}`);
     const out = join(destination, `${prefix}-${name}`);
-    copyFileSync(file, out);
+    if (resolve(file) !== out) copyFileSync(file, out);
     const data = readFileSync(out);
-    manifest.artifacts.push({ kind, path: out.slice(root.length + 1), bytes: data.length, sha256: createHash('sha256').update(data).digest('hex') });
+    if (data.length === 0) throw Error(`Empty ${kind}: ${file}`);
+    manifest.artifacts.push({ kind, path: out.slice(root.length + 1), filename: basename(out), bytes: data.length,
+      sha256: createHash('sha256').update(data).digest('hex'), preferred_public_location_role: 'web-origin', locations: [
+        { role: 'build-workspace', transport: 'local-fs', host: hostname(), path: out, public: false },
+        { role: 'web-origin', transport: 'https', host: new URL(release.webOrigin).hostname, public: true,
+          url: new URL(`/releases/${version}/${basename(out)}`, release.webOrigin).href, publicationStatus: 'not-staged' },
+      ] });
     save();
     console.log(`Staged ${kind}: ${out}`);
   }
@@ -105,21 +182,33 @@ if (process.argv[2] === 'prepare') {
       const result = await execute();
       if (result.code !== 0) throw Error(`${name} command failed (${result.code}); see ${result.log || result.message}`);
       await collect();
-      manifest.targets[name] = { state: 'packaged', startedAt, finishedAt: new Date().toISOString() };
+      manifest.targets[name] = { ...manifest.targets[name], state: 'packaged', startedAt, finishedAt: new Date().toISOString() };
     } catch (error) {
-      manifest.targets[name] = { state: 'failed', startedAt, error: error.message };
+      manifest.targets[name] = { ...manifest.targets[name], state: 'failed', startedAt, error: error.message };
       console.error(error.message);
     }
     save();
   }
+  await target('web', () => {
+    const archive = join(destination, `${prefix}-web.zip`);
+    rmSync(archive, { force: true });
+    return run('web-archive', 'zip', ['-q', '-r', archive, '.'], resolve('dist-web'));
+  }, () => stage(join(destination, `${prefix}-web.zip`), 'web.zip', 'web-archive'));
   await target('linux', () => run('linux', 'npx', ['--no-install', 'tauri', 'build', '--bundles', 'appimage,deb,rpm', '--', '--locked']), () => {
     stageBundles(join(targets, 'release/bundle'), ['.AppImage', '.deb', '.rpm'], 'linux-x64');
   });
-  await target('windows', () => run('windows', 'npx', ['--no-install', 'tauri', 'build', '--runner', 'cargo-xwin', '--target', 'x86_64-pc-windows-msvc', '--bundles', 'nsis', '--', '--locked']), () => {
+  await target('windows', () => {
+    const environment = { ...childEnv, CARGO_TARGET_X86_64_PC_WINDOWS_MSVC_RUSTFLAGS:
+      `${childEnv.CARGO_TARGET_X86_64_PC_WINDOWS_MSVC_RUSTFLAGS || ''} -C target-feature=+crt-static`.trim() };
+    delete environment.RUSTFLAGS;
+    delete environment.CARGO_ENCODED_RUSTFLAGS;
+    return run('windows', 'npx', ['--no-install', 'tauri', 'build', '--runner', 'cargo-xwin', '--target', 'x86_64-pc-windows-msvc', '--bundles', 'nsis', '--', '--locked'], root, environment);
+  }, () => {
     stage(join(targets, 'x86_64-pc-windows-msvc/release/natally-ai-studio.exe'), 'windows-x64.exe', 'windows-executable');
     stageBundles(join(targets, 'x86_64-pc-windows-msvc/release/bundle/nsis'), ['.exe'], 'windows-x64-installer');
   });
   await target('windows-msi', async () => {
+    if (manifest.targets.windows?.state !== 'packaged') throw Error('Windows executable must succeed before MSI packaging');
     // wixl packages the staged Windows executable into a per-machine MSI on
     // Linux (ARCHITECTURE.md "Windows MSI (Store)"). Ubuntu ships wixl as its
     // own package, Debian inside msitools, so request both and fall back.
@@ -149,6 +238,62 @@ if (process.argv[2] === 'prepare') {
       'src-tauri/msi/natally.wxs']);
   }, () => {
     stage(join(targets, 'msi', `${prefix}-windows-x64.msi`), 'windows-x64.msi', 'windows-msi');
+  });
+  await target('windows-msix', async () => {
+    if (manifest.targets.windows?.state !== 'packaged') throw Error('Windows executable must succeed before MSIX packaging');
+    const config = readJson('src-tauri/tauri.conf.json');
+    const manufacturer = /authors\s*=\s*\[\s*"([^"]+)"/.exec(readFileSync('src-tauri/Cargo.toml', 'utf8'))?.[1];
+    if (!manufacturer) throw Error('Configured MSIX publisher is missing');
+    const background = /--atelier-ink:\s*(#[0-9a-f]{6})/i.exec(readFileSync('src/app/prototype/atelier-frozen.css', 'utf8'))?.[1];
+    if (!background) throw Error('Frozen product background is missing');
+    const work = resolve('build', `${prefix}-msix`, String(Date.parse(identity.builtAt)));
+    const payload = join(work, 'payload');
+    mkdirSync(join(payload, 'Assets'), { recursive: true });
+    const executable = join(destination, `${prefix}-windows-x64.exe`);
+    copyFileSync(executable, join(payload, 'natally-ai-studio.exe'));
+    for (const name of ['StoreLogo.png', 'Square44x44Logo.png', 'Square150x150Logo.png']) {
+      copyFileSync(join('src-tauri/icons', name), join(payload, 'Assets', name));
+    }
+    const runtimeImports = [];
+    const runtimeSidecars = [];
+    const system = new Set('advapi32 avrt bcrypt bcryptprimitives cfgmgr32 clbcatq comctl32 comdlg32 crypt32 cryptbase cryptsp d2d1 d3d11 d3d12 d3dcompiler_47 dbghelp dnsapi dsound dwmapi dwrite dxcore dxgi gdi32 gdiplus imm32 iphlpapi kernel32 kernelbase mf mfplat mmdevapi mpr mscms msctf msimg32 msvcp_win msvcrt ncrypt netapi32 normaliz ntdll ole32 oleacc oleaut32 opengl32 powrprof profapi propsys psapi rasapi32 rpcrt4 secur32 setupapi shell32 shlwapi sspicli user32 userenv usp10 uxtheme ucrtbase version winhttp wininet winmm winspool winsta wintrust wldap32 ws2_32 wtsapi32'.split(' '));
+    const pending = [executable];
+    for (let index = 0; index < pending.length; index += 1) {
+      const imports = String(execFileSync('objdump', ['-p', pending[index]], { encoding: 'utf8', maxBuffer: 33554432 })).split('\n')
+        .filter(line => line.trim().startsWith('DLL Name:')).map(line => line.split(':').slice(1).join(':').trim());
+      for (const name of imports) {
+        if (!runtimeImports.includes(name)) runtimeImports.push(name);
+        const normalized = name.toLowerCase();
+        if (normalized.startsWith('api-ms-') || normalized.startsWith('ext-ms-') || system.has(normalized.replace(/\.(dll|drv)$/, ''))) continue;
+        if (runtimeSidecars.some(item => item.toLowerCase() === normalized)) continue;
+        const directory = join(targets, 'x86_64-pc-windows-msvc/release');
+        const sidecar = readdirSync(directory).find(item => item.toLowerCase() === normalized);
+        if (!sidecar) throw Error(`Required non-system Windows runtime is unavailable: ${name}`);
+        const source = join(directory, sidecar);
+        copyFileSync(source, join(payload, sidecar));
+        runtimeSidecars.push(sidecar);
+        pending.push(source);
+      }
+    }
+    manifest.targets['windows-msix'].runtimeImports = runtimeImports;
+    manifest.targets['windows-msix'].runtimeSidecars = runtimeSidecars;
+    const xml = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
+    writeFileSync(join(payload, 'AppxManifest.xml'), `<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap rescap">
+  <Identity Name="${xml(config.identifier)}" Publisher="${xml(`CN=${manufacturer}`)}" Version="${version}.0" ProcessorArchitecture="x64" />
+  <Properties><DisplayName>${xml(config.productName)}</DisplayName><PublisherDisplayName>${xml(manufacturer)}</PublisherDisplayName><Description>${xml(config.bundle.shortDescription)}</Description><Logo>Assets\\StoreLogo.png</Logo></Properties>
+  <Resources><Resource Language="en-US" /></Resources>
+  <Dependencies><TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22000.0" MaxVersionTested="10.0.22000.0" /></Dependencies>
+  <Applications><Application Id="Natally" Executable="natally-ai-studio.exe" EntryPoint="Windows.FullTrustApplication"><uap:VisualElements DisplayName="${xml(config.productName)}" Description="${xml(config.bundle.shortDescription)}" BackgroundColor="${xml(background)}" Square150x150Logo="Assets\\Square150x150Logo.png" Square44x44Logo="Assets\\Square44x44Logo.png" /></Application></Applications>
+  <Capabilities><rescap:Capability Name="runFullTrust" /></Capabilities>
+</Package>
+`);
+    save();
+    return run('windows-msix', 'makemsix', ['pack', '-d', payload, '-p', join(work, `${prefix}-windows-x64.msix`)]);
+  }, () => {
+    const work = resolve('build', `${prefix}-msix`, String(Date.parse(identity.builtAt)));
+    stage(join(work, `${prefix}-windows-x64.msix`), 'windows-x64.msix', 'windows-msix');
+    manifest.artifacts.at(-1).signatureStatus = 'unsigned';
   });
   await target('android', () => run('android', 'npx', ['--no-install', 'tauri', 'android', 'build', '--target', 'aarch64', '--apk', '--aab']), async () => {
     const output = 'src-tauri/gen/android/app/build/outputs';
@@ -186,13 +331,38 @@ if (process.argv[2] === 'prepare') {
       execFileSync(llvm, ['--only-keep-debug', library, join(abiDir, 'libnatally_ai_studio_lib.so.dbg')]);
       const archive = join(destination, `${prefix}-android-arm64-native-debug-symbols.zip`);
       execFileSync('zip', ['-r', archive, 'arm64-v8a'], { cwd: symbolRoot, stdio: 'inherit' });
-      const data = readFileSync(archive);
-      manifest.artifacts.push({ kind: 'android-symbols', path: archive.slice(root.length + 1), bytes: data.length, sha256: createHash('sha256').update(data).digest('hex') });
+      stage(archive, 'android-arm64-native-debug-symbols.zip', 'android-symbols');
     }
   });
   manifest.finishedAt = new Date().toISOString();
-  manifest.complete = ['linux', 'windows', 'windows-msi', 'android'].every(name => manifest.targets[name]?.state === 'packaged');
+  manifest.packagingComplete = ['web', 'linux', 'windows', 'windows-msi', 'windows-msix', 'android'].every(name => manifest.targets[name]?.state === 'packaged');
+  if (manifest.packagingComplete) {
+    const published = resolve('dist-web/releases', version);
+    mkdirSync(published, { recursive: true });
+    for (const artifact of manifest.artifacts) {
+      copyFileSync(artifact.path, join(published, artifact.filename));
+      artifact.locations.find(item => item.role === 'web-origin').publicationStatus = 'awaiting-readback';
+    }
+    manifest.publicationStatus = 'awaiting-readback';
+    const snapshot = { ...manifest, sourceRole: 'generated', generatedFrom: { role: 'canonical-build-inventory', path: inventoryPath.slice(root.length + 1) } };
+    const snapshotPath = join(destination, 'public-inventory.json');
+    json(snapshotPath, snapshot);
+    copyFileSync(snapshotPath, join(published, 'inventory.json'));
+    const data = readFileSync(snapshotPath);
+    const current = { sourceRole: 'generated', generatedFrom: { role: 'canonical-build-inventory', path: inventoryPath.slice(root.length + 1) },
+      projectId: release.projectId, repository: release.repository, webOrigin: release.webOrigin,
+      version, displayVersion: manifest.displayVersion, publicationStatus: 'awaiting-readback',
+      manifest: { url: new URL(`/releases/${version}/inventory.json`, release.webOrigin).href, bytes: data.length, sha256: createHash('sha256').update(data).digest('hex') } };
+    const currentPath = join(destination, 'public-current.json');
+    json(currentPath, current);
+    copyFileSync(currentPath, resolve('dist-web/releases/current.json'));
+    const pointer = readFileSync(currentPath);
+    manifest.publicSnapshot = { ...current.manifest, path: snapshotPath.slice(root.length + 1),
+      current: { path: currentPath.slice(root.length + 1), url: new URL('/releases/current.json', release.webOrigin).href,
+        bytes: pointer.length, sha256: createHash('sha256').update(pointer).digest('hex') } };
+  }
   save();
-  console.log(JSON.stringify({ version, displayVersion: manifest.displayVersion, complete: manifest.complete, targets: manifest.targets, inventory: inventoryPath }, null, 2));
-  process.exitCode = manifest.complete ? 0 : 1;
+  console.log(JSON.stringify({ version, displayVersion: manifest.displayVersion, packagingComplete: manifest.packagingComplete,
+    complete: manifest.complete, publicationStatus: manifest.publicationStatus, targets: manifest.targets, inventory: inventoryPath }, null, 2));
+  process.exitCode = manifest.packagingComplete ? 0 : 1;
 }
