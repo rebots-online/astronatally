@@ -26,6 +26,12 @@ cp dist-web/app.html dist-web/index.html
 echo "Web build complete → dist-web/"
 # The fork has one configured origin. Original-lineage sites are untouched.
 npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
+printf 'Web published: %s (v%s)\n' "$(node scripts/product-release.mjs origin)" "$(node -p 'require("./version.json").displayVersion')"
+printf 'Review the published screens. Type BUILD to continue native packaging: '
+if ! IFS= read -r review_decision < /dev/tty || [[ "$review_decision" != BUILD ]]; then
+  printf '\nWeb review pending; native packaging has not started and source minor has not advanced.\n' >&2
+  exit 75
+fi
 node scripts/build-native.mjs
 npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
 node scripts/build-native.mjs verify-publication
