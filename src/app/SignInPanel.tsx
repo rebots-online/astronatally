@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
+import { flushSync } from 'react-dom';
 import {
   cancelNativeSignIn, describeSignInFailure, emailSignIn, emailSignUp,
   isNativeAuth, nativePhoneSignIn, resetEmailPassword, startPhoneSignIn,
@@ -169,7 +170,8 @@ export function SignInPanel({ onClose, onGoogle, initialMethod, googleError, con
     }
     const container = recaptchaRef.current;
     if (!container) { setError('The reCAPTCHA form is unavailable. Close sign-in and try again.'); finish(epoch); return; }
-    setView('phone');
+    // A resend reuses the mounted host; expose its phone form before Firebase renders verification.
+    flushSync(() => setView('phone'));
     const controller = new AbortController();
     abortRef.current = controller;
     setStatus('Complete the reCAPTCHA check to request your SMS code.');
