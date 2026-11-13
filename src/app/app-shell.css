@@ -137,3 +137,14 @@ div[id^='threejs-container'] { position: absolute; inset: 0; width: 100%; height
 /* The source room's old sound badge duplicates the exported44px control.
    That same existing foley gate is bound by the new interaction-sounds button. */
 .atelier-live-room .atelier-sound-toggle { display: none; }
+
+/* A focused-room inset scales the complete registered scene as one unit.
+   Keeping its2048×1280 internal coordinates also scales HTML prop labels,
+   whose ordinary minimum sizes would otherwise cover Natally in the thumbnail. */
+.atelier-live-room.atelier-natally-inset-dock .atelier-live-room-content {
+  position: absolute; left: 0; bottom: 0; width: 2048px; height: 1280px;
+  transform-origin: bottom left; transform: scale(0.068359375);
+}
+@media(max-width:767px) {
+  .atelier-live-room.atelier-natally-inset-dock .atelier-live-room-content { transform: scale(0.056640625); }
+}

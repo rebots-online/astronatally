@@ -55,3 +55,10 @@ stage/rail and inset geometry, with one scene, no horizontal overflow and no pag
 errors. Save-Data was enabled for those composition captures to avoid an unrelated
 voice-model download. They are UI observations, not external login, payment,
 completed spoken-reading or packaged-build certification.
+
+Final QA corrections: the focused room inset scales the entire existing
+2048×1280 scene, including HTML object labels, into the exported140×88 /
+116×74 region. Only containment CSS changes; it remains the same live scene.
+The existing guest chart-focused view renders the already frozen S01-chart
+rail with its explicit demonstration context. Returning to the room restores
+the prior landing task; authored explanations and manual view pins are unchanged.

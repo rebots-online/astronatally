@@ -1094,11 +1094,20 @@ export default function App() {
  const activeChart = personalStage ? astrolabe : exampleChart;
  const activeTargets = activePresentation.focusTargets;
  const foregroundBody = personalStage ? chart.bodies.find(body => activeTargets.includes(body.key))?.key ?? null : null;
- const returnToRoom = () => personalStage ? handleStageView('atelier') : handleLandingStageView('atelier');
- const toggleView = () => personalStage
-  ? handleStageView(chartFocused ? 'atelier' : 'chart')
-  : handleLandingStageView(chartFocused ? 'atelier' : 'chart');
- const baseHidden = currentTask !== null || infoSection !== null;
+ const returnToRoom = () => {
+  if (personalStage) { handleStageView('atelier'); return; }
+  if (infoSection === 'your-chart' || infoSection === 'reading-aloud') setInfoSection(null);
+  handleLandingStageView('atelier');
+ };
+ const toggleView = () => {
+  if (chartFocused) returnToRoom();
+  else if (personalStage) handleStageView('chart');
+  else handleLandingStageView('chart');
+ };
+ // The frozen demonstration template follows the existing view state,
+ // without a second effect or a competing automatic view dispatch.
+ const visibleInformation = !personalStage && chartFocused ? 'your-chart' : infoSection;
+ const baseHidden = currentTask !== null || visibleInformation !== null;
 
  return (
   <ImmersiveLayout
@@ -1156,7 +1165,7 @@ export default function App() {
        }} />
        : <ChatPanel chart={chart} stage={chatStage} onTopUp={() => openRail('topup')} onMenu={() => openRail('menu')} />}
      </div>
-     {infoSection !== null && currentTask === null && <LandingCards sectionId={infoSection} onSection={showSection} onClose={closeInformation}
+     {visibleInformation !== null && currentTask === null && <LandingCards sectionId={visibleInformation} onSection={showSection} onClose={closeInformation}
       onSignIn={() => openRail('signin')} signingIn={signingIn} />}
      {menuOpen && <AtelierRail title="Menu" onClose={closeRail}>
       {LANDING_SECTIONS.map(section => <button type="button" className="atelier-btn-secondary" key={section.id}
