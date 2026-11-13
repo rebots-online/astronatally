@@ -1423,3 +1423,140 @@ Android arm64 APK/AAB/native symbols. Existing repository scope does not
 define macOS/iOS releases. Rubric12–15 in
 `RUBRIC-immersive-stitch-2026-11-13.md` govern evidence; user-facing visual
 conformance and actual external-service acceptance are separate observations.
+
+## 24. Immersive Stitch revision — specified, awaiting export freeze
+
+Repository: **rebots-online/astronatally**, cloud workspace `/workspace/astronatally`.
+Requirements: [PRD.md](PRD.md). Design system: [DESIGN.md](DESIGN.md).
+Observations: [RUBRIC-immersive-stitch-2026-11-13.md](RUBRIC-immersive-stitch-2026-11-13.md).
+This section supersedes inconsistent historical UI composition instructions,
+including centered onboarding, fullscreen account backdrops, oversized avatar,
+18-page introduction and the unused current-location question. Service behavior
+is frozen below. Historical sections cannot override this revision.
+
+**Status:** specification complete; UI coding held until actual revised exports
+and their complete state/hash manifest exist. Baseline Stitch project
+6919345441915622012/screen6e69d41b4a4e418b97b5c83ac901f264 represents the current
+obstructing UI, not the new design. Revised project16384422545803483395 is
+separate. Baseline asset corrections were uploaded and downloaded byte-for-byte;
+PNG is390×844 despite stale provider desktop metadata. Provenance resides in
+`STITCH/2026-11-13/baseline/`. Measure files rather than trusting stale metadata.
+
+### 24.1 Shared composition and implementation boundary
+
+The canonical entry remains `app.html`/`src/main.tsx` → `AppShell.App`.
+Purchased domains retain §12.1's roles; the retired marketing port is not
+reinstated. First-paint HTML and auth resolution use the actual room/poster
+inside the same stage geometry, never a separate central mascot splash.
+
+The selected Stitch export defines the actual DOM/CSS for header, stage,
+caption, rail and status slots. `ImmersiveLayout` is its mechanical React
+transcription, populated with existing components. `AtelierRail` transcribes
+the exported task wrapper. Invitation, forms, transcript, account and commerce
+change the rail contents; they do not replace/remount the live stage, introduce
+an iframe, dim the viewport or make stage controls inert. Existing chart/voice
+events stay in the same document/window.
+
+Desktop has a compact header, dominant stage and approximately352px rail.
+Below768px:48px header → contained room/chart band → two-line caption → rail
+in normal document flow. Actual frozen CSS controls dimensions. Keyboard visual
+viewport and native safe-area adaptation may change available height, never
+hierarchy. Complete Natally/ball and wheel perimeter fit their stage. Existing
+floating/docked inset stays within that stage; forms cannot cover her.
+
+New shared classes use `atelier-`. Shared CSS is extracted verbatim from the
+actual export and retained with its source hash. Existing fullscreen backdrops,
+centered sheets and unbounded avatar styles are removed/rebound to exported
+structures. Exact current artwork/fonts are bundled locally; asset corrections
+occur in Stitch before freeze and are exported again. JSX bindings, asset URLs,
+live-canvas slots and native safe areas are documented adaptations, not redesign.
+
+### 24.2 Complete PRD-to-code translation
+
+Every PRD rule, shared element and screen/state below is binding. Exact copy,
+controls and visual arrangement are in the PRD plus the actual state exports;
+neither an unexported design nor historical markup may override them.
+
+| Requirement | Architecture realization and existing integration |
+| --- | --- |
+| P01/P02/P04 presence, evidence, discovery | Persist `AtelierScene`, `Inset`, `Astrolabe3D`, actual authored selection explanations and presentation driver. No welcome gate, duplicate portrait or hint exposing room mechanics; demonstration is never represented as the visitor's chart |
+| P03/shared elements | Exported compact header, single rail heading/action, necessary labelled inputs and truthful feedback. `StageHeader` bounds real customer avatar32px inside44px target. Exact title/body/CTA and price/status placement from PRD; no logo portrait |
+| P05 honest states | Preserve actual auth/allowance/calculation/voice/checkout pending, error and recovery distinctions. No fake balance, grant, reading, purchase or unsupported persistence promise |
+| P06/P07 frozen function/fidelity | Services in24.3 stay fixed; implement actual exported structures/assets/tokens/copy with the state/hash/binding manifest. Conformance cannot certify market adoption |
+| S01 guest and six sections | `App` signed-out branch + `LandingCards`; six real section destinations and concise exported pages, valid Previous/Next directions, same section-driven view swaps. Initial Your birth chart / Tell me when and where you were born. / Cast my chart / Free · No card needed. No18-page promotional wall or cloud-history promise |
+| S02 choose/email/register/reset/phone/code | Existing `SignInPanel` form fields/handlers, validation, pending/error/success and SMS cleanup adopt the nonmodal rail. Preserve Google click→popup and email/SMS app-origin handoff. Remove viewport locks, aria-modal/inert and focus trap; focus heading/field and restore opener on Close |
+| S03 signed-in first visit | Existing `FirstLight` welcome becomes exported compact Your birth chart / Let’s find your sky. / Cast my chart invitation. No mascot, ceremony label, duplicate greeting or dismiss-before-interaction step |
+| S04 name/date/place/time | Existing intake/CalendarPicker/BirthDateFields/gazetteer, validation and draft recovery retained. Deliberate local markup/step adaptation of preserved intake authorized. Fields appear immediately; omit unused current-location step; retain unknown-time calculation exactly. No upstream/sibling source read |
+| S05 casting/error | Existing `FirstLight.onCreate`/`natalChart` execute unchanged. Actual casting/elapsed/error/retry/edit in rail, persistent room; no second wheel or fake computation. Existing draft/bfcache recovery retained |
+| S06 reading/chart focus | Existing `ChatPanel`/`useChat`/opening/cue driver bind exported transcript and composer. Preserve `explainTarget`, manual view pin, wheel selection/highlight/structural legibility, completion clearing, karaoke/lipsync, drag/dock/resize and authored free explanations. Existing notebook becomes secondary Chart notes, no fabricated personal analysis |
+| S07 menu/account | Existing `StageHeader`/`AccountPanel`; actual account/allowance, Top up/My keepsake/Sign out. Mount requested commerce surface in every signed-in branch, including no-chart; chart-required action reaches intake, never silently disappears |
+| S08 topup/redeem/checkout | Existing `TopUpSheet`/purchases/billing/redemption request identity/access refresh; exact US$5/10/25. Actual launch/cancel/error/verified result; no duration/discount claim or service rewrite |
+| S09 offer/preparing/done/viewer/PDF | Existing `SouvenirDialog`, report/PDF/retain, US$30. Mount real retained `SouvenirViewer` through existing `loadSouvenir` instead of repeat offer/unreachable component. No new storage service or saved-conversation promise. Exact opening/preparation/result states and real PDF/export |
+| S10 native handoff | `auth/native.html`/`bootstrapNativeAuth` keep §19/22's real provider/state/origin/nonce/port/deadline/field validation and memory-only sensitive data. Apply exported utility frame. System-browser handoff is a justified separate-surface exception; it cannot contain the native canvas |
+| S11 status/recovery/utilities/first paint | Existing `VoiceDownloadStatus`/`VoiceProgress`, auth-resolution, artwork/inference failure and actual legal destinations. Actual progress/MB/percent/preparation/synthesis/retry; no viewport/stage/scrollY reflow. No fabricated legal document, empty destination or simulated success |
+| Accessibility/responsive | Actual exported44px targets/16px inputs, persistent labels, focus/contrast, reduced motion/transparency, one phone document scroll. Existing measured two-line caption/current-word index and7:1 active-word contrast; existing Save-Data/real gesture audio admission |
+| Build/evidence | §23's sole entry, complete existing matrix, shared identity and actual artifacts/logs/hashes. Type checking, visual conformance, live external-service observations and commercial adoption are distinct evidence scopes |
+
+### 24.3 Functional freeze
+
+- **Astrology:** existing `BirthInput`, IANA-zone gazetteer, Swiss Ephemeris,
+  natal/current-sky calculations, renderer bridge and timed/unknown-time policy.
+  Omitting unused current location changes no calculation.
+- **Presentation:** existing target inventory, tap explanations, view swaps,
+  manual pin, real speech-paced cues/highlights, completion cleanup and inset
+  movement/dock/resize persistence. A live renderer occupies the explicit
+  prototype slot; never paste the full UI screenshot over live content.
+- **Voice:** existing local Supertonic model, preload/cache/progress, gesture
+  admission, stream/arbitration, word events/lipsync, mute and reduced motion.
+  No hosted voice, fake waveform, new model or decorative pending state.
+- **Identity:** existing Firebase Google/email/SMS/registration/reset, `#gid`
+  and method-only app-domain bridge, secure native handoff. No provider-setting
+  changes, linked accounts or credentials in exported HTML/frontend.
+- **Conversation:** existing SSE/request/allowance/provider/model contract.
+  Bind existing real errors/retry without redesigning inference or queued
+  backend work. No new microphone, upload, ZIM or unrelated product function.
+- **Commerce:** existing real Chargebee checkout/redemption/access refresh,
+  US$5/10/25 and US$30. No simulated grant, substituted provider or credential.
+  Required provider-owned checkout/system-browser UI is documented separately
+  from the app's nonblocking composition; do not add another backdrop.
+- **Data:** existing per-account chart/draft/inset and local retained keepsake.
+  Mounting `SouvenirViewer` wires existing behavior; it adds no cloud history,
+  cross-device continuity, embedding store or customer persistence promise.
+- **Character:** existing SOUL, backstory, scene motion and hidden interactions.
+  No new room mechanics or UI exposition of discoverable behavior.
+
+### 24.4 Registry additions and existing adaptations
+
+These rows extend §16 before code. Unlisted new module-scope names require an
+architecture addition first; ad hoc bindings stay local to existing components.
+
+| Entity | File | Frozen role |
+| --- | --- | --- |
+| `ImmersiveLayoutProps` | `src/app/prototype/ImmersiveLayout.tsx` | `{header:ReactNode;stage:ReactNode;rail:ReactNode;caption?:ReactNode;status?:ReactNode}` |
+| `ImmersiveLayout` | same | Mechanical transcription of exported shared frame/slots, stable live stage mount |
+| `AtelierRailProps` | same | `{title:string;onClose?:()=>void;children:ReactNode;labelledBy?:string}` |
+| `AtelierRail` | same | Exported nonmodal task wrapper; no backdrop/trap/viewport lock |
+| `atelier-frozen.css` | `src/app/prototype/` | Export-extracted CSS, source hash and local-asset/native adaptations recorded |
+| Prototype state/source manifest | `DOCS/STITCH/2026-11-13/revised/` | Immutable actual HTML/PNG/provider responses; state/screen/file IDs, hashes and per-state React/service/observation bindings |
+| Existing `App`, `StageHeader`, `AccountPanel`, `LandingCards` | existing app modules | Exported frame/rail composition, bounded avatar and all existing destinations |
+| Existing `FirstLight` and preserved intake components | existing onboarding modules | Exported invitation/intake/casting; immediate fields, omit unused question; unchanged chart callback |
+| Existing `SignInPanel`, `ChatPanel`, `TopUpSheet`, `SouvenirDialog`, `SouvenirViewer` | existing owning modules | Exported rail markup; same callbacks; mount existing retained viewer |
+| Existing native HTML/bootstrap | `auth/native.html`, `src/platform/nativeAuthPage.ts` | Exported utility structure; same stable form IDs and secure protocol |
+| Initial poster HTML | `app.html` | Actual room in matching initial stage boundary; no separate mascot splash |
+
+### 24.5 Freeze and delivery gate
+
+Before coder assignment record actual revised project/screen/file IDs, complete
+state coverage, authoritative downloads, measured desktop/phone geometry,
+bundled-art/font provenance, SHA-256 hashes and state→component/service binding.
+Mark PRD/architecture/checklist FROZEN only after those artifacts exist. Missing
+states are designed in Stitch before freeze; coders cannot improvise them.
+
+After freeze, reproduce/wire exactly as architected. Permitted implementation
+idiosyncrasies: JSX syntax/events, live-canvas content slots, bundled font/asset
+paths, visual viewport/native safe areas, secure system-browser auth,
+provider-owned checkout and numeric native version normalization. They do not
+permit a different screen or service behavior. Report actual unsupported or
+unconfigured operations rather than replacing them with simulations. Completion
+requires visual observations and the complete canonical platform build;
+historical inventories or type checks cannot certify the new artifacts.
