@@ -169,8 +169,9 @@ if (process.argv[2] === 'prepare') {
     console.log(`Staged ${kind}: ${out}`);
   }
   function stageBundles(dir, extensions, label) {
+    const token = new RegExp(`(^|[^0-9.])${version.replaceAll('.', '\\.')}($|[^0-9.])`);
     for (const ext of extensions) {
-      const matches = files(dir).filter(file => file.endsWith(ext) && basename(file).includes(version));
+      const matches = files(dir).filter(file => file.endsWith(ext) && token.test(basename(file).slice(0, -ext.length)));
       if (matches.length !== 1) throw Error(`${label}: expected one current-version ${ext}, found ${matches.length}`);
       stage(matches[0], `${label}${ext}`, label + ext);
     }
@@ -317,8 +318,17 @@ if (process.argv[2] === 'prepare') {
     if (!actual || actual !== expected) throw Error('Android APK signer does not match the configured production certificate');
     execFileSync(join(tool, 'zipalign'), ['-c', '-P', '16', '4', apks[0]], { stdio: 'inherit' });
     execFileSync('jarsigner', ['-verify', aabs[0]], { stdio: 'ignore' });
+    const certificate = execFileSync('keytool', ['-printcert', '-jarfile', aabs[0], '-rfc'], { encoding: 'utf8' });
+    const pem = /-----BEGIN CERTIFICATE-----([\s\S]+?)-----END CERTIFICATE-----/.exec(certificate)?.[1];
+    const bundleSigner = pem ? createHash('sha256').update(Buffer.from(pem.replace(/\s/g, ''), 'base64')).digest('hex').toUpperCase() : null;
+    if (!bundleSigner || bundleSigner !== expected) throw Error('Android AAB signer does not match the configured production certificate');
+    manifest.targets.android.signerCertificatesSha256 = { apk: actual, aab: bundleSigner };
     stage(apks[0], 'android-arm64.apk', 'android-apk');
+    manifest.artifacts.at(-1).signatureStatus = 'verified-production';
+    manifest.artifacts.at(-1).signerCertificateSha256 = actual;
     stage(aabs[0], 'android-arm64.aab', 'android-aab');
+    manifest.artifacts.at(-1).signatureStatus = 'verified-production';
+    manifest.artifacts.at(-1).signerCertificateSha256 = bundleSigner;
     const symbols = files(join(output, 'native-debug-symbols')).filter(p => p.endsWith('.zip') && p.includes('release') && basename(p).includes(stamp));
     if (symbols.length === 1) stage(symbols[0], 'android-arm64-native-debug-symbols.zip', 'android-symbols');
     else {
