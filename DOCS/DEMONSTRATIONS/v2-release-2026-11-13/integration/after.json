@@ -1,0 +1,140 @@
+{
+  "phase": "after",
+  "scope": "Actual before/after branch-integration observation only; not publication/native/provider acceptance.",
+  "capturedAt": "2026-11-13T11:35:04.615Z",
+  "source": {
+    "commit": "1b4b65c8badf6c5e079fc346bc33de789dd8ecf4",
+    "branch": "master"
+  },
+  "url": "http://127.0.0.1:5173/app.html",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "width": 1016,
+          "height": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "width": 352,
+          "height": 229.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "version": "v1.32.09425",
+        "frameworkOverlay": false
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 52
+        },
+        "stage": {
+          "x": 24,
+          "y": 76,
+          "width": 1016,
+          "height": 730
+        },
+        "rail": {
+          "x": 1064,
+          "y": 76,
+          "width": 352,
+          "height": 287
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "version": "v1.32.09425",
+        "frameworkOverlay": false
+      },
+      "sameSceneAcrossRail": true,
+      "pageExceptions": [
+        "document is not defined",
+        "document is not defined"
+      ]
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "guest": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "width": 358,
+          "height": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "width": 358,
+          "height": 221.296875
+        },
+        "railText": "Your birth chart\n\nTell me when and where you were born.\n\nCast my chart\n\nFree · No card needed",
+        "sceneCount": 1,
+        "overflow": false,
+        "version": "v1.32.09425",
+        "frameworkOverlay": false
+      },
+      "chooser": {
+        "url": "http://127.0.0.1:5173/app.html",
+        "title": "Natally — the live atelier",
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 48
+        },
+        "stage": {
+          "x": 16,
+          "y": 64,
+          "width": 358,
+          "height": 371.359375
+        },
+        "rail": {
+          "x": 16,
+          "y": 531.359375,
+          "width": 358,
+          "height": 279
+        },
+        "railText": "Save your chart\n×\nContinue with GoogleContinue with emailContinue with SMS",
+        "sceneCount": 1,
+        "overflow": false,
+        "version": "v1.32.09425",
+        "frameworkOverlay": false
+      },
+      "sameSceneAcrossRail": true,
+      "pageExceptions": [
+        "document is not defined",
+        "document is not defined"
+      ]
+    }
+  ]
+}

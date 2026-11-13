@@ -1,0 +1,77 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 3962,
+    "sha256": "ed0407780258804f5b4e85fbf515f7408555cf6c117209afb589340f90909ca3"
+  },
+  {
+    "path": "after-desktop-chooser.png",
+    "bytes": 984846,
+    "sha256": "35e8a924d4140fb1135ff95469ad8c8a67214f2841338371d3f4cf9d1794fc38"
+  },
+  {
+    "path": "after-desktop-guest.png",
+    "bytes": 973807,
+    "sha256": "2b532f0382c5f442b01aa54dc777fe183719668959e0c7748ec156fefe320e7d"
+  },
+  {
+    "path": "after-phone-chooser.png",
+    "bytes": 195318,
+    "sha256": "d212b4421d772174bb1d99b9a93251dbc5ad4341386df7c26bd54a429f6edc02"
+  },
+  {
+    "path": "after-phone-guest.png",
+    "bytes": 185470,
+    "sha256": "c49e00ad2e9585f46614b0ee833f28eab05af8a774861dc22ae54d6fcde179dc"
+  },
+  {
+    "path": "after.json",
+    "bytes": 3641,
+    "sha256": "6b7a5fa0618604913e2414e463f1622b52b83c3af535fbb7caf77f8f3078d087"
+  },
+  {
+    "path": "before-desktop-chooser.png",
+    "bytes": 984772,
+    "sha256": "61c5a7c6155362fa19735b739a8e847598cca68d5ab30664d63abaae9b4170d4"
+  },
+  {
+    "path": "before-desktop-guest.png",
+    "bytes": 973740,
+    "sha256": "f4f50f4724fbbf3c7015a1d8947698f080621f8787c71a0c78648e0b08b28dda"
+  },
+  {
+    "path": "before-phone-chooser.png",
+    "bytes": 195048,
+    "sha256": "6be3a33076bf9a0caba0083e76c824791ba852e5acec22b7fe01f5b0ab6a507b"
+  },
+  {
+    "path": "before-phone-guest.png",
+    "bytes": 186729,
+    "sha256": "4c7514bac9b4682e1fa414e2a26cd379960a22f16200b7d88ab6576c5c0b22a1"
+  },
+  {
+    "path": "before.json",
+    "bytes": 3508,
+    "sha256": "87b869586a8f0cf1ac9014e22b084c4a745ebfc94beadb5c6e396564e7cb7898"
+  },
+  {
+    "path": "comparison.json",
+    "bytes": 1224,
+    "sha256": "b18467c47fb61af34cdc98eb88bb4fe4410c5a986e0eff4c475efb16b8028b00"
+  },
+  {
+    "path": "error-stack.json",
+    "bytes": 559,
+    "sha256": "5097ae63857b9db2931558893adcaacf4c66c37db3faf0c15ce67677b80c2594"
+  },
+  {
+    "path": "observe-browser.cjs",
+    "bytes": 4069,
+    "sha256": "caa11896cb3217dd522ab30764af1fd73907c425ad8e17224d360a8fad913172"
+  },
+  {
+    "path": "observe-error-stack.cjs",
+    "bytes": 1702,
+    "sha256": "ffc47f4856308f671144d199cc8022ca550e61035d21091c39061543c504d562"
+  }
+]

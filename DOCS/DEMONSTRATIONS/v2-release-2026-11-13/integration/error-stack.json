@@ -1,0 +1,20 @@
+{
+  "scope": "Bounded guest-only stack observation after cumulative error messages appeared in the held integration browser; no account or provider operation.",
+  "startedAt": "2026-11-13T11:38:01.077Z",
+  "pageExceptions": [],
+  "consoleErrors": [
+    {
+      "text": "The script has an unsupported MIME type ('text/html').",
+      "location": {
+        "url": "",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "workers": [],
+  "remoteRequests": [],
+  "endedAt": "2026-11-13T11:38:10.398Z"
+}

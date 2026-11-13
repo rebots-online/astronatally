@@ -1,0 +1,46 @@
+{
+  "scope": "Browser composition comparison across feature-to-master fast-forward; not a release or service certification.",
+  "sameCommit": true,
+  "beforeSource": {
+    "commit": "1b4b65c8badf6c5e079fc346bc33de789dd8ecf4",
+    "branch": "feat/immersive-stitch-ui"
+  },
+  "afterSource": {
+    "commit": "1b4b65c8badf6c5e079fc346bc33de789dd8ecf4",
+    "branch": "master"
+  },
+  "viewports": [
+    {
+      "name": "desktop",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "guestRecordedDomExactMatch": true,
+      "chooserRecordedDomExactMatch": true,
+      "sameSceneAcrossRailBefore": true,
+      "sameSceneAcrossRailAfter": true,
+      "beforePageExceptions": [],
+      "afterCumulativePageExceptions": [
+        "document is not defined",
+        "document is not defined"
+      ]
+    },
+    {
+      "name": "phone",
+      "dimensions": [
+        390,
+        844
+      ],
+      "guestRecordedDomExactMatch": true,
+      "chooserRecordedDomExactMatch": true,
+      "sameSceneAcrossRailBefore": true,
+      "sameSceneAcrossRailAfter": true,
+      "beforePageExceptions": [],
+      "afterCumulativePageExceptions": [
+        "document is not defined",
+        "document is not defined"
+      ]
+    }
+  ]
+}
