@@ -1628,3 +1628,14 @@ callback for the existing exported Back arrow/accessible name. When present,
 the wrapper renders the frozen Back control; otherwise `onClose` renders the
 frozen Close control. This records a React binding detail, with no PRD, screen,
 functionality or immutable-export change.
+
+Native utility binding adapter: existing `bootstrapNativeAuth` may add local
+view-only callbacks for the already exported phone/code headings and Change
+number/Back control. Register DOM ID `native-auth-change-number` in
+`auth/native.html`. It reuses existing `clearPhone` cleanup, clears code input,
+shows the phone form, hides the code form and focuses the phone field. Existing
+resend remains separate. It must not settle the native invocation, change
+provider/state/origin/nonce/port/deadline validation, persist sensitive fields or
+claim authentication success. UI-COMMERCE owns this local DOM binding in
+`src/platform/nativeAuthPage.ts` alongside its existing utility markup; the
+native protocol and provider operations remain frozen.
