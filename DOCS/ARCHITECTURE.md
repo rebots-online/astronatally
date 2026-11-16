@@ -1916,3 +1916,33 @@ unchanged; do not ask the user to approve the same interface again for a
 packaging-only retry. A publication failure before this checkpoint never
 constitutes a live review opportunity. The observed2.1.09519 attempt failed at
 its first Surge command and started no native compilation.
+
+## 26. Durable first-light intake — per-step Firestore persistence — 2026-11-16
+
+The full onboarding (restored verbatim `src/onboarding-original/` plus the
+`src/app/onboarding/` composition) gains the persistence that was always
+missing: **every answered step is written to Firestore immediately**, and a
+returning customer resumes with their answers intact on any device.
+
+- **Document**: `users/{uid}/private/intake` (same path the landing surface
+  uses), written `merge` per step. Fields: `draft` (Partial<IntakeDraft>:
+  name, date, placeId, time, unknownTime, currentLocation as they accrue),
+  `step` (question index, or `done`), `chart` (the computed birth input,
+  written once at completion), `updatedAt`.
+- **Platform seam**: `src/platform/firebase.ts` exposes `firestoreDb()` on
+  the same app instance as auth, and `authCurrentUser()`. No second app,
+  no second config. Firestore is already a package dependency.
+- **Emission seam**: `src/onboarding-original/FirstLight.tsx` (verbatim UI,
+  U.4-TW) gains two optional props only: `onStep(step, partial)` fired on
+  every step change, and `initialStep`/`initialAnswers` for hydration. The
+  composition owns persistence, exactly as the original header prescribes.
+- **Composition** (`src/app/onboarding/FirstLight.tsx`): persists each step
+  via `src/services/intakeStore.ts`; on mount, hydrates from Firestore when
+  the sessionStorage stash is absent (complete draft → recompute; partial →
+  resume at the persisted step with answers prefilled); on successful cast,
+  writes `step: 'done'` + `chart`, then hands the chart to the app stage.
+- **Honesty rules (unchanged doctrine)**: billing/quota-class Firestore
+  failures surface as truthful blocking errors (never silently continue
+  unpersisted); transient network failures do not block the flow — the
+  sessionStorage stash and Firestore re-hydration remain the recovery
+  paths. Unauthenticated sessions never write (the flow is signed-in-only).
