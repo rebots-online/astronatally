@@ -1,7 +1,7 @@
 {
-  "version": "2.1.3880",
-  "builtAt": "2026-11-16T12:40:03.017Z",
-  "displayVersion": "2.1.03880",
+  "version": "2.1.3884",
+  "builtAt": "2026-11-16T12:44:02.052Z",
+  "displayVersion": "2.1.03884",
   "sourceRole": "generated",
   "policySource": "config/product-release.json",
   "projectId": "astronatally-v2",
