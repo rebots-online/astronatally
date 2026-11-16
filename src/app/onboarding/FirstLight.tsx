@@ -16,8 +16,12 @@ import type { NatalChart } from '../../shared/types';
 import type { Voice, VoiceState } from '../../voice';
 import { loadGazetteer } from '../../services/gazetteer';
 import type { IntakeDraft } from '../../services/onboarding';
+import {
+  fetchPersistedIntake, IntakePersistenceBillingError,
+  persistIntakeCompletion, persistIntakeStep,
+} from '../../services/intakeStore';
 import { getPreloadedVoice } from '../../services/supertonicTts';
-import OriginalFirstLight from '../../onboarding-original/FirstLight';
+import OriginalFirstLight, { type IntakeAnswers } from '../../onboarding-original/FirstLight';
 import './onboarding.css';
 
 const GREETING =
@@ -60,6 +64,9 @@ function clearStashedDraft(): void {
 export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChart) => void }) {
  const [phase, setPhase] = useState<Phase>('welcome');
  const [error, setError] = useState<string | null>(null);
+ // §26 hydration: a persisted partial intake resumes at its step with the
+ // answers prefilled; null until the Firestore read settles.
+ const [hydrated, setHydrated] = useState<{ step: number; answers: Partial<IntakeAnswers> } | null>(null);
  const [castSeconds, setCastSeconds] = useState(0);
  const [voiceState, setVoiceState] = useState<VoiceState>({
   admitted: false,
@@ -155,6 +162,11 @@ export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChar
    };
    const computed = await natalChart(birth);
    clearStashedDraft();
+   try {
+    await persistIntakeCompletion(draft, birth);
+   } catch (persistenceFailure) {
+    if (persistenceFailure instanceof IntakePersistenceBillingError) throw persistenceFailure;
+   }
    voice.stop();
    onSitDown(computed);
   } catch (failure) {
@@ -169,14 +181,58 @@ export default function FirstLight({ onSitDown }: { onSitDown: (chart: NatalChar
   }
  };
 
+// §26: persist each answered step as it happens. Billing-class failures
+// surface truthfully; transient ones stay silent (stash + re-hydration
+// remain the recovery paths).
+const onIntakeStep = (step: number, partial: Partial<IntakeDraft>) => {
+  void persistIntakeStep(step, partial).catch(failure => {
+   if (failure instanceof IntakePersistenceBillingError) setError(failure.message);
+  });
+};
+
 // Reload/back recovery: a submitted-but-uncompleted draft is stashed;
 // recompute it idempotently (same input, same wheel) so the journey
-// resumes at the hand-off instead of a dead end.
+// resumes at the hand-off instead of a dead end. §26: when the stash is
+// absent, the Firestore-persisted intake takes over — a complete draft
+// recomputes, a partial one resumes at its step with answers prefilled.
 useEffect(() => {
  if (resumed.current) return;
  resumed.current = true;
- const draft = unstashDraft();
- if (draft) void onCreate(draft);
+ void (async () => {
+  let draft = unstashDraft();
+  let persistedStep: number | 'done' | undefined;
+  if (!draft) {
+   try {
+    const persisted = await fetchPersistedIntake();
+    if (persisted && persisted.step !== 'done') {
+     draft = persisted.draft as IntakeDraft;
+     persistedStep = persisted.step;
+    }
+   } catch (failure) {
+    if (failure instanceof IntakePersistenceBillingError) setError(failure.message);
+   }
+  }
+  if (!draft) return;
+  const complete = typeof draft.placeId === 'string' && typeof draft.date === 'string' && draft.date !== '';
+  if (complete) {
+   stashDraft(draft);
+   void onCreate(draft);
+  } else {
+   const gazetteer = loadGazetteer();
+   const place = typeof draft.placeId === 'string'
+    ? gazetteer.find(entry => entry.id === draft.placeId)
+    : undefined;
+   const answers: Partial<IntakeAnswers> = {
+    name: draft.name || '',
+    date: draft.date || '',
+    ...(place ? { place: `${place.name}, ${place.countryCode}` } : {}),
+    ...(typeof draft.time === 'string' ? { time: draft.time } : {}),
+    ...(draft.currentLocation ? { currentPlace: draft.currentLocation.name } : {}),
+   };
+   setHydrated({ step: typeof persistedStep === 'number' ? persistedStep : 0, answers });
+   setPhase('intake');
+  }
+ })();
 }, []);
 
  if (phase === 'welcome') {
@@ -223,6 +279,9 @@ useEffect(() => {
      busy={phase === 'casting'}
      error={error}
      onCreate={onCreate}
+     onStep={onIntakeStep}
+     initialStep={hydrated?.step}
+     initialAnswers={hydrated?.answers}
     />
    </div>
    {phase === 'casting' && (
