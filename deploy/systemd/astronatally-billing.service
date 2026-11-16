@@ -1,0 +1,15 @@
+[Unit]
+Description=Astronatally billing router (self-hosted)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/astronatally/billing
+EnvironmentFile=/opt/astronatally/billing.env
+ExecStart=/usr/bin/node /opt/astronatally/billing/server.mjs
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target
