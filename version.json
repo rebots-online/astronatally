@@ -1,10 +1,10 @@
 {
-  "version": "2.1.3840",
-  "builtAt": "2026-11-16T12:00:31.481Z",
-  "displayVersion": "2.1.03840",
+  "version": "2.1.3880",
+  "builtAt": "2026-11-16T12:40:03.017Z",
+  "displayVersion": "2.1.03880",
   "sourceRole": "generated",
   "policySource": "config/product-release.json",
   "projectId": "astronatally-v2",
   "repository": "rebots-online/astronatally",
-  "webOrigin": "https://v2.astronatally.com"
+  "webOrigin": "https://baseline.astronatally.com"
 }
