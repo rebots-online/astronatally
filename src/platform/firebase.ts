@@ -5,6 +5,7 @@
 // authUnavailable is true so the app can render signed-out state truthfully.
 
 import { FirebaseError, getApp, getApps, initializeApp, type FirebaseOptions } from 'firebase/app';
+import { getFirestore, type Firestore } from 'firebase/firestore';
 import {
   GoogleAuthProvider,
   PhoneAuthProvider,
@@ -88,6 +89,30 @@ function requireAuth(): Auth {
   const app = getApps().length > 0 ? getApp() : initializeApp(options);
   auth = getAuth(app);
   return auth;
+}
+
+/** The signed-in user, or null when signed out / auth unavailable. */
+export function authCurrentUser(): User | null {
+  try {
+    return requireAuth().currentUser;
+  } catch {
+    return null;
+  }
+}
+
+let firestore: Firestore | null = null;
+
+/**
+ * Firestore on the same app as auth, for durable customer documents
+ * (onboarding intake persistence). Throws AuthUnavailableError when the
+ * Firebase config is absent — callers surface truthfully, never fake.
+ */
+export function firestoreDb(): Firestore {
+  if (firestore) return firestore;
+  if (!options) throw new AuthUnavailableError();
+  const app = getApps().length > 0 ? getApp() : initializeApp(options);
+  firestore = getFirestore(app);
+  return firestore;
 }
 
 export async function emailSignIn(email: string, password: string): Promise<void> {
