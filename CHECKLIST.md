@@ -1133,3 +1133,4 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 - [x] C26.4 `npm run lint` clean.
 - [ ] C26.5 Canonical `bash build_all.sh` web build + deploy to baseline.astronatally.com; verify served bundle carries the persistence code.
 - [ ] C26.6 Live verification: each step writes the intake doc (Firestore), reload resumes mid-flow, completion writes `done`.
+- [x] C26.7 AtelierSeason marquis copy: non-seasonal sign text becomes the product-relevant upsell line ("FIRST CHART FREE"); seasonal variants unchanged. Deployed + screenshot-verified.

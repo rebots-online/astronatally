@@ -78,7 +78,7 @@ export function AtelierSeason({theme,accountUid}:{theme:AtelierTheme;accountUid:
   // Cookies are seasonal (§12.1 5d): the rest of the year the plate carries macarons.
   const cookie=halloween||christmas;
   const treatName=halloween?'Pumpkin cookie':christmas?'Xmas cookie':'Rose macaron';
-  const sign=halloween?'FREE HALLOWEEN COOKIES':christmas?'FREE XMAS COOKIES':'FRESH MACARONS';
+  const sign=halloween?'FREE HALLOWEEN COOKIES':christmas?'FREE XMAS COOKIES':'FIRST CHART FREE';
   const bite=()=>{if(held===null)return;playAtelierCrunch();const bites=treats[held].bites+1;setTreats(previous=>previous.map((treat,index)=>index===held?{...treat,bites}:treat));setAnnouncement(bites===4?'The last bite. Just a few crumbs.':`${cookie?'Crunch':'Mmm'}. ${4-bites} bites left.`);if(bites===4)setHeld(null);};
   return <>
     <svg className="atelier-season" viewBox="0 0 2048 1280" aria-hidden="true" focusable="false">
