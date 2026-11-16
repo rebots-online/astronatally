@@ -1,5 +1,5 @@
 // Netlify function: billing rail router.
-// Routes (site path or /.netlify/functions/chargebee/billing/...):
+// Routes (site path /billing/...):
 //   GET  /billing/access         Bearer Firebase ID token → allowance + key state
 //   POST /billing/checkout       {kind, amountUsdMicros, requestId} → hosted page {url,id}
 //   POST /billing/redeem         {code, requestId} → grant redemption allowance
@@ -8,10 +8,10 @@
 //   GET  /billing/invoices/:id   owner-checked Chargebee invoice
 //   POST /billing/chat           SSE passthrough on the uid's managed OpenRouter key
 import crypto from 'node:crypto';
-import { BillingConfigError, verifyIdToken } from '../../billing/verify.mjs';
-import * as chargebee from '../../billing/chargebee.mjs';
-import * as ledger from '../../billing/ledger.mjs';
-import * as openrouter from '../../billing/openrouter.mjs';
+import { BillingConfigError, verifyIdToken } from './verify.mjs';
+import * as chargebee from './chargebee.mjs';
+import * as ledger from './ledger.mjs';
+import * as openrouter from './openrouter.mjs';
 
 // Free-tier inference chain (OpenRouter canonical ids):
 // deepseek-chat-v3-0324:free → llama-3.3-70b:free → gemma-3-27b:free

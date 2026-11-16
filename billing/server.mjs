@@ -1,9 +1,9 @@
-// Standalone node HTTP server exposing the same billing router as the Netlify
-// function — for local runs. Run: `node billing/server.mjs` (PORT, default 8788).
+// Standalone node HTTP server exposing the billing router for self-hosted
+// function — for local runs. Run: `node billing/server.mjs` (PORT, default 38471).
 import http from 'node:http';
 import { Readable } from 'node:stream';
 import { pathToFileURL } from 'node:url';
-import { handler } from '../netlify/functions/chargebee.mjs';
+import { handler } from './router.mjs';
 
 export function createBillingServer() {
   return http.createServer(async (req, res) => {
@@ -51,7 +51,7 @@ export function createBillingServer() {
 const invokedDirectly =
   process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
 if (invokedDirectly) {
-  const port = Number(process.env.PORT) || 8788;
+  const port = Number(process.env.PORT) || 38471;
   createBillingServer().listen(port, () => {
     console.log(`billing server listening on http://localhost:${port}`);
   });

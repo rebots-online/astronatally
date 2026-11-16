@@ -1,5 +1,5 @@
-import soul from '../../SOUL.md?raw';
-import rubric from '../../READING_RUBRIC.md?raw';
+import soul from '../../../SOUL.md?raw';
+import rubric from '../../../READING_RUBRIC.md?raw';
 
 // Legacy profile values remain readable; every new answer uses one standard.
 export type ReadingStyle = 'plain' | 'merlin';

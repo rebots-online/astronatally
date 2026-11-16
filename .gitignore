@@ -5,3 +5,4 @@ dist-web/
 *.log
 .DS_Store
 
+build/

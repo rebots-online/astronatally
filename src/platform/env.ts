@@ -11,7 +11,7 @@ export function productWebOrigin(): string {
   return release.webOrigin;
 }
 
-const DEFAULT_BILLING_API_URL = 'https://natally-hosted-chat.netlify.app';
+const DEFAULT_BILLING_API_URL = 'https://baseline.astronatally.com';
 const DEFAULT_CREDIT_DISPLAY_PER_USD = 100;
 
 function publicString(value: unknown): string | null {

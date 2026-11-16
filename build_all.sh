@@ -24,8 +24,8 @@ npm run lint
 npx vite build --outDir dist-web
 cp dist-web/app.html dist-web/index.html
 echo "Web build complete → dist-web/"
-# The fork has one configured origin. Original-lineage sites are untouched.
-npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
+# The fork has one configured origin, served by our own nginx (nginx-ui, CT123).
+bash scripts/deploy-web-nginx.sh
 printf 'Web published: %s (v%s)\n' "$(node scripts/product-release.mjs origin)" "$(node -p 'require("./version.json").displayVersion')"
 printf 'Review the published screens. Type BUILD to continue native packaging: '
 if ! IFS= read -r review_decision < /dev/tty || [[ "$review_decision" != BUILD ]]; then
@@ -33,7 +33,7 @@ if ! IFS= read -r review_decision < /dev/tty || [[ "$review_decision" != BUILD ]
   exit 75
 fi
 node scripts/build-native.mjs
-npx --yes surge@0.56.0 dist-web "$release_hostname" --force https
+bash scripts/deploy-web-nginx.sh
 node scripts/build-native.mjs verify-publication
 node scripts/build-version.mjs advance
 node scripts/build-native.mjs prepare

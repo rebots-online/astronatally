@@ -1,4 +1,4 @@
-// Typed HTTP client for the Netlify billing function
+// Typed HTTP client for the self-hosted billing router
 // (DOCS/ARCHITECTURE.md §Billing). Every call carries the customer's
 // Firebase ID token as a bearer token. Unconfigured billing (HTTP 503) and
 // unreachable billing surface as typed errors — never a dummy flow.
