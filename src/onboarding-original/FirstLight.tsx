@@ -10,11 +10,26 @@ import { BirthDateFields } from './BirthDateFields';
 
 export type { IntakeDraft };
 
+/** Raw per-question answers (hydration + step emission shape). */
+export interface IntakeAnswers {
+  readonly name: string;
+  readonly date: string;
+  readonly place: string;
+  readonly time: string;
+  readonly currentPlace: string;
+}
+
 export interface FirstLightProps {
   readonly gazetteer: readonly GazetteerEntry[];
   readonly busy: boolean;
   readonly error: string | null;
   readonly onCreate: (draft: IntakeDraft) => void;
+  /** Fired on every step change so the composition can persist each
+   * answered step (ARCHITECTURE §26). Optional: absent = no persistence. */
+  readonly onStep?: (step: number, partial: Partial<IntakeDraft>) => void;
+  /** Hydration: resume at a persisted step with prefilled answers. */
+  readonly initialStep?: number;
+  readonly initialAnswers?: Partial<IntakeAnswers>;
 }
 
 export const QUESTION_SEQUENCE = [
@@ -48,11 +63,14 @@ const normalizePlaceLabel = (value: string) =>
   value.trim().normalize('NFC').toLocaleLowerCase('en');
 
 /** U.4-TW: clean-room presentation; the composition still owns persistence. */
-export function FirstLight({ gazetteer, busy, error, onCreate }: FirstLightProps) {
+export function FirstLight({ gazetteer, busy, error, onCreate, onStep, initialStep, initialAnswers }: FirstLightProps) {
   useEffect(scheduleSupertonicPreload, []);
   const id = useId();
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState({ name: '', date: '', place: '', time: '', currentPlace: '' });
+  const [step, setStep] = useState(initialStep ?? 0);
+  const [answers, setAnswers] = useState<IntakeAnswers>({
+    name: '', date: '', place: '', time: '', currentPlace: '',
+    ...initialAnswers,
+  });
   const [deviceLocation, setDeviceLocation] = useState<CurrentLocation | null>(null);
   const [skipLocation, setSkipLocation] = useState(false);
   const [locating, setLocating] = useState(false);
@@ -118,6 +136,22 @@ export function FirstLight({ gazetteer, busy, error, onCreate }: FirstLightProps
     query.addEventListener?.('change', update);
     return () => query.removeEventListener?.('change', update);
   }, []);
+
+  // §26 step emission: every step change hands the composition the answers
+  // accrued so far (with the place resolved to its gazetteer id). Fired on
+  // back-navigation too — the merge-write is idempotent.
+  useEffect(() => {
+    if (!onStep || submitted) return;
+    onStep(step, {
+      ...(answers.name ? { name: answers.name } : {}),
+      ...(answers.date ? { date: answers.date } : {}),
+      ...(match ? { placeId: match.entry.id } : {}),
+      ...(answers.time || unknownTime ? { time: unknownTime ? null : answers.time } : {}),
+      ...(unknownTime ? { unknownTime: true } : {}),
+      ...(deviceLocation ? { currentLocation: deviceLocation } : {}),
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- snapshot emission on step change only, by design
+  }, [step]);
 
   useEffect(() => {
     advancing.current = false;

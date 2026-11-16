@@ -1128,7 +1128,7 @@ Metadata: project=Natally; branch=master; authority=operator; architecture=DOCS/
 ## 2026-11-16 — §26 durable first-light intake (per-step Firestore persistence)
 
 - [ ] C26.1 `src/services/intakeStore.ts`: per-step `setDoc` merge to `users/{uid}/private/intake`, `fetchPersistedIntake`, `persistIntakeCompletion`; billing-class errors typed and surfaced, transient network non-blocking, unauthenticated = no-op.
-- [ ] C26.2 `src/onboarding-original/FirstLight.tsx`: optional `onStep(step, partial)` emission on every step change; optional `initialStep`/`initialAnswers` hydration props. Verbatim UI behavior otherwise untouched.
+- [x] C26.2 `src/onboarding-original/FirstLight.tsx`: optional `onStep(step, partial)` emission on every step change; optional `initialStep`/`initialAnswers` hydration props. Verbatim UI behavior otherwise untouched.
 - [ ] C26.3 `src/app/onboarding/FirstLight.tsx`: wire per-step persistence, Firestore hydration on mount (complete draft → recompute; partial → resume at step with prefilled answers), completion write (`step: 'done'`, `chart`).
 - [ ] C26.4 `npm run lint` clean.
 - [ ] C26.5 Canonical `bash build_all.sh` web build + deploy to baseline.astronatally.com; verify served bundle carries the persistence code.
